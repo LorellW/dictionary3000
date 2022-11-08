@@ -1,0 +1,2875 @@
+become (became, become)_становиться
+begin (began, begun)_начинать
+start_начинать
+continue_продолжать
+go on (went, gone)_продолжать
+stop_заканчивать, останавливать
+end_заканчивать
+finish_заканчивать
+last_длиться
+accomplish_завершать
+prepare_подготавливать
+postpone_откладывать
+put off (put, put)_откладывать
+divide_разделять
+consist of_состоять из
+include_включать (в себя что-то)
+exclude_исключать
+incorporate_включать (в себя что-то), объединяться
+split (split, split)_разделять на части, расщеплять
+contain_содержать (в себе)
+separate_отделять
+assemble_собирать (из частей)
+go (went, gone)_идти
+come (came, come)_приходить
+turn_поворачивать
+run (ran, run)_бежать
+move_двигать (-ся)
+bring (brought, brought)_приносить
+sit (sat, sat)_сидеть
+stand_стоять
+follow_следовать
+stop_останавливать (-ся)
+walk_ходить (гулять)
+appear_появляться
+disappear_исчезать
+remain_оставаться
+leave (left, left)_уходить
+raise_поднимать (-ся)
+carry_нести
+drive (drove, driven)_вести машину
+throw (threw, trown)_бросать
+push_толкать
+lay (laid, laid)_класть
+lie (lay, lain)_лежать, лгать
+arrive_прибывать
+shake (shook, shaken)_трясти
+fly (flew, flown)_летать
+stay_оставаться
+fall (fell, fallen)_падать
+wear (wore, worn)_носить (напр. одежду)
+step_шагнуть
+roll_катиться, сворачивать
+ride (rode, ridden)_ехать (напр. верхом)
+lift_поднимать
+jump_прыгать
+approach_приближаться
+cross_пересекать
+climb_лезть (карабкаться)
+bear (bore, born)_нести
+shift_сдвигать
+slip_поскальзываться
+rush_торопиться (стремительно мчаться)
+land_приземляться
+escape_сбегать
+drag_тащить
+slide (slid, slid)_скользить
+toss_бросать (метать)
+accompany_сопровождать
+swing (swang, swung)_раскачивать
+advance_продвигаться
+swim (swam, swum)_плыть
+flee_убегать, спасаться бегством
+sink (sank, sunk)_тонуть
+be (was, been)_быть
+exist_существовать
+include_включать (в себя что-либо)
+exclude_исключать
+add_добавлять
+enter_вводить, входить
+share_делиться
+remove_удалять
+receive_получать
+lose (lost, lost)_терять
+find (found, found)_найти
+have (had, had)_иметь
+be present_присутствовать
+be absent_отсутствовать
+get (got, got\gotten)_получить (становиться)
+take (took, taken)_брать
+give (gave, given)_давать
+return_возвращать
+join_присоединять
+involve_вовлекать
+release_выпускать (отпускать)
+own_владеть
+gain_получать, набирать (прибавлять в чем-то)
+emerge_появляться
+expand_расширять (-ся)
+disappear_исчезать
+obtain_получать
+belong_принадлежать
+limit_ограничивать
+spread (spread, spread)_распространять (-ся)
+extend_расширять (-ся)
+acquire_приобретать (получать)
+abandon_покидать
+arise (arose, arisen)_возникать
+possess_обладать (владеть)
+leave (left, left)_оставить
+occupy_занимать (место)
+work_работать
+keep (kept, kept)_хранить
+help_помогать
+write (wrote, written)_писать
+provide_обеспечивать
+pay (paid, paid)_платить
+lead (led, led)_лидировать (возглавлять)
+create_создавать
+serve_служить
+build (built, built)_строить
+develop_развивать (разрабатывать)
+base_базировать, размещать
+realize_реализовать, осознавать
+save_сохранять (делать сбережения)
+fail_терпеть неудачу
+check_проверять
+design_разрабатывать
+claim_предъявлять претензии, заявлять о правах, утверждать
+establish_устанавливать
+maintain_поддерживать
+head_руководить (возглавлять)
+control_контролировать
+apply_подавать заявление, применять что-то
+manage_управлять
+perform_выполнять
+improve_улучшать
+sign_подписывать
+test_проверять (тестировать)
+prevent_предотвращать
+publish_публиковать
+achieve_достигать (добиваться чего-то)
+conduct_проводить
+attend_участвовать, посещать
+complete_выполнять
+handle (Handle with care)_обращаться (работать с чем-либо, обычн. вручную)
+handle (I can handle it)_справляться (напр. с проблемой)
+deliver_доставлять
+operate_управлять (обычно механизмом, машиной, программой)
+order_приказывать, заказывать
+measure_измерять
+engage_входить в контакт (заниматься)
+hire_нанимать на работу
+train_обучать
+paint_красить
+direct_руководить (управлять)
+solve_решать (проблему, задачу)
+file_вносить в записи
+employ_принимать на работу
+make (made, made)_делать, заставлять
+try_пробовать, пытаться
+happen_случаться
+set (set, set)_устанавливать
+seek_искать
+fill_заполнять
+pass_проходить, передавать
+attempt_пытаться
+connect_подключать (соединять)
+record_записывать
+locate_обнаружить (выяснить местоположение)
+search_искать, обыскивать
+select_выбирать
+launch_запускать
+adjust_настраивать
+succeed_достигать цели (преуспевать в чем-то)
+review_пересматривать, делать обзор
+arrange (an event)_организовывать (мероприятие)
+benefit_получать выгоду
+coach_тренировать
+exercise_упражняться
+monitor_наблюдать
+supply_обеспечивать
+assist_помогать
+construct_строить
+schedule_составлять график, вносить в график
+assign_назначать, давать задание
+dismiss_увольнять
+practice_практиковаться
+illustrate_иллюстрировать
+enhance_улучшать, усиливать
+implement_выполнять, применять
+preserve_сохранять (уберегать)
+guide_вести (направлять)
+illustrate_иллюстрировать
+deserve_заслуживать чего-то
+face (something)_встретиться с чем-то (напр. с проблемой)
+cause_причинять что-либо
+teach (taught, taught)_учить (обучать)
+can (could)_мочь, быть способным
+know (knew, known)_знать
+think (thought, thought)_думать
+see (saw, seen)_видеть
+want_хотеть
+look_смотреть, выглядеть
+need_нуждаться
+feel (felt, felt)_чувствовать
+mean (meant, meant)_значить (иметь ввиду)
+seem_казаться
+hear (heard, heard)_слышать
+like_нравиться (любить)
+believe_верить
+learn (learnt, learnt)_изучать
+watch_смотреть (сторожить)
+read (read, read)_читать
+remember_помнить
+love_любить
+decide_решать
+hope_надеяться
+listen_слушать
+focus_сосредоточиваться (на чем-либо)
+plan_планировать
+note_замечать, обращать внимание
+identify_идентифицировать
+determine_определять
+recognize_узнавать
+compare_сравнивать
+miss (someone)_скучать (по кому-то\чему-то)
+study_изучать (учиться)
+forget (forgot, forgotten)_забывать
+imagine_воображать
+discover_совершать открытие
+worry_беспокоиться
+wait_ждать
+experience_переживать (испытывать что-то на себе)
+tend_иметь склонность (к чему-то)
+notice_замечать
+wish_желать
+figure out_выяснять (находить решение)
+suffer_страдать
+recall_вспоминать
+stare_пристально смотреть, пялиться
+examine_проверять (изучать)
+define_определять
+observe_наблюдать
+count_считать
+associate_ассоциировать (с чем-то)
+view_смотреть
+remind_напоминать
+hate_ненавидеть
+intend_намереваться
+explore_исследовать
+predict_предсказывать
+acknowledge_признавать, подтверждать получение
+fear_бояться
+conclude_делать вывод
+prefer_предпочитать
+appreciate_ценить
+trust_доверять
+rely on_полагаться на
+question_подвергать сомнению, допрашивать
+regard_учитывать, считать кем-либо \ чем-либо
+suspect_подозревать
+suppose_предполагать
+perceive_воспринимать
+inspire_вдохновлять
+analyze_анализировать
+concentrate_сосредоточиваться
+smell (smelt, smelt)_нюхать, пахнуть
+glance_смотреть (бросать взгляд)
+dream (dreamt, dreamt)_мечтать (видеть сны)
+react_реагировать
+choose_выбирать
+expect_ожидать
+miss_упускать, скучать
+realize_реализовать, осознавать
+say (said, said)_сказать
+tell (told, told)_говорить
+call_звать, звонить
+ask_спрашивать, просить
+talk_разговаривать
+meet (met, met)_знакомиться (встречать)
+understand (understood, understood)_понимать
+speak (spoke, spoken)_говорить
+allow_позволять
+offer_предлагать
+consider_рассматривать, считать
+suggest_предлагать
+require_требовать, нуждаться
+report_докладывать
+explain_объяснять
+thank_благодарить
+agree_соглашаться
+describe_описывать
+represent_представлять (напр. компанию)
+lie_лгать
+tell the truth (told, told)_говорить правду
+mean (meant, meant)_иметь в виду
+argue_спорить
+wonder_интересоваться
+name_называть, именовать
+answer_отвечать
+state_делать заявление
+discuss_обсуждать
+laugh_смеяться
+guess_догадываться
+prove_доказывать
+sound_звучать
+respond_отвечать
+reveal_выявлять, раскрывать
+treat_лечить (обращаться с кем-либо)
+affect_влиять (воздействовать)
+mention_упоминать
+care_заботиться, беспокоиться, относиться не безразлично
+avoid_избегать
+support_поддерживать
+sing (sang, sung)_петь
+address_обращаться к кому-то
+smile_улыбаться
+admit_признать
+assume_предполагать
+refer_ссылаться на что-то, направлять, отсылать
+announce_объявлять
+encourage_воодушевлять, поощрять, побуждать
+introduce_представлять (напр. одного человека другому)
+refuse_отказываться
+express_выражать
+settle_улаживать (вопрос)
+cry_плакать (кричать)
+insist_настаивать
+ignore_игнорировать
+deny_отрицать
+promise_обещать
+demand_требовать
+welcome_приветствовать
+invite_приглашать
+repeat_повторять
+recommend_рекомендовать
+propose_предлагать
+declare_объявлять
+matter (It doesn't matter)_иметь значение
+judge_судить, осуждать
+ensure_обеспечивать (гарантировать, убеждаться в чем-то)
+challenge_бросать вызов
+warn_предупреждать
+influence_влиять
+blame_винить
+complain_жаловаться
+back_поддерживать, отступать
+cite_цитировать (ссылаться)
+emphasize_подчеркивать (делать ударение на чем-то)
+decline_отклонять (напр. предложение)
+accuse_обвинять
+reject_отвергать
+convince_убеждать
+approve_подтверждать, одобрять
+list_перечислять, составлять список
+permit_разрешать
+scream_кричать
+shout_выкрикивать, кричать
+inform_информировать
+bother_беспокоить
+reply_отвечать
+resolve_решать (вопрос)
+contact_контактировать, связываться
+interview_проводить интервью (беседу)
+quote_цитировать
+urge_торопить, убеждать
+whisper_шептать
+favor (favour)_оказывать внимание, быть благосклонным
+comment_коментировать
+negotiate_вести переговоры
+advise_советовать
+criticize_критиковать
+assure_уверять
+yell_кричать
+communicate_общаться
+disagree_не соглашаться
+proceed_переходить к чему-то, продолжать как запланировано
+translate_переводить (лингв.)
+interpret_толковать, интерпретировать, переводить (устно)
+pause_делать паузу
+imply_предполагать, подразумевать, намекать
+respect_уважать
+characterize_характеризовать
+appeal_обращаться, апеллировать
+stress_делать ударение
+doubt_сомневаться
+guarantee_гарантировать
+honor_чтить, уважать
+encounter_встречать (случайно встретить кого-то)
+dominate_доминировать, иметь полный контроль
+accept_принимать
+let (let, let)_позволять
+date_встречаться, ходить на свидания
+win (won, won)_побеждать
+kill_убивать
+hit (hit, hit)_ударить
+fight (fought, fought)_драться
+shoot (shot, shot)_стрелять (снимать на камеру)
+protect_защищать
+force_принуждать
+beat (beat, beaten)_бить
+hurt (hurt, hurt)_причинять боль
+strike (struck, struck)_ударять (бастовать)
+threaten_угрожать
+destroy_уничтожать
+fire_стрелять
+attack_атаковать
+struggle_бороться
+capture_захватывать
+defend_защищать
+kick_пинать
+eliminate_устранять
+score_набирать очки (баллы)
+aim_целиться
+compete (sport)_соревноваться
+confront_противостоять
+resist_сопротивляться
+target_делать мишенью, целиться
+overcome_преодолевать
+give up (gave, given)_сдаваться
+surrender_сдаваться
+cost (cost, cost)_стоить
+earn_зарабатывать
+make money (made, made)_зарабатывать
+promote_продвигать, рекламировать, повышать по службе
+charge_брать плату
+estimate_оценивать
+account_считать, вести учет
+invest_инвестировать
+assess_оценивать
+compete_конкурировать
+purchase_покупать
+evaluate_оценивать
+trade_торговать
+market_продвигать на рынке (рекламировать)
+withdraw_снимать (деньги со счета в банке)
+convert_конвертировать
+spend (spent, spent)_тратить (напр. деньги), проводить время
+buy (bought, bought)_покупать
+sell (sold, sold)_продавать
+deal (dealt, dealt)_вести дела
+produce_производить
+save_делать сбережения, экономить
+rule_править (властвовать)
+elect_выбирать (на выборах)
+vote_голосовать
+contribute_вносить вклад во что-то
+settle_расселяться (создавать поселение)
+impose_налагать (напр. обязательство)
+transfer_передавать, переводить (напр. деньги)
+distribute_распространять
+deposit_вносить деньги (на счет в банке)
+afford_повзволять себе
+live_жить
+grow up (grew, grown)_расти
+die_умереть
+be born_быть рожденным
+marry (get married)_жениться (выходить замуж)
+survive_выживать
+adopt_усыновлять (удочерять)
+retire_выходить на пенсию
+breathe_дышать
+kiss_целовать
+bury_хоронить
+pray_молиться
+graduate_выпускаться из учебного заведения
+tire (get tired)_уставать
+adapt_адаптировать (-ся)
+pretend_притворяться
+divorce (get divorced)_разводиться (о супругах)
+inherit_наследовать
+sleep (slept, slept)_спать
+dress_одевать (-ся)
+wake up (woke, woken)_будить (просыпаться)
+eat (ate, eaten)_есть
+drink (drank, drunk)_пить, выпивать
+feed (fed, fed)_кормить
+cook_готовить пищу
+taste_пробовать на вкус, ощущаться на вкус
+bake_печь
+freeze_замораживать, замерзать, хранить в морозилке
+play_играть в игру или на музыкальном инструменте, воспроизводить запись
+spend (spent, spent)_проводить (напр. время), тратить деньги
+enjoy_наслаждаться
+visit_навещать
+travel_путешествовать, ехать (перемещаться)
+rest_отдыхать
+dance_танцевать
+celebrate_праздновать
+bet (bet, bet)_делать ставку
+relax_расслабляться
+gamble_играть в азартные игры
+have fun (had, had)_развлекаться (веселиться)
+weigh_весить, взвешивать
+balance_балансировать
+flow (flew, flown)_течь
+transform_трансформировать (-ся), значительно изменять (-ся)
+recover_восстанавливать (-ся), выздоравливать
+expose_выставлять (подвергать чему-то)
+pop_хлопать (выскакивать)
+indicate_указывать (объяснять)
+alter_изменять, модифицировать
+alternate_чередовать
+double_удваивать
+retain _удерживать
+fade_увядать (блекнуть)
+form_формировать
+shape_придавать форму
+change_менять
+place_размещать
+rise (rose, risen)_поднимать (-ся)
+reflect_отражать (-ся)
+enable_включать (активировать), делать возможным
+wave_развеваться, махать
+snap_щелкать, трещать, сломать с хрустом
+display_показывать (выставлять на показ)
+stick_липнуть
+testify_давать показания
+justify_оправдывать
+violate_нарушать
+witness_быть свидетелем
+arrest_арестовывать
+investigate_расследовать
+confess_сознаваться
+accuse_обвинять
+charge_обвинять (официально)
+suspect_подозревать
+sue_подавать в суд
+convict_выносить приговор, признавать виновным
+beat (up) (beat, beaten)_бить, избивать
+murder_убивать
+kill_убивать
+attack_нападать
+free_освободжать
+offend_оскорблять
+disturb_беспокоить
+steal (stole, stolen)_красть
+rob_грабить
+rape_насиловать
+punish_наказывать
+do time_сидеть (в тюрьме)
+interrogate_допрашивать
+swear_клясться
+reach_достигать (дотягиваться)
+catch (caught, caught)_ловить
+drop_ронять
+hang (hung, hung)_повесить
+touch_прикасаться
+clear_очищать
+pour_лить (напр. воду)
+stir_перемешивать
+clean_чистить, убирать (мыть, приводить в порядок)
+wrap_заворачивать
+wash_стирать (мыть)
+ring (rang, rung)_звонить
+embrace_обнимать
+hug_обнимать
+put (put, put)_класть (помещать)
+use_использовать
+show_показывать
+hold (held, held)_держать
+open_открывать
+cut_резать
+pull_тянуть
+break (broke, broken)_ломать
+cover_прикрывать
+draw (drew, drawn)_тянуть
+point_указывать (на что-либо)
+close_закрывать
+replace_заменять
+collect_собирать, забирать
+grab_хватать
+tie_связывать
+press_давить
+link_соединять, проводить связь между фактами
+mix_перемешивать
+stretch_растягивать
+hand_подавать что-то, передавать из рук в руки
+knock_стучать
+bend (bent, bent)_гнуть
+lock_запирать на замок
+tear (tore, torn)_рвать
+pack_упаковывать
+attach_прикреплять
+dig (dug, dug)_копать
+bind (bound, bound)_связывать (веревкой)
+wind (wound, wound)_закручивать
+wipe_протирать
+load_загружать
+sweep (swept, swept)_мести
+squeeze_сжимать
+rub_тереть
+tap_постукивать
+spin (spun, spun)_вращать
+plant_сажать (растение)
+pick_выбирать
+gather_собирать (вместе)
+hide (hid, hid)_прятать (-ся)
+blow (blew, blown)_дуть
+smoke_курить
+act_действовать
+do (did, done)_делать
+demonstrate_демонстрировать
+lean_прислоняться, наклоняться
+fix_чинить
+nod_кивать
+pose_позировать
+send (sent, sent)_отправлять
+burn (burnt, burnt)_сжигать
+shut (shut, shut)_закрывать
+line (up)_выстраивать в линию
+arrange (the books on the shelves)_приводить в порядок (расставлять)
+install_устанавливать
+south_юг
+west_запад
+north_север
+east_восток
+world_мир
+water_вода
+air_воздух
+field_поле
+light_свет
+space_пространство (космос)
+earth_земля (в т.ч. планета)
+ground_земля (под ногами)
+soil_почва
+land_земля (территория, страна)
+star_звезда
+fire_огонь (пожар)
+nature_природа
+environment_окружающая среда
+rock_камень (скала)
+sea_море
+seashore_берег моря
+sort_сорт (разновидность)
+planet_планета
+weather_погода
+heat_жара
+wind_ветер
+track_тропа (дорожка)
+sky_небо
+camp_лагерь
+stone_камень
+ice_лед
+sun_солнце
+wood_древесина (лес)
+mountain_гора
+river_река
+wave_волна
+atmosphere_атмосфера
+storm_буря
+universe_вселенная
+dirt_грязь
+rain_дождь
+pollution_загрязнение
+disaster_катастрофа
+climate_климат
+moon_луна
+cloud_облако
+lake_озеро
+ocean_океан
+island_остров
+landscape_пейзаж
+sand_песок
+peak_пик
+coast_побережье
+pole (geography)_полюс (напр. Северный полюс)
+flow_поток
+stream_поток
+desert_пустыня
+diversity_разнообразие
+relief_рельеф
+snow_снег
+darkness_тьма
+hill_холм
+bank _берег реки
+dust_пыль
+stick_палка
+silence_тишина
+reality_реальность
+shadow_тень
+selection_отбор
+top_вершина
+bird_птица
+poultry_домашняя птица
+duck_утка
+chicken_курица (цыпленок)
+cock, rooster_петух
+pigeon, dove_голубь
+sparrow_воробей
+crow_ворона
+animal_животное
+domestic animal_домашнее животное
+wild animal_дикое животное
+cow_корова
+bull_бык
+horse_лошадь
+pig_свинья
+cat_кот
+dog_собака
+mouse_мышь
+wolf_волк
+fox_лиса
+bear_медведь
+deer_олень
+lion_лев
+rabbit_кролик
+growth_рост
+cell_клетка (биол.)
+variety_разнообразие
+evolution_эволюция
+fish_рыба
+egg_яйцо
+male (biol.)_самец
+female (biol.)_самка
+wing_крыло
+creature_существо
+tree_дерево
+root_корень
+leaf_лист растения
+plant_растение
+forest_лес
+flower_цветок
+seed_семя
+grass_трава
+season_время года
+winter_зима
+spring_весна
+summer_лето
+fall (Am.) autumn (Br.)_осень
+January_январь
+February_февраль
+March_март
+April_апрель
+May_май
+June_июнь
+July_июль
+August_август
+September_сентябрь
+October_октябрь
+November_ноябрь
+December_декабрь
+Monday_понедельник
+Tuesday_вторник
+Wednesday_среда
+Thursday_четверг
+Friday_пятница
+Saturday_суббота
+Sunday_воскресенье
+week_неделя
+day_день
+night_ночь (вечер)
+month_месяц
+hour_час
+minute_минута
+morning_утро
+moment_момент
+century_век
+period_период
+future_будущее
+second_секунда
+time_время
+year_год
+decade_десять лет
+evening_вечер
+past_прошлое
+beginning_начало
+date_дата
+era_эра
+present (time)_настоящее
+afternoon_день (время суток)
+life_жизнь
+death_смерть
+birth_рождение
+soul_душа
+funeral_похороны
+fate_судьба
+wisdom_мудрость
+lifetime_жизнь (продолжительность всей  жизни)
+boy_мальчик
+girl_девушка
+guy_парень
+baby_малыш
+adult_взрослый
+youth_молодежь
+childhood_детство
+teenager (сокр. teen)_подросток
+man_человек (мужчина)
+woman_женщина
+child_ребенок
+kid_ребенок
+twins_близнецы
+identity_личность (установленная личность)
+person_человек, персона
+individual_личность (индивид)
+human_человек
+beauty_красотка
+personality_личность (персоналия)
+gentleman_джентльмен
+lady_леди
+name (first name)_имя
+last name (Am) surname (Br)_фамилия
+date of birth_дата рождения
+birthday_день рождения
+sex_пол, секс
+female (person)_женщина
+male (person)_мужчина
+talent_талант
+risk_риск
+ability_способность
+height_рост
+weight_вес
+age_возраст
+hand_рука (кисть)
+eye_глаз
+body_тело
+face_лицо
+heart_сердце
+arm_рука (полностью)
+hair_волосы
+mouth_рот
+neck_шея
+lips_губы
+head_голова
+back_спина
+foot_нога (ступня)
+leg_нога (полностью)
+shoulder_плечо
+skin_кожа
+finger_палец
+brain_мозг
+ear_ухо
+bone_кость
+knee_колено
+breast_грудь
+muscle_мышца
+chest_грудь
+nose_нос
+tooth_зуб
+throat_горло
+stomach_желудок
+hip_бедро
+cheek_щека
+voice_голос
+look_взгляд
+breath_дыхание
+sight_зрение
+hearing_слух
+tongue_язык (биол.)
+gesture_жест
+step_шаг
+sleep_сон
+profile_профиль
+tear_слеза
+sense_чувство (физ.)
+touch_прикосновение
+number_число
+digit_цифра
+value_значение (матем.)
+plus_плюс
+minus_минус
+fraction_дробь
+odd number_нечетное число
+even number_четное число
+problem_задача (арифм.)
+answer_ответ
+point_точка
+brackets_скобки (матем.)
+percent_процент
+half_половина
+quarter_четверть
+degree_степень
+addition_сложение
+subtraction_вычитание
+multiplication_умножение
+division_деление
+equality_равенство
+line_линия
+shape_форма, геом. Тело
+figure_фигура
+form_форма
+level_уровень
+circle_круг
+square_квадрат
+triangle_треугольник
+rectangle_прямоугольник
+sphere_сфера
+cube_куб
+cone_конус
+majority_большинство
+minority_меньшинство
+increase_увеличение
+decrease_уменьшение
+combination_комбинация, сочетание
+dimension_измерение (пространств.)
+chart_схема
+table_таблица
+statistics_статистика
+pair_пара
+unit_единица (напр. измерения)
+amount, number_количество
+force_сила
+power_энергия
+strength_сила
+speed_скорость
+size_размер
+length_длина
+color (colour)_цвет
+shape (form)_форма
+temperature_температура
+capacity_вместимость
+volume_объем
+mass_масса
+weight_вес
+smell_запах
+pace_темп
+contrast_контраст
+absence_отсутствие
+presence_присутствие
+state_состояние (напр. вещества)
+noise_шум
+resistance_сопротивление
+tension_напряжение, натяжение
+kilogram_килограмм
+meter_метр
+inch_дюйм
+mile_миля
+pound_фунт
+foot_фут
+material_материал
+wood_древесина, дерево
+glass_стекло
+plastic_пластик
+metal_металл
+steel_сталь
+plank_доска
+board_доска, панель
+element_элемент
+brick_кирпич
+lead_свинец
+chip_осколок (кусочек)
+substance_вещество
+iron_железо
+mixture_смесь
+fiber_волокно
+chemical_химикат
+tissue (biol.)_ткань (биол.)
+mix_смесь
+paper_бумага
+piece (of something)_кусок чего-либо
+bit (of something)_частичка
+process_процесс
+model_модель
+impact_удар (столкновние), воздействие
+hole_отверстие
+basis_основа
+engine_двигатель
+function_функция
+damage_повреждение
+component_компонент
+chain_цепь
+tear_разрыв (прореха)
+improvement_улучшение
+core_ядро
+rise_увеличение (рост)
+link_соединение (звено)
+release_выпуск (выход)
+hit_удар (попадание)
+transition_переход
+cycle_цикл
+exposure (to something)_подверженность  (воздействию чего-то)
+phase_фаза
+reduction_сокращение
+shift_сдвиг
+wire_провод
+smoke_дым
+shell_оболочка
+gear_механизм (аппарат), шестерня
+barrier_барьер
+chamber_полость (палата)
+mechanism_механизм
+destruction_разрушение
+electricity_электричество
+expansion_расширение
+decline_спад (склон)
+concentration_концентрация
+reflection_отражение
+mode_режим (работы чего-то)
+platform_платформа
+hold_удержание, хватка
+segment_сегмент
+tank_бак (танк)
+gap_разрыв (пробел)
+layer_слой
+power_энергия
+standard_стандарт
+part_часть
+effect_эффект
+surface_поверхность
+portion_порция
+movement_движение
+direction_направление
+edge_край
+fall_падение
+access_доступ
+turn_поворот
+distance_расстояние
+return_возвращение
+middle_середина
+path_путь, тропа
+move_ход, движение
+location_местонахождение, место
+front_передняя часть
+bottom_дно (нижняя часть)
+trail_тропа
+limit_предел, ограничение
+zone_зона
+motion_движение
+row_ряд
+length_длина
+width_ширина
+coverage_охват (покрытие)
+passage_проезд (проход)
+advance_продвижение
+arrangement_расположение
+drop_падение
+depth_глубина
+boundary_граница (предел)
+course_курс
+way_путь (способ)
+place_место
+point_точка (пункт)
+area_местность, регион, район
+side_сторона
+end_конец
+center_центр
+absence_отсутствие
+presence_наличие
+corner_угол
+problem_проблема
+fact_факт
+issue_вопрос (проблема)
+information_информация
+result_результат
+reason_причина
+decision_решение
+matter_дело (вопрос)
+type_тип
+rule_правило
+goal_цель
+factor_фактор
+approach_подход (к чему-либо)
+option_вариант (опция)
+version_версия
+solution_решение
+mistake_ошибка
+category_категория
+finding_находка, вывод, информация, полученная в результате исследования
+search_поиск
+importance_важность
+cause_причина
+effect_следствие, эффект
+conclusion_вывод, заключение
+notion_идея (замечание), представление о чем-то
+definition_определение
+priority_приоритет
+exception_исключение
+feature_особенность
+comparison_сравнение
+relation_отношение, связь
+criteria_критерий
+idea_идея
+mind_разум, сознание
+attention_внимание
+thought_мысль
+memory_память
+opinion_мнение
+vision_видение
+intelligence_интеллект, разведданные (разведка)
+focus_центр, сосредоточение
+will (power of will)_воля (психол.)
+thinking_мышление
+perception_восприятие
+doubt_сомнение
+reflection_размышление
+insight_прозрение
+imagination_воображение
+capability_способность
+fantasy_фантазия
+sense_смысл
+interest_интерес
+meaning_значение
+interpretation_интерпретация
+assumption_предположение
+perspective_точка зрения, взгляд
+planning_планирование
+recognition_узнавание
+consideration_рассмотрение
+intention_намерение
+awareness_осведомленность
+controversy_противоречие, несогласие по вопросу, бурная дискуссия
+distinction_различие
+variation_разновидность, вариация, изменение в чем-либо
+list_список
+expectation_ожидание
+initiative_инициатива, преимущество
+psychology_психология
+potential_потенциал
+choice_выбор
+burden_бремя
+significance_значимость
+experience_опыт
+subject_субъект, предмет, учебный предмет
+behavior_поведение
+concern_забота
+truth_правда
+lie_неправда (ложь)
+purpose_цель
+honor_честь
+objective_цель
+feeling_чувство
+fear_страх
+dream_мечта, сон
+hope_надежда
+drive_воодушевление (прилив сил)
+desire_желание (страсть)
+confidence_уверенность
+depression_депрессия
+passion_страсть
+habit_привычка
+anger_гнев
+anxiety_тревожность
+impression_впечатление
+terror_ ужас
+satisfaction_удовлетворение
+pride_гордость
+joy_радость
+fault_вина
+emotion_эмоции
+mood_настроение
+stress_стресс
+attitude_отношение (к чему-то)
+pleasure_удовольствие
+luck_удача
+love_любовь
+friendship_дружба
+family_семья
+parents_родители
+mother_мать
+father_отец
+mom (Am.), mum (Br.)_мама
+dad_папа
+grandmother_бабушка
+grandfather_дедушка
+brother_брат
+sister_сестра
+cousin_кузен (двоюродные братья и сестры)
+wife_жена
+husband_муж
+son_сын
+daughter_дочь
+baby_маленький ребенок
+children, kids_дети
+teenager_подросток
+aunt_тетя
+uncle_дядя
+niece_племянница
+nephew_племянник
+girlfriend_девушка (подруга)
+boyfriend_парень (бойфренд)
+friend_друг
+relatives_родственники
+engagement_помолвка
+marriage_женитьба
+wedding_свадьба
+fiancée,bride_невеста
+fiancé, groom (bridegroom)_жених
+relationships_отношения
+love_любовь
+friendship_дружба
+date_свидание
+proposal_предложение
+affair_любовная связь (роман)
+lover_любовник, любовница
+understanding_понимание
+jealousy_ревность
+betrayal_предательство
+argument_спор, ссора
+quarrel_ссора
+divorce_развод
+influence_влияние
+smile_улыбка
+visit_визит
+respect_уважение
+surprise_сюрприз
+fun_веселье
+guest_гость
+neighbor_сосед
+stranger_незнакомец
+team_команда
+support_поддержка
+help_помощь
+partner_партнер
+participant_участник
+gift_подарок (дар)
+colleague_коллега
+present_подарок
+good_польза (добро)
+cooperation_сотрудничество
+challenge_вызов, трудная задача
+difficulty_трудность
+struggle_борьба
+resolution_решение (задачи, проблемы)
+competition_конкуренция
+assistance_помощь
+opponent_оппонент
+trouble_беда
+conflict_конфликт
+criticism_критика
+request_запрос
+participation_участие
+trust_доверие
+complaint_жалоба
+consequence_последствие
+thanks_благодарности
+contribution_вклад
+circumstance_обстоятельство
+offer_предложение
+occasion_случай (возможность)
+drawing_рисунок
+art_искусство, изобразительное искусство (и произведения)
+event_мероприятие
+image_изображение
+picture_картина, фото
+artist_художник
+design_дизайн, разработка
+style_стиль
+painting_живопись, картина
+camera_фотокамера, видеокамера
+photo_фото
+culture_культура
+background_фон, опыт, происхождение человека
+photograph_фотография
+exhibition_выставка
+portrait_портрет
+paint_краска
+pencil_карандаш
+charcoal_уголь (худ.)
+brush_кисть
+pen_авторучка
+movie_фильм
+film_фильм (кино\фотопленка)
+play_пьеса
+audience_аудитория (зрители)
+video_видео
+actor_актер
+series_серия, сериал
+stage_сцена (место)
+dancer_танцор
+studio_студия
+theater_театр
+viewer_зритель
+script (screenplay)_сценарий
+celebrity_знаменитость
+scene_сцена
+song_песня
+band_группа (муз.)
+singer_певец
+musician_музыкант
+performance_выступление
+dance_танец
+concert_концерт
+bell_колокольчик (колокол)
+string_струна
+story_история
+guitar_гитара
+piano_пианино
+music_музыка
+role_роль
+show_шоу
+book_книга
+author_автор
+page_страница
+language_язык
+article_статья (напр. в газете)
+character_характер (персонаж)
+reader_читатель
+text_текст
+title_название
+critic_критик
+context_контекст
+writing_написание, почерк, процесс письма
+literature_литература
+reading_чтение
+novel_роман
+tale_сказка, история
+story_история, рассказ
+mystery_тайна, мистика
+publication_публикация
+poem_стихотворение
+essay_эссе, сочинение
+drama_драма, телевизионная или театральная постановка
+fiction_вымысел
+journal_дневник (журнал)
+episode_эпизод
+adventure_приключение
+tragedy_трагедия
+poet_поэт
+poetry_поэзия
+plot_сюжет
+writer_писатель
+god_бог
+devil_дьявол
+belief_вера
+religion_религия
+paradise_рай
+hell_ад
+faith_вера
+prayer_молитва
+priest_священник
+heaven_небеса
+Bible_Библия
+sin_грех
+church_церковь
+creation_создание (акт/процесс создания)
+being_бытие
+spirit_дух
+existence_существование
+christian_христианин
+muslim_мусульманин
+buddhist_буддист
+player_игрок
+sport_спорт
+race_гонка
+seat_сиденье (место)
+ball_мяч
+score_счет (в игре)
+turn_ход (напр. в игре)
+fan_болельщик (поклонник)
+run (running)_бег
+exercise_упражнение
+workout, training_тренировка
+athlete_спортсмен
+basketball_баскетбол
+football_футбол
+soccer_футбол
+hockey_хоккей
+chess_шахматы
+league_лига
+championship_чемпионат
+round_раунд
+match_матч
+champion_чемпион
+tournament_турнир
+game_игра
+stake, bet_ставка
+winner_победитель
+loser_проигравший
+question_вопрос
+note_примечание, заметка, записка
+statement_заявление
+conference_конференция
+detail_деталь (подробность)
+comment_комментарий
+advice_советы, совет
+theme, topic_тема
+appeal_обращение
+secret_секрет
+tip_совет
+tone_тон
+promise_обещание
+sentence_предложение (лингв.)
+explanation_объяснение
+alternative_альтернатива
+interaction_взаимодействие
+warning_предупреждение
+description_описание
+exposure (of a secret)_раскрытие (чего-то тайного)
+joke_шутка
+negotiation_переговоры
+involvement_участие (вовлеченность)
+emphasis_акцент (ударение) на что-то
+suggestion_предложение (т.е. предложить что-то)
+approval_подтверждение
+phrase_фраза
+dispute_спор
+dialogue_диалог
+lie_ложь
+introduction_введение, представление (при знакомстве)
+representation_представление, представительство
+instance_пример
+letter_письмо
+response_ответ
+answer_ответ
+talk_обсуждение (разговор)
+discussion_обсуждение
+debate_дебаты
+conversation_разговор
+argument_аргумент
+exchange_обмен
+expression_выражение
+abuse_плохое отношение, причинение вреда
+study_изучение (исследование)
+campus_кампус
+curriculum_учебный план
+laboratory (lab)_лаборатория
+graduate_выпускник
+mark (US), grade (UK)_оценка, отметка
+library_библиотека
+discipline_дисциплина
+major_специальность (в учебе)
+educator_педагог
+testing_тестирование
+specialist_специалист
+teacher_учитель
+professor_профессор
+school_школа
+student_студент
+history_история
+education_образование
+college_колледж
+class_класс, урок
+test_тест
+degree_степень (в т.ч. ученая степень)
+training_обучение
+knowledge_знание
+coach_тренер
+university_университет
+lesson_урок
+failure_неудача
+learning_изучение, процесс учебы
+classroom_класс (помещение)
+session_сеанс, период работы, деятельности, учебы
+preparation_подготовка
+draft_набросок (черновик)
+set_набор
+research_исследование
+term_термин
+professor_профессор
+science_наука (естественная)
+expert_эксперт
+theory_теория
+method_метод
+pattern_модель, схема
+scientist_ученый
+speech_речь
+concept_концепция, идея
+researcher_исследователь
+scale_шкала
+survey_опрос
+sample_образец
+technique_техника (прием)
+principle_принцип
+aspect_аспект, сторона
+experiment_эксперимент
+scholar_ученый (исследователь)
+observation_наблюдение
+error_ошибка
+discovery_открытие
+philosophy_философия
+phenomenon_феномен, явление
+historian_историк
+origin_происхождение
+satellite_спутник
+telescope_телескоп
+object_объект
+government_правительство
+right_право
+power_власть
+member_член
+community_сообщество
+president_президент
+party_партия
+leader_лидер
+official_официальное лицо
+administration_администрация
+campaign_кампания
+terrorism_терроризм
+election_выборы
+authority_полномочия (власть)
+peace_мир (мирное время)
+politics_политика
+candidate_кандидат
+institution_учреждение
+vote_голос (на выборах)
+citizen_гражданин
+reform_реформа
+act_акт
+freedom_свобода
+department_департамент
+crisis_кризис
+committee_комитет
+voter_избиратель
+democracy_демократия
+poll_опрос
+minority_меньшинство
+majority_большинство
+union_союз, профсоюз
+regulation_регулирование, правила
+politician_политик
+governor_губернатор
+rating_рейтинг
+regime_режим (правления)
+opposition_оппозиция
+minister_министр
+intervention_вмешательство
+coalition_коалиция
+independence_независимость
+king_король
+convention_съезд
+revolution_революция
+senator_сенатор
+founder_основатель
+council_совет (совещание)
+activist_активист
+people_люди (народ)
+state_государство, штат
+group_группа
+country_страна, сельская местность
+nation_нация, народ, страна
+society_общество
+land_земля (территория), страна
+population_население
+region_регион
+public_общественность
+status_статус
+farm_ферма
+folk_народ
+border_граница
+map_карта
+holiday_праздник
+immigrant_иммигрант
+territory_территория
+volunteer_доброволец
+symbol_символ
+immigration_иммиграция
+supporter_сторонник
+strike_забастовка
+speaker_спикер (выступающий с речью)
+refugee_беженец
+cabinet_кабинет министров
+spokesman_докладчик, оратор
+slave_раб
+terror_террор, ужас
+elite_элита
+conservative_консерватор
+protest_протест
+shelter_приют
+tribe_племя
+ally_союзник
+army_армия
+military_вооруженные силы, военные
+enemy_враг
+combat_сражение
+strategy_стратегия
+tactics_тактика
+soldier_солдат
+officer_офицер, должностное лицо
+troops_войска (пехота)
+victory_победа
+defeat_поражение
+hero_герой
+commander_командир
+flag_флаг
+banner_знамя
+rank_звание
+war_война
+battle_битва
+shot_выстрел
+fight_борьба (драка)
+bomb_бомба
+bullet_пуля
+shell_снаряд
+missile_ракета, реактивный снаряд
+ammunition (сокр. ammo)_боеприпасы
+shooting_стрельба
+casualty_жертва
+weapon_оружие
+gun_пистолет, оружие
+machine gun_пулемет
+rifle_винтовка
+armor_броня
+attack_атака
+general_генерал
+division_дивизия (подразделение)
+unit_войсковая единица
+price_цена
+tax_налог
+cost_стоимость
+product_продукт (товар)
+organization_организация
+economy_экономика
+bank_банк
+agency_агентство
+store_магазин (склад)
+fund_фонд
+stock _акция
+loss_ущерб
+trade_торговля
+deal_сделка
+bill_счет (напр. в ресторане)
+benefit_выгода
+firm_фирма
+management_управление (руководящий состав)
+charge_плата (цена)
+property_собственность
+base_база, основание
+owner_владелец
+investment_инвестиции
+consumer_потребитель
+budget_бюджет
+agreement_соглашение
+capital_капитал
+account_счет (в банке)
+credit_кредит
+income_доход
+insurance_страхование
+sales_продажи
+contract_контракт
+demand_спрос (требование)
+share_доля, акция
+competition_конкуренция
+claim_претензия, заявление
+supply (econom.)_предложение (эконом.)
+supply (provision)_обеспечение (материальное)
+market_рынок
+assessment_оценка
+revenue_доход
+loan_кредит (заем)
+investor_инвестор
+profit_прибыль
+cash_наличные
+advertisement (сокр. ad)_реклама (объявление)
+real estate_недвижимость
+branch_филиал
+fee_плата (вознаграждение)
+division_подразделение (административное\политическое)
+debt_долг (в значении "денежный долг")
+check_чек
+check_проверка
+welfare_благосостояние, пособие по безработице
+representative_представитель
+association_ассоциация
+asset_актив (вклад)
+payment_оплата
+expense_расход
+funding_финансирование
+savings_сбережения
+gain_прибыль
+sale_продажа (распродажа)
+foundation_основание (создание чего-то)
+goods_товары
+marketing_маркетинг
+poverty_бедность
+spendings_расходы
+evaluation_оценка
+commission_комиссия
+deficit_дефицит
+estimate_оценка
+enterprise_предприятие
+employment_трудовая занятость
+wealth_богатство
+brand_бренд
+stake_акция
+corporation_корпорация
+provision_снабжение, обеспечение
+fortune_состояние (денежн.)
+shopping_покупка товаров
+finance_финансы
+transfer_передача, перевод (напр. денежный)
+treaty_договор (между странами), переговоры
+licence (Br.) license (Am.)_лицензия
+establishment_основание (создание чего-то)
+partnership_партнерство
+buyer_покупатель
+stability_стабильность
+customer_клиент, покупатель
+client_клиент
+package_посылка
+business_бизнес
+resource_ресурс
+oil_нефть
+gas_газ (бензин)
+industry_промышленность
+technology_технология
+energy_энергия
+plant_завод
+machine_машина (напр.станок)
+facility_промышленное здание
+equipment_оборудование
+manufacturer_производитель
+mine_шахта
+factory_фабрика
+engineering_инженерия
+storage_хранилище, хранение
+production_производство
+silver_серебро
+gold_золото
+crop_урожай
+maker_производитель
+waste_отходы
+case_дело (случай)
+company_компания
+work_работа
+money_деньги
+job_работа
+service_услуга (обслуживание)
+office_офис
+policy_политика (в знач. стратегия, линия поведения)
+plan_план
+control_контроль
+report_отчет (доклад)
+site_объект (напр. строительный)
+performance_производительность
+effort_усилие (труд)
+action_действие
+activity_деятельность
+practice_практика
+skill_умение, навык
+order_порядок, приказ, заказ
+meeting_встреча
+operation_операция
+interview_интервью (собеседование)
+quality_качество
+success_успех
+task_задача
+break_перерыв
+mission_миссия
+labor_труд
+weekend_уикэнд, выходные (сб, вс)
+attempt_попытка
+day off_выходной день
+lack (of something)_нехватка
+target_цель
+tool_инструмент
+leadership_руководство (лидерство)
+procedure_процедура (порядок выполнения действий)
+document_документ
+contacts_контактные данные
+progress_прогресс
+application_заявка
+instruction_инструкция
+instrument_инструмент
+file_файл, документ, личное дело
+outcome_итог (результат)
+duty_долг (должностная обязанность)
+manner (in that manner)_способ выполнения действия
+requirement_требование
+copy_экземпляр книги, копия чего-либо
+tips (money)_чаевые
+achievement_достижение
+characteristic_характеристика, черта
+signal_сигнал
+agenda_повестка дня
+schedule_график
+print_печать (печатная продукция), отпечаток
+stamp_печать, штамп
+pass_пропуск
+employer_работодатель
+prospect_перспектива
+entry_запись (напр.в журнале)
+disorder_беспорядок
+distribution_распределение, распространение
+command_команда (приказ)
+veteran_ветеран
+recovery_восстановление
+salary_зарплата
+observer_наблюдатель
+award_награда
+routine_заведенный порядок (определенная последовательность действий)
+wage_зарплата
+pay_оплата
+recommendation_рекомендация
+delivery_доставка
+craft_ремесло
+headquarters_штаб, главный офис
+earnings_заработки
+load, cargo_груз
+sheet_лист (бумаги)
+possibility_возможность
+advantage_преимущество
+project_проект
+use_использование
+reputation_репутация
+career_карьера
+director_директор, режиссер
+position_положение (должность )
+worker_работник
+staff_персонал
+lawyer_адвокат
+executive_управленец, топ-менеджер
+manager_менеджер
+employee_сотрудник
+agent_агент
+farmer_фермер
+analyst_аналитик
+engineer_инженер
+secretary_секретарь
+physician_врач
+journalist_журналист
+designer_дизайнер
+retirement_выход на пенсию
+consultant_консультант
+doctor_врач
+teacher_учитель
+driver_водитель
+cook_повар
+artist_художник
+administrator_администратор
+CEO_генеральный директор
+deputy_заместитель
+assistant_ассистент
+correspondent_корреспондент
+counselor_советник, консультант
+editor_редактор, главный редактор
+producer_производитель (продюсер)
+master_мастер (капитан корабля)
+boss_босс
+personnel_персонал
+dealer_дилер, продавец
+head (of something)_руководитель
+reporter_репортер
+chairman_председатель
+chief_шеф (глава)
+adviser_советник
+profession_профессия
+professional_профессионал
+city_большой город
+town_маленький город
+road_дорога
+building_здание
+street_улица
+bar_бар
+station_станция
+trip_поездка
+hotel_отель
+yard_двор
+neighborhood_район (окрестность)
+park_парк
+village_деревня
+resident_житель
+club_клуб
+district_район
+crowd_толпа
+block_квартал
+shop_магазин
+construction_строительство
+tour_тур
+restaurant_ресторан
+bridge_мост
+traffic_дорожное движение
+museum_музей
+emergency_чрезвычайная ситуация
+airport_аэропорт
+address_адрес
+beach_пляж
+opening_открытие
+route_маршрут
+post office_почта
+settlement_поселение
+parking lot (Am.), car park (Br.)_парковка
+stop_остановка
+tower_башня
+mayor_мэр
+highway_шоссе
+bench_скамья
+sightseeing_осмотр достопримечательностей
+column_колонна
+resort_курорт
+car_автомобиль
+ship_корабль
+plane_самолет
+driver_водитель
+boat_лодка
+truck_грузовик
+vehicle_автомобиль
+flight_полет
+bus_автобус
+fuel_топливо
+engine_двигатель
+ticket_билет
+train_поезд
+crew_экипаж
+accident_авария
+pilot_пилот
+wheel_колесо
+ride_поездка
+passenger_пассажир
+airline_авиакомпания
+bike_велосипед (мотоцикл)
+transportation_транспортировка
+deck_палуба
+aircraft_самолет, воздушное судно
+crash_авария
+vessel_судно
+port_порт
+victim_жертва
+threat_угроза
+felony_преступление (тяжелое, уголовное)
+misdemeanor_мелкое преступление
+attorney_адвокат
+judge_судья
+safety_безопасность
+investigation_расследование
+murder_убийство
+justice_справедливость
+danger_опасность
+jury_жюри (присяжные)
+judgment_суждение (решение суда)
+witness_свидетель
+incident_инцидент
+legislation_законодательство, законы
+sentence_приговор
+prosecutor_прокурор
+investigator_следователь
+lawyer_адвокат
+suicide_самоубийство
+enforcement_принуждение к исполнению закона
+prisoner_заключенный, пленник
+inmate_заключенный
+jail_тюрьма
+killer_убийца
+gang_банда
+advocate_адвокат
+lawsuit_иск
+testimony_свидетельство, показания
+penalty_карательная мера
+offense_правонарушение
+terrorist_террорист
+assault_нападение
+proof_доказательство
+violation_нарушение
+crime_преступление
+cell (prison)_камера (тюремная), клетка
+trial_испытание (судебный процесс)
+prison_тюрьма
+evidence_улика
+gun_пистолет
+protection_защита
+court_суд
+security_безопасность (охрана)
+officer_офицер, должностное лицо
+cop_коп (полицейский)
+police_полиция
+guard_охранник
+law_закон
+will_завещание
+violence_насилие
+responsibility_ответственность
+home_дом
+room_комната
+house_дом (здание)
+door_дверь
+view_вид
+table_стол
+court_дворик
+wall_стена
+window_окно
+floor_пол (этаж)
+bed_кровать
+chair_стул
+garden_сад
+kitchen_кухня
+bedroom_спальня
+living room_гостиная
+bathroom_туалет, ванная
+basement_подвал
+fan_вентилятор
+spot_пятно
+screen_экран
+flat (Br.) apartment (Am.)_квартира
+living_проживание
+key_ключ
+pool_бассейн
+desk_стол (письменный, рабочий)
+visitor_посетитель
+guest_гость
+hall_зал
+mirror_зеркало
+telephone_телефон
+household_домашнее хозяйство
+gate_ворота
+roof_крыша
+housing_жилье
+dormitory, dorm_общежитие (студенческое)
+pot_горшок
+knife_нож
+recipe_рецепт
+roll_рулон
+clock_часы (настенные)
+ceiling_потолок
+fence_забор
+furniture_мебель
+wardrobe_шкаф (для одежды)
+stair_ступенька, лестница
+entrance_вход
+exit_выход
+oven_печь
+comfort_комфорт
+shelf_полка
+can_консервная банка
+lawn_газон
+case_кейс (футляр)
+card_карточка
+stuff_вещи, хлам, барахло
+box_коробка
+item_предмет
+collection_коллекция
+tape_лента
+cover_крышка, покрытие, обложка
+lid_крышка
+bowl_чаша
+frame_рамка
+album_альбом
+tube_тюбик (трубка)
+pack_упаковка
+a bunch of_куча чего-то
+match_спичка
+cigarette_сигарета
+thing_вещь
+glass_стакан
+breakfast_завтрак
+lunch_обед (ланч)
+dinner_обед
+supper_ужин
+food_еда
+coffee_кофе
+wine_вино
+salt_соль
+fat_жир
+sugar_сахар
+fruit_фрукты
+meal_еда (блюдо)
+bottle_бутылка
+meat_мясо
+beer_пиво
+pepper_перец
+vegetables_овощи
+dish_блюдо
+cream_сливки
+drink_напиток
+taste_вкус
+milk_молоко
+cheese_сыр
+bread_хлеб
+tea_чай
+alcohol_алкоголь
+potato_картофель
+sauce_соус
+juice_сок
+beans_бобы
+tomato_помидор
+butter_сливочное масло
+spoon_ ложка
+fork_вилка
+knife_нож
+corn_кукуруза
+cake_пирог, торт
+onion_лук
+ingredient_ингредиент
+chocolate_шоколад
+apple_яблоко
+rice_рис
+salad_салат
+honey_мед
+garlic_чеснок
+cup_чашка
+plate_тарелка
+shoes_обувь
+clothes_одежда
+ring_кольцо
+dress_платье
+shirt_рубашка
+fashion_мода
+tie_галстук
+hat_шляпа
+coat_пальто
+jacket_куртка (пиджак)
+cap_кепка
+boots_ботинки
+belt_ремень
+watch_наручные часы
+label_этикетка
+button_кнопка (пуговица)
+pants, trousers_брюки
+glasses_очки
+bag_сумка
+purse_дамская сумочка, кошелек
+suit_костюм
+pocket_карман
+skirt_юбка
+T-shirt_футболка
+zip_молния (застежка)
+gloves_перчатки
+health_здоровье
+care_уход
+drug_лекарство (наркотик)
+doctor_доктор
+patient_пациент
+hospital_больница
+blood_кровь
+treatment_лечение
+pain_боль
+disease_болезнь
+cancer_рак (болезнь)
+pills_таблетки
+medicine_медицина, лекарство
+cut_порез
+injury_травма
+aid (first aid)_помощь (напр. первая помощь)
+surgery_хирургия (операция)
+nurse_медсестра (сиделка)
+abortion_аборт
+diet_диета
+therapy_терапия
+symptom_симптом
+shock_шок
+illness_болезнь
+clinic_клиника
+protein_белок
+survival_выживание
+infection_инфекция
+virus_вирус
+disability_инвалидность
+insurance_страховка
+system_система
+programme (Br.) program (Am.)_программа
+phone_телефон
+data_данные
+computer_компьютер
+call_телефонный звонок
+message_сообщение
+network_компьютерная сеть
+radio_радио (рация)
+communication_связь (коммуникация)
+connection_подключение (связь)
+Internet_интернет
+device_устройство
+application_приложение, программа
+hardware_компьютерное "железо"
+software_программное обеспечение
+email_электронная почта
+settings_настройки
+user_пользователь
+resolution_разрешение (экрана)
+chip_чип (комп.)
+link_ссылка (в интернете)
+display_дисплей
+keyboard_клавиатура
+laptop_ноутбук
+PC (personal computer)_ПК, персональный компьютер
+tablet_планшетный компьютер
+mail_почта
+net_сеть
+content_содержание (контент)
+old_старый
+young_молодой
+early_ранний
+late_поздний
+recent_недавний
+current_текущий (нынешный)
+past_прошедший
+modern_современный
+senior_старший
+future_будущий
+previous_предыдущий
+next_следующий
+annual_ежегодный
+following_последующий
+daily_ежедневный
+primary_первичный
+ancient_древний
+initial_начальный
+contemporary_современный
+present_настоящий (в наст. времени), присутствующий
+long-term_долгосрочный
+junior_младший
+brief_краткий
+immediate_немедленный
+constant_постоянный
+permanent_постоянный
+regular_регулярный (обычный)
+ongoing_продолжающийся
+sudden_внезапный
+sure_уверенный
+able_способный (сделать что-то, быть кем-то)
+human_человеческий
+strong_сильный
+free_свободный
+certain_уверенный
+personal_личный
+single_одинокий (неженатый\незамужняя)
+private_личный (напр. личная жизнь)
+common_обычный, распространенный
+dead_мертвый
+happy_счастливый
+serious_серьезный
+ready_готовый
+simple_простой
+religious_религиозный
+individual_индивидуальный
+tough_крепкий, сильный
+positive_положительный
+successful_успешный
+concerned_обеспокоенный
+willing_желающий (готовый к чему-то)
+interested_заинтересованный
+responsible_ответственный
+afraid_испуганный
+native_родной (язык), коренной (житель)
+aware_знающий (осведомленный)
+active_активный
+chief_главный
+cool (slang)_крутой (клевый)
+direct_прямой
+famous_известный
+familiar_знакомый
+male_мужской
+alive_живой
+strange_странный
+married_женатый (замужняя)
+alone_одинокий
+sick_больной
+smart_умный
+mean_подлый (злой)
+surprised_удивленный
+busy_занятый
+careful_осторожный
+tired_уставший
+proud_гордый
+healthy_здоровый
+creative_творческий
+lucky_везучий
+silent_молчаливый
+leading_ведущий
+glad_довольный
+fat_полный (о фигуре)
+slim_стройный (о фигуре)
+lean_стройный, тощий (о фигуре)
+nervous_нервный
+pretty_симпатичная (о женщине)
+handsome_симпатичный (о мужчине)
+sensitive_чувствительный
+reasonable_разумный
+aggressive_агрессивный
+mad_безумный
+pregnant_беременная
+stupid_глупый
+blind_слепой
+friendly_дружелюбный
+innocent_невиновный
+attractive_привлекательный
+intellectual_интеллектуальный
+confident_уверенный
+pale_бледный
+ill_больной
+scared_испуганный
+capable_способный
+fellow_товарищеский
+advanced_продвинутый (расширенный)
+favorite_любимый
+wonderful_чудесный
+emotional_эмоциональный
+angry_сердитый
+crazy_сумасшедший
+interesting_интересный
+fun_веселый
+spiritual_духовный
+dramatic_драматичный
+sad_грустный
+amazing_удивительный
+psychological_психологический
+surprising_удивительный
+exciting_увлекательный (захватывающий)
+true_правдивый, настоящий
+wrong_неверный, неправильный
+nice_хороший, милый, приятный
+popular_популярный
+dangerous_опасный
+moral_моральный
+negative_отрицательный (негативный)
+fair_честный
+funny_смешной
+correct_правильный
+just_справедливый
+terrible_ужасный
+criminal_преступный
+guilty_виновный
+illegal_незаконный
+violent_жестокий (насильственный)
+holy_святой
+false_ложный
+honest_честный
+similar_похожий
+other_другой
+different_другой (отличный от чего-то)
+various_различные
+general_общий (обычный)
+special_особенный (специальный)
+specific_конкретный
+only_единственный
+final_окончательный
+average_средний
+unique_уникальный
+equal_равный
+typical_типичный
+standard_стандартный
+rare_редкий
+separate_отдельный
+common_общий
+multiple_многочисленные
+basic_базовый
+complete_полный (завершенный)
+diverse_разнообразный
+classic_классический
+universal_универсальный
+fine_изящный (отличный)
+dark_темный
+beautiful_красивый
+light_светлый, легкий
+bright_яркий
+warm_теплый
+sweet_сладкий
+visible_видимый (заметный)
+hot_острый, горячий
+ugly_отвратительный (о внешности)
+bitter_горький
+supposed_предполагаемый, подразумеваемый
+appropriate_подходящий (уместный)
+relevant_релевантный (имеющий отношение к чему-то)
+unknown_неизвестный
+secret_тайный
+consistent_последовательный
+alternative_альтернативный
+ultimate_окончательный
+comprehensive_всеобъемлющий
+new_новый
+good_хороший
+great_великий
+bad_плохой
+best_лучший
+used_использованный (подержанный)
+original_оригинальный
+normal_нормальный
+useful_полезный
+proper_тщательный (правильный)
+weak_слабый
+excellent_отличный
+extreme_экстремальный
+conventional_обычный, традиционный
+super_супер
+odd_странный
+simple_простой
+intense_интенсивный, плотный
+perfect_идеальный
+ideal_идеальный
+effective_эффективный
+high_высокий
+big_большой
+small_маленький
+large_большой
+long_длинный (долгий)
+little_маленький
+low_низкий
+short_короткий
+huge_огромный
+wide_широкий
+tiny_крошечный
+broad_широкий
+tall_высокий
+thin_тонкий
+thick_толстый
+increased_увеличившийся
+enormous_громадный
+massive_массивный, массовый
+narrow_узкий
+straight_прямой
+giant_гигантский
+flat_плоский
+square_квадратный
+tremendous_огромный
+round_круглый
+prominent_заметный (выступающий)
+clear_ясный
+open_открытый
+hot_горячий
+cold_холодный
+heavy_тяжелый
+tough_жесткий
+powerful_мощный
+quick_быстрый
+soft_мягкий
+quiet_тихий
+cool_прохладный
+dry_сухой
+slow_медленный
+solid_твердый
+sharp_острый (предмет, звук)
+live_живой (в т.ч в значении "прямой эфир")
+mass_массовый
+smooth_гладкий
+wet_мокрый
+fast_быстрый
+rough_грубый
+tight_плотный, узкий
+raw_сырой
+dirty_грязный
+still_замерший
+pure (water)_чистый (без примесей)
+steady_устойчивый
+stable_стабильный
+vulnerable_уязвимый
+loose_свободный (ненатянутый, напр. об одежде)
+accurate_точный
+whole_весь (целиком)
+full_полный
+physical_физический
+entire_весь (целиком)
+clean_чистый
+empty_пустой
+golden_золотой
+wooden_деревянный
+broken_сломанный
+visual_визуальный
+economic_экономический
+free_бесплатный
+financial_финансовый
+commercial_коммерческий
+rich_богатый
+expensive_дорогой
+cheap_дешевый
+competitive_конкурентоспособный
+valuable_ценный
+poor_бедный
+remaining_оставшийся
+double_двойной
+numerous_многочисленные
+increasing_увеличивающийся
+total (total number)_общий (напр.общее количество)
+single_одиночный, отдельный
+main_главный
+major_основной, более важный, крупный
+significant_значительный
+particular_специфический (особенный)
+critical_критический, решающий
+essential_важный (существенный)
+key_ключевой
+crucial_решающий (значимый)
+extraordinary_необычайный
+vital_жизненный (жизненно важный)
+substantial_существенный
+minor_незначительный, младший
+considerable_значительный
+extra_дополнительный
+actual_актуальный (настоящий)
+practical_практический
+fundamental_фундаментальный
+real_реальный, настоящий
+possible_возможный
+likely_вероятный
+necessary_необходимый
+opposite_противоположный
+supposed_предполагаемый
+potential_потенциальный
+appropriate_подходящий (уместный)
+unlikely_маловероятный
+important_важный
+national_национальный, государственный
+political_политический
+social_социальный, общественный
+public_общественный, государственный
+military_военный
+federal_федеральный
+international_международный
+foreign_иностранный
+democratic_демократический
+legal_законный (правовой)
+traditional_традиционный
+cultural_культурный
+civil_гражданский
+safe_безопасный
+nuclear_ядерный
+independent_независимый
+united_объединенный
+domestic_домашний (внутренний - в политич.смысле)
+corporate_корпоративный
+urban_городской
+regional_региональный
+ethnic_этнический
+conservative_консервативный
+industrial_промышленный
+historical_исторический
+presidential_президентский
+liberal_либеральный
+rural_сельский
+historic_исторический
+armed_вооруженный
+constitutional_конституционный
+strategic_стратегический
+defensive_оборонительный
+joint_совместный
+mutual_взаимный
+official_официальный
+hard_трудный
+easy_легкий
+difficult_трудный
+complex_сложный (комплексный)
+impossible_невозможный
+obvious_очевидный
+comfortable_удобный, комфортный
+convenient_удобный
+handy_удобный, сподручный
+complicated_сложный
+severe (pain)_жестокий (напр. условия, боль, погода)
+apparent_очевидный
+elementary_элементарный
+regular_регулярный (обычный)
+extra_дополнительный
+unusual_необычный
+formal_формальный
+ordinary_обычный
+usual_обычный
+so-called_так называемый
+assistant_вспомогательный, помощник
+additional_дополнительный
+remarkable_примечательный, выдающийся
+top_верхний (главный)
+right_правильный (правый)
+local_местный
+available_доступный
+central_центральный
+left_левый (оставшийся)
+close_близкий (закрытый)
+far_далекий
+deep_глубокий
+middle_средний
+western_западный
+southern_южный
+front_передний
+eastern_восточный
+northern_северный
+internal_внутренний
+upper_верхний
+vast_широкий (обширный)
+limited_ограниченный
+outside_внешний
+nearby_находящийся поблизости
+inner_внутренний
+biological_биологический
+distant_удаленный
+bottom_нижний
+remote_удаленный (дистанционный)
+external_внешний
+lost_потерянный
+extensive_обширный
+natural_природный (естественный)
+environmental_относящийся к окружающей среде
+fresh_свежий
+global_глобальный
+wild_дикий
+growing_растущий
+living_живущий
+racial_расовый
+solar_солнечный (напр. Солнечная система)
+existing_существующий
+medical_медицинский
+professional_профессиональный
+academic_академический
+educational_образовательный
+scientific_научный
+online_онлайн
+digital_цифровой
+electronic_электронный
+electric_электрический
+genetic_генетический
+chemical_химический
+working_работающий
+technical_технический
+musical_музыкальный
+literary_литературный
+clinical_клинический
+developing_находящийся в разработке
+technical_технический
+musical_музыкальный
+colour (Br.) color (Am.)_цвет
+black_черный
+white_белый
+dark_темный
+light_светлый
+red_красный
+orange_оранжевый
+yellow_желтый
+green_зеленый
+blue_голубой, синий
+purple_фиолетовый (пурпурный)
+violet_темно-фиолетовый
+pink_розовый
+silver_серебристый
+gold_золотой
+brown_коричневый
+grey (Br.) gray (Am.)_серый
+now_сейчас
+then_затем
+never_никогда
+again_снова
+always_всегда
+today_сегодня
+long_долго
+ever_вечно
+later_позже
+(one year) ago_(один год) назад
+early_рано
+soon_скоро
+recently_недавно
+before_до
+PM_после полудня
+tonight_этой ночью (вечером)
+AM_до полудня
+late_поздно
+forever_навсегда
+rarely_редко
+tomorrow_завтра
+yesterday_вчера
+currently_в настоящее время
+already_уже
+previously_ранее, в прошлый раз
+whenever_всякий раз, когда
+just_только что (всего лишь)
+sometimes_иногда
+finally_наконец
+quickly_быстро
+suddenly_вдруг
+immediately_немедленно
+frequently_часто
+meanwhile_тем временем
+occasionally_иногда
+initially_изначально
+shortly_коротко, вскоре
+gradually_постепенно
+ultimately_в конечном счете
+regularly_регулярно
+eventually_в конечном итоге
+rapidly_быстро
+newly_вновь, только что
+primarily_в первую очередь
+constantly_постоянно
+originally_изначально (по происхождению)
+often_часто
+fast_быстро
+well_хорошо
+even_даже
+too_слишком
+usually_обычно
+exactly_точно
+ok_хорошо
+clearly_ясно
+directly_непосредственно
+absolutely_абсолютно
+completely_полностью
+easily_с легкостью
+slowly_медленно
+highly_высоко
+mostly_в основном
+seriously_серьезно
+totally_полностью
+merely_просто
+typically_обычно
+simply_просто
+nearly_почти
+carefully_тщательно
+somehow_как-нибудь
+truly_действительно
+hardly_с трудом
+significantly_значительно
+entirely_полностью
+necessarily_обязательно
+specifically_специально
+surely_уверенно, безусловно
+heavily_сильно
+strongly_сильно
+quietly_тихо
+effectively_эффективно
+precisely_точно
+normally_обычно
+roughly_примерно (грубо)
+gently_мягко
+naturally_естественно
+partly_частично
+properly_правильно
+slightly_немного
+straight_прямо
+definitely_определенно
+virtually_практически
+literally_буквально
+politically_политически
+relatively_относительно
+personally_лично
+likely_вероятно
+similarly_аналогично, похоже
+potentially_потенциально
+here_здесь
+around_вокруг
+forward_вперед
+close_близко
+forth_вперед
+anywhere_в любом месте
+deeply_глубоко
+ahead (go ahed)_вперед
+somewhere_где-то
+everywhere_везде
+back_назад
+there_там
+far_далеко
+away_вдали от чего-то
+along_вдоль
+below_ниже
+apart_отдельно от чего-то
+widely_широко
+outside_вне
+aside_в сторону
+closely_близко
+nowhere_никуда
+elsewhere_в другом месте
+a little_немного
+only_только
+alone_в одиночку
+at least_по меньшей мере
+together_вместе
+a lot_много
+bit_немного
+twice_дважды
+fully_полностью
+increasingly_более
+anymore_(еще) больше
+also_также
+else (something else)_еще (что-нибудь еще)
+more_больше
+much_много
+less_меньше
+all_все
+once_раз (однажды)
+enough_достаточно
+largely_в значительной степени
+deep_глубоко
+extremely_чрезвычайно
+partly_частично
+barely_едва
+fairly_довольно
+essentially_существенно
+approximately_примерно
+equally_одинаково
+perfectly_отлично
+pretty_довольно
+very_очень
+better_лучше
+hard_трудно
+best_лучший
+really_действительно
+most_наиболее
+still_еще (все еще)
+yet (not yet)_еще (еще нет)
+almost_почти
+easy_легко
+quite_вполне (довольно)
+maybe_может быть
+actually_на самом деле (вообще-то)
+probably_вероятно
+of course_конечно
+perhaps_возможно
+possibly_возможно
+unfortunately_к сожалению
+certainly_конечно
+apparently_по-видимому
+indeed_действительно
+basically_в основном
+mainly_в основном
+especially_особенно
+particularly_особенно
+generally_в общем
+anyway_в любом случае
+particularly_в особенности
+obviously_очевидно
+moreover_более того
+nevertheless_тем не менее
+however_однако
+rather_скорее (скорее…, чем…)
+though_хотя
+thus_Таким образом...
+so_так
+otherwise_в противном случае
+around (around the world)_вокруг (вокруг света)
+at (at the gate)_у (у ворот)
+by (house by the lake)_около, у (дом у реки)
+in (in the room)_в (в комнате)
+above (above the table)_над (над столом)
+among (the wolf among us)_среди (волк среди нас)
+behind (behind the building)_позади (позади здания)
+beside (beside the house)_рядом с (рядом с домом)
+between (between two mountains)_между (между двух гор)
+beyond (beyond the river)_по ту сторону, за (за рекой)
+in front of (in front of TV)_перед (перед телевизором)
+inside (inside the box)_внутри (внутри коробки)
+on (The cat is on the roof)_на (кошка на крыше)
+out (to walk out)_вне, наружу (выйти наружу)
+outside (Is there anybody outside?)_снаружи (Есть кто-нибудь снаружи?)
+under (underground is under ground)_под (подземка под землей)
+within (within my heart)_внутри, в (в моем сердце)
+below (below sea level)_ниже (ниже уровня моря)
+around (around nine o'clock)_около (около 9 часов)
+at (at the midday)_в (в полдень)
+before (before breakfast)_до (до завтрака)
+by (by two o'clock)_к какому-то времени (к двум часам)
+in (I'll be back in ten minutes)_через какое-то время (вернусь через 10 минут)
+for (I've been waiting for you for an hour)_на протяжении (я ждал тебя на протяжении часа)
+since (I’ve been studying English since I was 10)_с какого-то времени (я учу английский с 10 лет)
+during (during the war)_во время (во время войны)
+within (He's got to be here within an hour)_в течение (Он должен появиться здесь в течение часа)
+on (on Monday)_в какой-то день недели (в понедельник)
+after (Don't call me after 9PM)_после (не звони мне после 9 вечера)
+till (from dusk till dawn)_до (от рассвета до заката)
+down (down the street)_вниз (вниз по улице)
+up (up the street)_вверх (вверх по улице)
+from (I am from Russia)_из (я из России)
+across (go across the river)_через (иди через реку)
+along (along the wall)_вдоль (вдоль стены)
+into (into the cave)_в, внутрь (в пещеру)
+to (to the next stop)_к чему-то (к следующей остановке)
+toward (toward the city)_по направлению к (по направлению к городу)
+through (through the forest)_через (через лес)
+over (over the fence)_через (через забор)
+off (off here)_из, откуда-то (отсюда)
+out of (out of the coverage area)_наружу, вне (вне зоны покрытия)
+via (go via Moscow)_через (ехать через Москву)
+past (go past the church)_мимо (пройти мимо церкви)
+with (coffe with sugar)_с (кофе с сахаром)
+about (tell me about yourself)_о (расскажите мне о себе)
+against (against war)_против (против войны)
+without (without you)_без (без тебя)
+including (two cars including one broken)_включая (две машины, включая одну сломанную)
+according to (according to the rules)_в соответствии с (в соответствии с правилами)
+because of (because of the car accident)_из-за (из-за автомобильной аварии)
+despite (despite the bad weather)_несмотря на (несмотря на плохую погоду)
+instead of (new part instead of broken one)_вместо (новая запчасть вместо сломанной)
+in spite of (in spite of the rain)_несмотря на (несмотря на дождь)
+regardless of (regardless of what you say)_несмотря на, независимо от (несмотря на то, что ты скажешь)
+thanks to (thanks to the doctor, I'm feeling fine)_благодаря (благодаря доктору, я чувствую себя отлично)
+by means of (by means of tools)_с помощью (с помощью инструментов)
+on behalf of (on behalf of my boss)_от имени (от имени моего босса)
+for (this gift is for you)_для (этот подарок для тебя)
+compare to (This is nothing compare to the real troubles)_в сравнении с (это ничто в сравнении с настоящими трудностями)
+rather… than (they'd rather buy fish than meat)_скорее, чем  (они купят скорее рыбу, чем мясо)
+rather than (they'd buy fish rather than meat)_скорее, чем\а не (они купят рыбу, а не мясо)
+and (Good and Evil)_и (Добро и Зло)
+but (Small but proud)_но (Маленькая, но гордая)
+however (It is true however it's not always true)_однако (Это правда, однако это не всегда правда)
+as well as (He owns the store as well as the warehouse)_также как (Он владелец магазина, также как и склада)
+both… and (Both you and me)_и …, и … (И ты, и я)
+either… or (We need either you or him)_или … или… (Нам нужен или ты, или он)
+neither… nor (We don't need neither you nor him)_ни …, ни … (Нам не нужен ни ты, ни он)
+when (Call me when you're ready)_когда (Позови меня, когда будешь готов)
+before (He was born before the war)_до, перед (Он родился до войны)
+after (I'll come back after the rain)_после (Я вернусь после дождя)
+while (Don't talk while you're eating)_во время (Не говори во время еды)
+since (She has been sad since the accident)_с тех пор как, после (Она грустна после нечастного случая)
+until (I slept until 9 o'clock)_до, до того как (Я спал до 9 часов)
+where (I have no idea where we are going)_где, куда (Понятия не имею, куда мы идем)
+how (Tell me how you do that)_как (Расскажи мне, как ты это делаешь)
+if (We'll rest if you stop whining)_если (Мы отдохнем, если ты перестанешь ныть)
+because (That's because you read too much)_потому что (Это потому, что ты слишком много читаешь)
+so (It was cold, so I came back)_так что (Было холодно, так что я вернулся)
+so (that) (Study hard so that you don't end up like me)_чтобы, с целью (Много учись, чтобы не стать таким, как я)
+though, although (The soil is hard athough it's been raining lately)_хотя (Почва была твердой, хотя в последнее время шли дожди)
+once (I'll have a look at your essay once I finish reading this one)_как только (Я взгляну на ваше эссе, как только закончу читать это)
+as soon as (Call me as soon as you get on the plane)_как только (Позвони мне, как только сядешь на самолет)
+as long as (As long as you are with me, you have nothing to worry about)_пока, при условии (Пока ты со мной, тебе не о чем беспокоиться)
