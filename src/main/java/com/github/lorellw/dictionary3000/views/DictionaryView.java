@@ -16,6 +16,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 import java.io.*;
+import java.util.List;
 
 @PageTitle("Dictionary 3000")
 @Route(value = "3000", layout = MainLayout.class)
@@ -26,6 +27,15 @@ public class DictionaryView extends VerticalLayout {
 
     public DictionaryView(WordService wordService) {
         this.wordService = wordService;
+
+        List<Word> wordList = wordService.getAll(null);
+        for (Word updatedWord : wordList) {
+            if (updatedWord.getId() <= 613) {
+                updatedWord.setWordEn("to " + updatedWord.getWordEn());
+                wordService.update(updatedWord);
+            }
+        }
+
         addClassName("dictionary-view");
         add(filter);
         setSizeFull();
@@ -43,13 +53,13 @@ public class DictionaryView extends VerticalLayout {
         grid.addColumn(Word::getWordRu).setHeader("Rus");
         grid.addComponentColumn(word -> {
             int progress = word.getProgress();
-            if (progress == 0){
+            if (progress == 0) {
                 return new Icon(VaadinIcon.BOOK);
             }
-            if (progress == 1){
+            if (progress == 1) {
                 return new Icon(VaadinIcon.CLOCK);
             }
-            if (progress == 2){
+            if (progress == 2) {
                 return new Icon(VaadinIcon.CHECK);
             }
             return new Icon(VaadinIcon.TOOLS);
@@ -58,9 +68,9 @@ public class DictionaryView extends VerticalLayout {
         add(grid);
     }
 
-    private void createContentGrid(){
-        GridContextMenu<Word> menu =grid.addContextMenu();
-        menu.addItem("Learned",event -> {
+    private void createContentGrid() {
+        GridContextMenu<Word> menu = grid.addContextMenu();
+        menu.addItem("Learned", event -> {
             Word learnedWord = event.getItem().get();
             learnedWord.setProgress(2);
             wordService.update(learnedWord);
@@ -70,13 +80,14 @@ public class DictionaryView extends VerticalLayout {
 
     }
 
-    private void updateList(){
+    private void updateList() {
         grid.setItems(wordService.getAll(filter.getValue()));
     }
 
-    private void configuredFilter(){
+    private void configuredFilter() {
         filter.setPlaceholder("Filter...");
-        filter.setClearButtonVisible(true); //TODO try false
+        filter.setPrefixComponent(VaadinIcon.SEARCH.create());
+        filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.LAZY);
         filter.addValueChangeListener(textFieldStringComponentValueChangeEvent -> updateList());
     }
