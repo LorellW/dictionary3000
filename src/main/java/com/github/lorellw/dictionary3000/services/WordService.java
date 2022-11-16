@@ -16,7 +16,7 @@ public class WordService {
 
     public void addWord(Word word){
         if (word == null){
-            System.err.println("Contact is null");
+            System.err.println("Word is null");
             return;
         }
         repository.save(word);
@@ -25,12 +25,18 @@ public class WordService {
     public void addWords(){
 
     }
+
+
     public List<Word> getAll(String filter){
         if (filter == null || filter.isEmpty()) {
             return repository.findAll();
         }else{
             return repository.search(filter);
         }
+    }
+
+    public List<Word> getUnstudied(){
+        return repository.searchUnstudied();
     }
 
     public void update(Word newWord){
