@@ -15,9 +15,8 @@ public interface WordRepository extends JpaRepository<Word, Long> {
             "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
     List<Word> search(@Param("searchItem")String searchItem);
 
-    //TODO create query for select unlearned words
     @Query("select w from Word w " +
-            "where w.progress < 2")
+            "where w.isEnTranslated is FALSE or w.isRuTranslated is FALSE")
     List<Word> searchUnstudied();
 
 }

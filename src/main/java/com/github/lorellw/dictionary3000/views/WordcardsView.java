@@ -49,15 +49,17 @@ public class WordcardsView extends VerticalLayout {
         knowButton.addClickListener(buttonClickEvent -> {
             Word learnedWord = wordList.get(index-1);
             ruWord.setValue(learnedWord.getWordRu());
-            learnedWord.setProgress(2);
+            learnedWord.setEnTranslated(true);
+            learnedWord.setRuTranslated(true);
             wordService.update(learnedWord);
         });
         dontKnowButton.addClickShortcut(Key.ARROW_RIGHT);
         dontKnowButton.addClickListener(buttonClickEvent -> {
             Word unlearnedWord = wordList.get(index-1);
             ruWord.setValue(unlearnedWord.getWordRu());
-            if (unlearnedWord.getProgress() == 2){
-                unlearnedWord.setProgress(0);
+            if (unlearnedWord.isEnTranslated() || unlearnedWord.isRuTranslated()){
+                unlearnedWord.setEnTranslated(false);
+                unlearnedWord.setEnTranslated(false);
                 wordService.update(unlearnedWord);
             }
         });

@@ -1,5 +1,6 @@
 package com.github.lorellw.dictionary3000.services;
 
+import com.github.lorellw.dictionary3000.entities.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.repositories.WordRepository;
 import org.springframework.stereotype.Service;
@@ -43,5 +44,9 @@ public class WordService {
         if (repository.findById(newWord.getId()).isPresent()){
             repository.save(newWord);
         }
+    }
+
+    public List<Word> getUntranslated(Languages lang){
+        return null;
     }
 }
