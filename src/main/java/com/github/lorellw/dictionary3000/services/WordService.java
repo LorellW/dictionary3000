@@ -36,17 +36,18 @@ public class WordService {
         }
     }
 
-    public List<Word> getUnstudied(){
-        return repository.searchUnstudied();
-    }
-
     public void update(Word newWord){
         if (repository.findById(newWord.getId()).isPresent()){
             repository.save(newWord);
         }
     }
 
-    public List<Word> getUntranslated(Languages lang){
-        return null;
+    public List<Word> getUnstudied(Languages lang){
+        if (lang == Languages.enEN){
+            return repository.searchEnUntranslated();
+        } else if (lang == Languages.ruRU){
+            return repository.searchRuUntranslated();
+        }
+        return repository.searchUnstudied();
     }
 }

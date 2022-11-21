@@ -1,5 +1,6 @@
 package com.github.lorellw.dictionary3000.repositories;
 
+import com.github.lorellw.dictionary3000.entities.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -19,4 +20,11 @@ public interface WordRepository extends JpaRepository<Word, Long> {
             "where w.isEnTranslated is FALSE or w.isRuTranslated is FALSE")
     List<Word> searchUnstudied();
 
+    @Query("select w from Word w " +
+            "where w.isEnTranslated is FALSE")
+    List<Word> searchEnUntranslated();
+
+    @Query("select w from Word w " +
+            "where w.isRuTranslated is FALSE")
+    List<Word> searchRuUntranslated();
 }

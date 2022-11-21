@@ -1,5 +1,6 @@
 package com.github.lorellw.dictionary3000.views;
 
+import com.github.lorellw.dictionary3000.entities.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Key;
@@ -18,18 +19,15 @@ public class WordcardsView extends VerticalLayout {
     private final WordService wordService;
     private List<Word> wordList;
 
-    private Button knowButton = new Button("Know");
-    private Button dontKnowButton = new Button("Don't know");
-    private Button nextButton = new Button("Next");
     private TextField enWord = new TextField();
     private TextField ruWord = new TextField();
     private int index = 0;
 
     public WordcardsView(WordService wordService) {
         this.wordService = wordService;
-        wordList = wordService.getUnstudied();
+        wordList = wordService.getUnstudied(Languages.ALL);
         Collections.shuffle(wordList);
-        add(addTextFields(),addButtonField());
+        add(addTextFields(),createButtonField());
     }
 
     private HorizontalLayout addTextFields(){
@@ -44,7 +42,12 @@ public class WordcardsView extends VerticalLayout {
     }
 
 
-    private HorizontalLayout addButtonField(){
+    private HorizontalLayout createButtonField(){
+
+        Button knowButton = new Button("Know");
+        Button dontKnowButton = new Button("Don't know");
+        Button nextButton = new Button("Start");
+
         knowButton.addClickShortcut(Key.ARROW_LEFT);
         knowButton.addClickListener(buttonClickEvent -> {
             Word learnedWord = wordList.get(index-1);
@@ -65,6 +68,7 @@ public class WordcardsView extends VerticalLayout {
         });
         nextButton.addClickShortcut(Key.SPACE);
         nextButton.addClickListener(buttonClickEvent -> {
+            nextButton.setText("Next");
             ruWord.setValue("");
             enWord.setValue(wordList.get(index).getWordEn());
             index++;
@@ -74,8 +78,4 @@ public class WordcardsView extends VerticalLayout {
         return buttonField;
     }
 
-//    private String action(){
-//        wordList.get(index);
-//        index++;
-//    }
 }
