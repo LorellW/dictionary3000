@@ -12,6 +12,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.component.textfield.TextFieldVariant;
 import com.vaadin.flow.router.Route;
 
 import java.util.*;
@@ -37,9 +38,19 @@ public class TranslateView extends VerticalLayout {
     public TranslateView(WordService wordService) {
         this.wordService = wordService;
         configWordList();
-        wordToTranslate.setReadOnly(true);
-        add(changeLangTabs(), wordToTranslate, createButtonField(), createNextButton());
+        configTextField();
+
+        add(createChangeLangTabs(),
+                wordToTranslate,
+                createButtonField(),
+                createNextButton());
         setAlignItems(Alignment.CENTER);
+    }
+
+    private void configTextField() {
+        wordToTranslate.setReadOnly(true);
+        wordToTranslate.addThemeVariants(TextFieldVariant.LUMO_ALIGN_CENTER);
+        wordToTranslate.getStyle().set("width", "21em");
     }
 
     private void configWordList() {
@@ -107,26 +118,24 @@ public class TranslateView extends VerticalLayout {
     }
 
     private void configAnswerButton(Button button) {
-        if (index != 0) {
-            if (button.getText().equals(wordList.get(index - 1).getWordRu()) ||
-                    button.getText().equals(wordList.get(index - 1).getWordEn())) {
-                button.setIcon(new Icon(VaadinIcon.CHECK));
-                wordList.get(index - 1).setEnTranslated(true);
-                wordService.update(wordList.get(index - 1));
-            } else {
-                button.setIcon(new Icon(VaadinIcon.BAN));
-                Arrays.stream(buttons).forEach(b -> {
-                    if (b.getText().equals(wordList.get(index - 1).getWordRu()) ||
-                            b.getText().equals(wordList.get(index - 1).getWordEn())) {
-                        b.setIcon(new Icon(VaadinIcon.CHECK));
-                    }
-                    b.setEnabled(false);
-                });
-            }
+        if (button.getText().equals(wordList.get(index - 1).getWordRu()) ||
+                button.getText().equals(wordList.get(index - 1).getWordEn())) {
+            button.setIcon(new Icon(VaadinIcon.CHECK));
+            wordList.get(index - 1).setTranslated(langMode, true);
+            wordService.update(wordList.get(index - 1));
+        } else {
+            button.setIcon(new Icon(VaadinIcon.BAN));
+            Arrays.stream(buttons).forEach(b -> {
+                if (b.getText().equals(wordList.get(index - 1).getWordRu()) ||
+                        b.getText().equals(wordList.get(index - 1).getWordEn())) {
+                    b.setIcon(new Icon(VaadinIcon.CHECK));
+                }
+                b.setEnabled(false);
+            });
         }
     }
 
-    private Tabs changeLangTabs() {
+    private Tabs createChangeLangTabs() {
         Tabs languagesTabs = new Tabs();
 
         Tab enTab = new Tab("English to Russian");
@@ -134,10 +143,10 @@ public class TranslateView extends VerticalLayout {
 
 
         languagesTabs.addSelectedChangeListener(selectedChangeEvent -> {
-            if (selectedChangeEvent.getSelectedTab().equals(enTab)){
+            if (selectedChangeEvent.getSelectedTab().equals(enTab)) {
                 langMode = Languages.enEN;
                 configWordList();
-            }else if (selectedChangeEvent.getSelectedTab().equals(ruTab)){
+            } else if (selectedChangeEvent.getSelectedTab().equals(ruTab)) {
                 langMode = Languages.ruRU;
                 configWordList();
             }
