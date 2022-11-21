@@ -15,4 +15,8 @@ public class Word {
     private String wordEn;
     private int progress;
 
+    @Column(name = "ru_translated")
+    private boolean isRuTranslated;
+    @Column(name = "en_translated")
+    private boolean isEnTranslated;
 }

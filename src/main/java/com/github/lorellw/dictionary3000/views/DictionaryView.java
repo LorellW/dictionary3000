@@ -28,14 +28,6 @@ public class DictionaryView extends VerticalLayout {
     public DictionaryView(WordService wordService) {
         this.wordService = wordService;
 
-        List<Word> wordList = wordService.getAll(null);
-        for (Word updatedWord : wordList) {
-            if (updatedWord.getId() <= 613) {
-                updatedWord.setWordEn("to " + updatedWord.getWordEn());
-                wordService.update(updatedWord);
-            }
-        }
-
         addClassName("dictionary-view");
         add(filter);
         setSizeFull();
