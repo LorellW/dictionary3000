@@ -27,16 +27,16 @@ public class WordcardsView extends VerticalLayout {
         this.wordService = wordService;
         wordList = wordService.getUnstudied(Languages.ALL);
         Collections.shuffle(wordList);
-        add(addTextFields(),createButtonField());
+        add(createTextFields(),createButtonField());
+        setAlignItems(Alignment.CENTER);
     }
 
-    private HorizontalLayout addTextFields(){
+    private HorizontalLayout createTextFields(){
         enWord.setLabel("EN");
         enWord.setReadOnly(true);
         ruWord.setLabel("RU");
         ruWord.setReadOnly(true);
         HorizontalLayout textFields = new HorizontalLayout();
-        textFields.setWidth("100%");
         textFields.add(enWord,ruWord);
         return textFields;
     }
@@ -45,8 +45,11 @@ public class WordcardsView extends VerticalLayout {
     private HorizontalLayout createButtonField(){
 
         Button knowButton = new Button("Know");
+        knowButton.setWidth("7em");
         Button dontKnowButton = new Button("Don't know");
+        dontKnowButton.setWidth("7em");
         Button nextButton = new Button("Start");
+        nextButton.setWidth("7em");
 
         knowButton.addClickShortcut(Key.ARROW_LEFT);
         knowButton.addClickListener(buttonClickEvent -> {

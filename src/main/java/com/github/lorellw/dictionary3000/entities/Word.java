@@ -19,4 +19,13 @@ public class Word {
     private boolean isRuTranslated;
     @Column(name = "en_translated")
     private boolean isEnTranslated;
+
+    public void setTranslated(Languages lang, boolean translated){
+        if (lang == Languages.enEN){
+            isEnTranslated = translated;
+        }
+        if (lang == Languages.ruRU){
+            isRuTranslated = translated;
+        }
+    }
 }

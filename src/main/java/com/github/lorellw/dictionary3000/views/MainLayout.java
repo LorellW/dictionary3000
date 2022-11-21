@@ -35,7 +35,7 @@ public class MainLayout extends AppLayout {
     private void createDrawer() {
         RouterLink dictionaryLink = new RouterLink("3000",DictionaryView.class);
         RouterLink wordcardsLink = new RouterLink("Word cards", WordcardsView.class);
-        RouterLink enToRuLink = new RouterLink("EN to RU", TranslateView.class);
+        RouterLink enToRuLink = new RouterLink("Translate", TranslateView.class);
 
         RouterLink aboutLink = new RouterLink("About", AboutView.class);
 
