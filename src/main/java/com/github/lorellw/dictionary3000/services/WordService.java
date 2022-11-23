@@ -15,7 +15,7 @@ public class WordService {
         this.repository = repository;
     }
 
-    public void addWord(Word word){
+    public void saveWord(Word word){
         if (word == null){
             System.err.println("Word is null");
             return;
