@@ -42,7 +42,11 @@ public class WordService {
         }
     }
 
-    public List<Word> getUnstudied(Languages lang){
+    public List<Word> getUnwritten(){
+        return repository.searchUnwritten();
+    }
+
+    public List<Word> getUntranslated(Languages lang){
         if (lang == Languages.enEN){
             return repository.searchEnUntranslated();
         } else if (lang == Languages.ruRU){

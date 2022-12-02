@@ -16,16 +16,18 @@ public class Word {
     private int progress;
 
     @Column(name = "ru_translated")
-    private boolean isRuTranslated;
+    private boolean ruTranslated;
     @Column(name = "en_translated")
-    private boolean isEnTranslated;
+    private boolean enTranslated;
+    @Column(name = "competently")
+    private boolean competently;
 
     public void setTranslated(Languages lang, boolean translated){
         if (lang == Languages.enEN){
-            isEnTranslated = translated;
+            enTranslated = translated;
         }
         if (lang == Languages.ruRU){
-            isRuTranslated = translated;
+            ruTranslated = translated;
         }
     }
 }

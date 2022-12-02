@@ -13,10 +13,12 @@ import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.textfield.TextFieldVariant;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 import java.util.*;
 
+@PageTitle("Translate")
 @Route(value = "translate", layout = MainLayout.class)
 public class TranslateView extends VerticalLayout {
     private final TextField wordToTranslate = new TextField();
@@ -54,7 +56,7 @@ public class TranslateView extends VerticalLayout {
     }
 
     private void configWordList() {
-        wordList = wordService.getUnstudied(langMode);
+        wordList = wordService.getUntranslated(langMode);
         Collections.shuffle(wordList);
     }
 
@@ -117,7 +119,7 @@ public class TranslateView extends VerticalLayout {
         return answersPool;
     }
 
-    private void configAnswerButton(Button button) {
+    private void configAnswerButton(Button button) { //TODO rewrite, all buttons should be disable after answer
         if (button.getText().equals(wordList.get(index - 1).getWordRu()) ||
                 button.getText().equals(wordList.get(index - 1).getWordEn())) {
             button.setIcon(new Icon(VaadinIcon.CHECK));

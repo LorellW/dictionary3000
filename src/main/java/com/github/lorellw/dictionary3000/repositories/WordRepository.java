@@ -17,14 +17,18 @@ public interface WordRepository extends JpaRepository<Word, Long> {
     List<Word> search(@Param("searchItem")String searchItem);
 
     @Query("select w from Word w " +
-            "where w.isEnTranslated is FALSE or w.isRuTranslated is FALSE")
+            "where w.enTranslated is FALSE or w.ruTranslated is FALSE")
     List<Word> searchUnstudied();
 
     @Query("select w from Word w " +
-            "where w.isEnTranslated is FALSE")
+            "where w.enTranslated is FALSE")
     List<Word> searchEnUntranslated();
 
     @Query("select w from Word w " +
-            "where w.isRuTranslated is FALSE")
+            "where w.ruTranslated is FALSE")
     List<Word> searchRuUntranslated();
+
+    @Query("select w from Word w " +
+            "where w.competently is FALSE")
+    List<Word> searchUnwritten();
 }
