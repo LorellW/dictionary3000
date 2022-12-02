@@ -8,11 +8,13 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 import java.util.Collections;
 import java.util.List;
 
+@PageTitle("Word cards")
 @Route(value = "wordcards",layout = MainLayout.class)
 public class WordcardsView extends VerticalLayout {
 
@@ -25,7 +27,7 @@ public class WordcardsView extends VerticalLayout {
 
     public WordcardsView(WordService wordService) {
         this.wordService = wordService;
-        wordList = wordService.getUnstudied(Languages.ALL);
+        wordList = wordService.getUntranslated(Languages.ALL);
         Collections.shuffle(wordList);
         add(createTextFields(),createButtonField());
         setAlignItems(Alignment.CENTER);

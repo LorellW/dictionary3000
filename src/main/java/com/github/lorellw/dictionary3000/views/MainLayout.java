@@ -36,6 +36,7 @@ public class MainLayout extends AppLayout {
         RouterLink dictionaryLink = new RouterLink("3000",DictionaryView.class);
         RouterLink wordcardsLink = new RouterLink("Word cards", WordcardsView.class);
         RouterLink enToRuLink = new RouterLink("Translate", TranslateView.class);
+        RouterLink wordFromCharactersLink = new RouterLink("Word from characters", WordFromLettersView.class);
 
         RouterLink aboutLink = new RouterLink("About", AboutView.class);
 
@@ -44,6 +45,7 @@ public class MainLayout extends AppLayout {
                         dictionaryLink,
                         wordcardsLink,
                         enToRuLink,
+                        wordFromCharactersLink,
                         aboutLink
                 )
         );
