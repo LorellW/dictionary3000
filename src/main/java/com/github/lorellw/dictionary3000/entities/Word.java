@@ -21,6 +21,8 @@ public class Word {
     private boolean enTranslated;
     @Column(name = "competently")
     private boolean competently;
+    @Column(name = "listened")
+    private boolean listened;
 
     public void setTranslated(Languages lang, boolean translated){
         if (lang == Languages.enEN){
