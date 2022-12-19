@@ -1,12 +1,11 @@
 package com.github.lorellw.dictionary3000.views;
 
-import com.github.lorellw.dictionary3000.entities.Languages;
+import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -16,7 +15,7 @@ import java.util.List;
 
 @PageTitle("Word cards")
 @Route(value = "wordcards",layout = MainLayout.class)
-public class WordcardsView extends VerticalLayout {
+public class WordcardsView extends AbstractView {
 
     private final WordService wordService;
     private List<Word> wordList;
@@ -43,7 +42,6 @@ public class WordcardsView extends VerticalLayout {
         return textFields;
     }
 
-
     private HorizontalLayout createButtonField(){
 
         Button knowButton = new Button("Know");
@@ -57,17 +55,19 @@ public class WordcardsView extends VerticalLayout {
         knowButton.addClickListener(buttonClickEvent -> {
             Word learnedWord = wordList.get(index-1);
             ruWord.setValue(learnedWord.getWordRu());
-            learnedWord.setEnTranslated(true);
-            learnedWord.setRuTranslated(true);
+            learnedWord.setTranslated(Languages.enEN,true);
+            learnedWord.setTranslated(Languages.ruRU,true);
+            learnedWord.setCompetently(true);
             wordService.update(learnedWord);
         });
         dontKnowButton.addClickShortcut(Key.ARROW_RIGHT);
         dontKnowButton.addClickListener(buttonClickEvent -> {
             Word unlearnedWord = wordList.get(index-1);
             ruWord.setValue(unlearnedWord.getWordRu());
-            if (unlearnedWord.isEnTranslated() || unlearnedWord.isRuTranslated()){
-                unlearnedWord.setEnTranslated(false);
-                unlearnedWord.setEnTranslated(false);
+            if (unlearnedWord.isEnTranslated() || unlearnedWord.isRuTranslated() || unlearnedWord.isCompetently() ){
+                unlearnedWord.setTranslated(Languages.enEN,false);
+                unlearnedWord.setTranslated(Languages.ruRU,false);
+                unlearnedWord.setCompetently(false);
                 wordService.update(unlearnedWord);
             }
         });

@@ -1,6 +1,8 @@
 package com.github.lorellw.dictionary3000.views;
 
+import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
+import com.github.lorellw.dictionary3000.enums.Status;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
@@ -11,6 +13,7 @@ import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
@@ -21,36 +24,38 @@ import com.vaadin.flow.router.Route;
 public class DictionaryView extends VerticalLayout {
     private final Grid<Word> grid = new Grid<>(Word.class, false);
     private final WordService wordService;
-    private TextField filter = new TextField();
+
+    private final TextField filter = new TextField();
+    private final Button addButton = new Button("Add");
+    private final Select<Status> statusSelect = new Select<>();
+    private Status status = null;
+
     protected WordForm form;
 
     public DictionaryView(WordService wordService) {
         this.wordService = wordService;
-        Button addButton = new Button("Add");
-        addButton.addClickListener(buttonClickEvent -> addWord());
 
         configGrid();
         configForm();
         configuredFilter();
-        add(filter,addButton,getContent());
+        configAddButton();
+        configSelect();
+
+        add(new HorizontalLayout(filter, statusSelect), addButton, getContent());
         addClassName("dictionary-view");
         setSizeFull();
-
         updateList();
         closeEditor();
-
     }
 
-
-    private Component getContent(){
-        HorizontalLayout content = new HorizontalLayout(grid,form);
-        content.setFlexGrow(2,grid);
-        content.setFlexGrow(1,form);
+    private Component getContent() {
+        HorizontalLayout content = new HorizontalLayout(grid, form);
+        content.setFlexGrow(2, grid);
+        content.setFlexGrow(1, form);
         content.setClassName("content");
         content.setSizeFull();
         return content;
     }
-
 
     private void configGrid() {
         createContentGrid();
@@ -60,14 +65,13 @@ public class DictionaryView extends VerticalLayout {
         grid.addColumn(Word::getWordEn).setHeader("Eng");
         grid.addColumn(Word::getWordRu).setHeader("Rus");
         grid.addComponentColumn(word -> {
-            int progress = word.getProgress();
-            if (progress == 0) {
+            if (word.getStatus() == Status.NEW) {
                 return new Icon(VaadinIcon.BOOK);
             }
-            if (progress == 1) {
+            if (word.getStatus() == Status.ONSTUDY) {
                 return new Icon(VaadinIcon.CLOCK);
             }
-            if (progress == 2) {
+            if (word.getStatus() == Status.STUDIED) {
                 return new Icon(VaadinIcon.CHECK);
             }
             return new Icon(VaadinIcon.TOOLS);
@@ -76,7 +80,34 @@ public class DictionaryView extends VerticalLayout {
         add(grid);
     }
 
-    public void editContact(Word word) {
+    private void configSelect() {
+        statusSelect.setPlaceholder("Status");
+        statusSelect.setEmptySelectionAllowed(true);
+        statusSelect.setItemLabelGenerator(s -> {
+            if (s == null){
+                return "";
+            }
+            return s.getName();
+        });
+        statusSelect.setItems(Status.NEW,Status.ONSTUDY,Status.STUDIED);
+        statusSelect.addValueChangeListener(listener -> {
+            status = listener.getValue();
+            updateList();
+        });
+    }
+
+    private void configAddButton() {
+        addButton.addClickListener(buttonClickEvent -> {
+            if (form.isVisible()) {
+                form.setVisible(false);
+            } else {
+                grid.asSingleSelect().clear();
+                editContact(new Word());
+            }
+        });
+    }
+
+    private void editContact(Word word) {
         if (word == null) {
             closeEditor();
         } else {
@@ -85,26 +116,26 @@ public class DictionaryView extends VerticalLayout {
         }
     }
 
-    private void addWord(){
-        grid.asSingleSelect().clear();
-        editContact(new Word());
-    }
-
     private void createContentGrid() {
         GridContextMenu<Word> menu = grid.addContextMenu();
         menu.addItem("Learned", event -> {
             if (event.getItem().isPresent()) {
                 Word learnedWord = event.getItem().get();
-                learnedWord.setProgress(2);
+                learnedWord.setTranslated(Languages.ALL, true);
+                learnedWord.setCompetently(true);
                 wordService.update(learnedWord);
                 updateList();
             }
         });
         menu.addItem(new Hr());
-
+        menu.addItem("Edit", event -> {
+            if (event.getItem().isPresent()) {
+                editContact(event.getItem().get());
+            }
+        });
     }
 
-    private void configForm(){
+    private void configForm() {
         form = new WordForm();
         form.setWidth("25em");
         form.addListener(WordForm.CloseEvent.class, closeEvent -> closeEditor());
@@ -117,36 +148,19 @@ public class DictionaryView extends VerticalLayout {
         closeEditor();
     }
 
-    private void closeEditor(){
+    private void closeEditor() {
         form.setVisible(false);
     }
 
-
     private void updateList() {
-        grid.setItems(wordService.getAll(filter.getValue()));
+        grid.setItems(wordService.getAll(filter.getValue(),status));
     }
 
     private void configuredFilter() {
-        filter.setPlaceholder("Filter...");
+        filter.setPlaceholder("Search");
         filter.setPrefixComponent(VaadinIcon.SEARCH.create());
         filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.LAZY);
         filter.addValueChangeListener(textFieldStringComponentValueChangeEvent -> updateList());
     }
-
-//    private void add3000() throws IOException {
-//        File file = new File("src/main/resources/dictionary.txt");
-//        BufferedReader reader = new BufferedReader(new FileReader(file));
-//        String temp = reader.readLine();
-//        while (temp != null){
-//            String[] newWord = temp.split("_");
-//            Word word = new Word();
-//            word.setWordEn(newWord[0]);
-//            word.setWordRu(newWord[1]);
-//            word.setProgress(0);
-//            wordService.addWord(word);
-//            System.out.println(word);
-//            temp = reader.readLine();
-//        }
-//    }
 }
