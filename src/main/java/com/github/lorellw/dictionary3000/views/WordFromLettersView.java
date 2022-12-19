@@ -1,6 +1,5 @@
 package com.github.lorellw.dictionary3000.views;
 
-import com.github.lorellw.dictionary3000.entities.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Component;
@@ -17,13 +16,16 @@ import java.util.*;
 
 @PageTitle("Words from characters")
 @Route(value = "wordsfromchars", layout = MainLayout.class)
-public class WordFromLettersView extends VerticalLayout {
+public class WordFromLettersView extends AbstractView {
     private final WordService wordService;
 
     private TextField wordRu = new TextField("RuWord");
     private TextField inputField = new TextField("Input");
+
     private Button nextButton = new Button("Start");
     private Button checkButton = new Button("Check");
+    private Button resetButton = new Button("Reset");
+
     private HorizontalLayout buttonField = new HorizontalLayout();
 
     private List<Word> wordList;
@@ -37,10 +39,19 @@ public class WordFromLettersView extends VerticalLayout {
         configTextFields();
         configNextButton();
         configCheckButton();
+        configResetButton();
 
-        add(wordRu, inputField, buttonField, new HorizontalLayout(nextButton, checkButton));
+        add(wordRu, inputField, buttonField, new HorizontalLayout(nextButton, checkButton, resetButton));
 
         setAlignItems(Alignment.CENTER);
+    }
+
+    private void configResetButton() {
+        resetButton.addClickShortcut(Key.BACKSPACE);
+        resetButton.addClickListener(buttonClickEvent -> {
+            inputField.setValue(null);
+            //buttonField.getChildren().forEach();
+        });
     }
 
     private Collection<Component> configButtonField() {
@@ -105,6 +116,7 @@ public class WordFromLettersView extends VerticalLayout {
                 wordService.saveWord(wordList.get(index-1));
             } else {
                 inputField.setPrefixComponent(VaadinIcon.BAN.create());
+                inputField.setValue(inputField.getValue() + " (" + currentString + ")");
             }
             buttonField.getChildren().forEach(component -> ((Button)component).setEnabled(false));
             nextButton.setEnabled(true);
@@ -117,5 +129,6 @@ public class WordFromLettersView extends VerticalLayout {
         inputField.setReadOnly(true);
         inputField.getStyle().set("width", "21em");
     }
+
 
 }

@@ -1,5 +1,7 @@
 package com.github.lorellw.dictionary3000.entities;
 
+import com.github.lorellw.dictionary3000.enums.Languages;
+import com.github.lorellw.dictionary3000.enums.Status;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -13,7 +15,6 @@ public class Word {
     private Long id;
     private String wordRu;
     private String wordEn;
-    private int progress;
 
     @Column(name = "ru_translated")
     private boolean ruTranslated;
@@ -30,6 +31,25 @@ public class Word {
         }
         if (lang == Languages.ruRU){
             ruTranslated = translated;
+        }
+        if (lang == Languages.ALL){
+            enTranslated = translated;
+            ruTranslated = translated;
+        }
+    }
+
+    public Status getStatus(){
+        if (!isRuTranslated() && !isEnTranslated() && !isCompetently()) {
+            return Status.NEW;
+        }
+        if (!isRuTranslated() || !isEnTranslated() || !isCompetently()) {
+            return Status.ONSTUDY;
+        }
+        if (isRuTranslated() && isEnTranslated() && isCompetently()) {
+            return Status.STUDIED;
+        }
+        else {
+            return Status.BROKEN;
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.github.lorellw.dictionary3000.views;
 
-import com.github.lorellw.dictionary3000.entities.Languages;
+import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Key;
@@ -20,7 +20,7 @@ import java.util.*;
 
 @PageTitle("Translate")
 @Route(value = "translate", layout = MainLayout.class)
-public class TranslateView extends VerticalLayout {
+public class TranslateView extends AbstractView {
     private final TextField wordToTranslate = new TextField();
 
     private final Button answer1 = new Button("answer #1");
