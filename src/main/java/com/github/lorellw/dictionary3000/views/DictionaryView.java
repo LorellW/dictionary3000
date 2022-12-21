@@ -21,7 +21,7 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Dictionary 3000")
 @Route(value = "3000", layout = MainLayout.class)
-public class DictionaryView extends VerticalLayout {
+public class DictionaryView extends AbstractView {
     private final Grid<Word> grid = new Grid<>(Word.class, false);
     private final WordService wordService;
 
