@@ -4,6 +4,7 @@ import com.github.lorellw.dictionary3000.entities.User;
 import com.github.lorellw.dictionary3000.services.UserService;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
@@ -54,7 +55,7 @@ public class RegistrationView extends VerticalLayout {
                 user.setPassword(passwordField.getValue());
                 userService.addUser(user);
             } else {
-
+                createDialog().open();
             }
         });
     }
@@ -67,4 +68,10 @@ public class RegistrationView extends VerticalLayout {
         }
     }
 
+    private Dialog createDialog() {
+        Dialog dialog = new Dialog();
+        dialog.setHeaderTitle("Title");
+
+        return dialog;
+    }
 }
