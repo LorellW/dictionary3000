@@ -5,6 +5,7 @@ import com.github.lorellw.dictionary3000.enums.Status;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
@@ -24,6 +25,10 @@ public class Word {
     private boolean competently;
     @Column(name = "listened")
     private boolean listened;
+
+    @OneToMany(mappedBy = "word", fetch = FetchType.EAGER)
+    private Set<UserWords> userWords;
+
 
     public void setTranslated(Languages lang, boolean translated){
         if (lang == Languages.enEN){

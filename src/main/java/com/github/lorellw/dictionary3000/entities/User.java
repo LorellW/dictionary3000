@@ -30,6 +30,9 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
+    @OneToMany(mappedBy = "user")
+    private Set<UserWords> userWords;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

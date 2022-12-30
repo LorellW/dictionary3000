@@ -30,4 +30,5 @@ public interface WordRepository extends JpaRepository<Word, Long> {
     @Query("select w from Word w " +
             "where w.competently is FALSE")
     List<Word> searchUnwritten();
+
 }
