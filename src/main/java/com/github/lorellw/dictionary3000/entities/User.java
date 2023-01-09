@@ -1,6 +1,8 @@
 package com.github.lorellw.dictionary3000.entities;
 
-import lombok.Data;
+import com.github.lorellw.dictionary3000.enums.Role;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -11,7 +13,8 @@ import java.util.Collection;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "users")
 public class User implements UserDetails {
 

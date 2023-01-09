@@ -119,7 +119,7 @@ public class TranslateView extends AbstractView {
         return answersPool;
     }
 
-    private void configAnswerButton(Button button) { //TODO rewrite, all buttons should be disable after answer
+    private void configAnswerButton(Button button) { //TODO rewrite, all buttons should be disable after answering
         if (button.getText().equals(wordList.get(index - 1).getWordRu()) ||
                 button.getText().equals(wordList.get(index - 1).getWordEn())) {
             button.setIcon(new Icon(VaadinIcon.CHECK));

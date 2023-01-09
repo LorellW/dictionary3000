@@ -3,12 +3,15 @@ package com.github.lorellw.dictionary3000.entities;
 import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.enums.Status;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Data
+@Setter
+@Getter
 @Table(name = "words")
 public class Word {
     @Id
@@ -17,16 +20,16 @@ public class Word {
     private String wordRu;
     private String wordEn;
 
-    @Column(name = "ru_translated")
+    @Transient
     private boolean ruTranslated;
-    @Column(name = "en_translated")
+    @Transient
     private boolean enTranslated;
-    @Column(name = "competently")
+    @Transient
     private boolean competently;
-    @Column(name = "listened")
+    @Transient
     private boolean listened;
 
-    @OneToMany(mappedBy = "word", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "word")
     private Set<UserWords> userWords;
 
 

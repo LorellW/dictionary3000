@@ -1,6 +1,6 @@
 package com.github.lorellw.dictionary3000.services;
 
-import com.github.lorellw.dictionary3000.entities.Role;
+import com.github.lorellw.dictionary3000.enums.Role;
 import com.github.lorellw.dictionary3000.entities.User;
 import com.github.lorellw.dictionary3000.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
