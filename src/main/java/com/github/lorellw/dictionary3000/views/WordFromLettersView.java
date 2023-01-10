@@ -1,13 +1,13 @@
 package com.github.lorellw.dictionary3000.views;
 
 import com.github.lorellw.dictionary3000.entities.Word;
+import com.github.lorellw.dictionary3000.services.UserWordsService;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -17,7 +17,7 @@ import java.util.*;
 @PageTitle("Words from characters")
 @Route(value = "wordsfromchars", layout = MainLayout.class)
 public class WordFromLettersView extends AbstractView {
-    private final WordService wordService;
+    private final UserWordsService userWordsService;
 
     private TextField wordRu = new TextField("RuWord");
     private TextField inputField = new TextField("Input");
@@ -32,8 +32,8 @@ public class WordFromLettersView extends AbstractView {
     private String currentString; //current word.wordEN
     private int index;
 
-    public WordFromLettersView(WordService wordService) {
-        this.wordService = wordService;
+    public WordFromLettersView(UserWordsService userWordsService) {
+        this.userWordsService = userWordsService;
 
         configWordList();
         configTextFields();
@@ -72,7 +72,7 @@ public class WordFromLettersView extends AbstractView {
     }
 
     private void configWordList() {
-        wordList = wordService.getUnwritten();
+        wordList = userWordsService.getUnwritten();
         Collections.shuffle(wordList);
     }
 
@@ -113,7 +113,7 @@ public class WordFromLettersView extends AbstractView {
             if (inputField.getValue().equals(currentString)) {
                 inputField.setPrefixComponent(VaadinIcon.CHECK.create());
                 wordList.get(index - 1).setCompetently(true);
-                wordService.saveWord(wordList.get(index-1));
+                userWordsService.update(wordList.get(index-1));
             } else {
                 inputField.setPrefixComponent(VaadinIcon.BAN.create());
                 inputField.setValue(inputField.getValue() + " (" + currentString + ")");

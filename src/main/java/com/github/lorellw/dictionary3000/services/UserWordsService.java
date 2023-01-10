@@ -32,37 +32,56 @@ public class UserWordsService {
 
 
     public void update(Word learnedWord) {
-
+        userWordsRepository.save(mapper.toUserWords(learnedWord, (User) securityService.getAuthenticatedUser()));
     }
 
     public void saveWord(Word word) {
-        if (word == null){
+        if (word == null) {
             System.err.println("Word is null");
             return;
         }
+    }
+
+    public List<Word> getUntranslated(Languages lang) {
+        List<Word> temp = new ArrayList<>();
+        if (lang == Languages.enEN) {
+            userWordsRepository.searchEnUntranslated((User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+                temp.add(mapper.toWord(userWord));
+            });
+        } else if (lang == Languages.ruRU) {
+            userWordsRepository.searchRuUntranslated((User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+                temp.add(mapper.toWord(userWord));
+            });
+        } else {
+            userWordsRepository.searchUntranslated((User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+                temp.add(mapper.toWord(userWord));
+            });
+        }
+        return temp;
     }
 
 
     public List<Word> getAll(String filter, Status status) {
         List<Word> words = new ArrayList<>();
         if ((filter == null || filter.isEmpty()) && status == null) {
-            userWordsRepository.findByUser((User) securityService.getAuthenticatedUser()).forEach(userWords -> {
-                words.add(mapper.toWord(userWords));
+            userWordsRepository.findByUser((User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+                words.add(mapper.toWord(userWord));
             });
         } else if (status != null) {
-            userWordsRepository.search(filter,(User) securityService.getAuthenticatedUser()).forEach(userWords -> {
-                Word temp = mapper.toWord(userWords);
-                if (temp.getStatus() == status){
+            userWordsRepository.search(filter, (User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+                Word temp = mapper.toWord(userWord);
+                if (temp.getStatus() == status) {
                     words.add(temp);
                 }
             });
         } else {
-            userWordsRepository.search(filter,(User) securityService.getAuthenticatedUser()).forEach(userWords -> {
-                words.add(mapper.toWord(userWords));
+            userWordsRepository.search(filter, (User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+                words.add(mapper.toWord(userWord));
             });
         }
         return words;
     }
+
     public void addWords() {
         User user = (User) securityService.getAuthenticatedUser();
         List<Word> words = wordRepository.findAll();
@@ -76,5 +95,13 @@ public class UserWordsService {
             temp.setWord(word);
             userWordsRepository.save(temp);
         });
+    }
+
+    public List<Word> getUnwritten() {
+        List<Word> words = new ArrayList<>();
+        userWordsRepository.searchUnwritten((User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+            words.add(mapper.toWord(userWord));
+        });
+        return words;
     }
 }

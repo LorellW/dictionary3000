@@ -25,8 +25,9 @@ public class WordMapper {
 
         temp.setUser(user);
         temp.setWord(word);
-        temp.setTranslated(Languages.ALL,false);
-        temp.setCompetently(false);
+        temp.setTranslated(Languages.ruRU, word.isRuTranslated());
+        temp.setTranslated(Languages.enEN, word.isEnTranslated());
+        temp.setCompetently(word.isCompetently());
 
         return temp;
     }

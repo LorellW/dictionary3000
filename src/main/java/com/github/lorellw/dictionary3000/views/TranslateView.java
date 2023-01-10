@@ -2,7 +2,7 @@ package com.github.lorellw.dictionary3000.views;
 
 import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
-import com.github.lorellw.dictionary3000.services.WordService;
+import com.github.lorellw.dictionary3000.services.UserWordsService;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -34,11 +34,12 @@ public class TranslateView extends AbstractView {
 
     private int index = 0;
 
-    private final WordService wordService;
+    private final UserWordsService userWordsService;
     private List<Word> wordList;
 
-    public TranslateView(WordService wordService) {
-        this.wordService = wordService;
+    public TranslateView(UserWordsService userWordsService) {
+        this.userWordsService = userWordsService;
+
         configWordList();
         configTextField();
 
@@ -56,7 +57,7 @@ public class TranslateView extends AbstractView {
     }
 
     private void configWordList() {
-        wordList = wordService.getUntranslated(langMode);
+        wordList = userWordsService.getUntranslated(langMode);
         Collections.shuffle(wordList);
     }
 
@@ -124,7 +125,7 @@ public class TranslateView extends AbstractView {
                 button.getText().equals(wordList.get(index - 1).getWordEn())) {
             button.setIcon(new Icon(VaadinIcon.CHECK));
             wordList.get(index - 1).setTranslated(langMode, true);
-            wordService.update(wordList.get(index - 1));
+            userWordsService.update(wordList.get(index - 1));
         } else {
             button.setIcon(new Icon(VaadinIcon.BAN));
             Arrays.stream(buttons).forEach(b -> {

@@ -2,6 +2,7 @@ package com.github.lorellw.dictionary3000.views;
 
 import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
+import com.github.lorellw.dictionary3000.services.UserWordsService;
 import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -17,16 +18,16 @@ import java.util.List;
 @Route(value = "wordcards",layout = MainLayout.class)
 public class WordcardsView extends AbstractView {
 
-    private final WordService wordService;
+    private final UserWordsService userWordsService;
     private List<Word> wordList;
 
     private TextField enWord = new TextField();
     private TextField ruWord = new TextField();
     private int index = 0;
 
-    public WordcardsView(WordService wordService) {
-        this.wordService = wordService;
-        wordList = wordService.getUntranslated(Languages.ALL);
+    public WordcardsView(UserWordsService userWordsService) {
+        this.userWordsService = userWordsService;
+        wordList = userWordsService.getUntranslated(Languages.ALL);
         Collections.shuffle(wordList);
         add(createTextFields(),createButtonField());
         setAlignItems(Alignment.CENTER);
@@ -57,8 +58,7 @@ public class WordcardsView extends AbstractView {
             ruWord.setValue(learnedWord.getWordRu());
             learnedWord.setTranslated(Languages.enEN,true);
             learnedWord.setTranslated(Languages.ruRU,true);
-            learnedWord.setCompetently(true);
-            wordService.update(learnedWord);
+            userWordsService.update(learnedWord);
         });
         dontKnowButton.addClickShortcut(Key.ARROW_RIGHT);
         dontKnowButton.addClickListener(buttonClickEvent -> {
@@ -68,7 +68,7 @@ public class WordcardsView extends AbstractView {
                 unlearnedWord.setTranslated(Languages.enEN,false);
                 unlearnedWord.setTranslated(Languages.ruRU,false);
                 unlearnedWord.setCompetently(false);
-                wordService.update(unlearnedWord);
+                userWordsService.update(unlearnedWord);
             }
         });
         nextButton.addClickShortcut(Key.SPACE);
