@@ -3,7 +3,7 @@ package com.github.lorellw.dictionary3000.views;
 import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.enums.Status;
-import com.github.lorellw.dictionary3000.services.WordService;
+import com.github.lorellw.dictionary3000.services.UserWordsService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -12,7 +12,6 @@ import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
@@ -21,9 +20,9 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Dictionary 3000")
 @Route(value = "3000", layout = MainLayout.class)
-public class DictionaryView extends VerticalLayout {
+public class DictionaryView extends AbstractView {
     private final Grid<Word> grid = new Grid<>(Word.class, false);
-    private final WordService wordService;
+    private final UserWordsService userWordsService;
 
     private final TextField filter = new TextField();
     private final Button addButton = new Button("Add");
@@ -32,8 +31,9 @@ public class DictionaryView extends VerticalLayout {
 
     protected WordForm form;
 
-    public DictionaryView(WordService wordService) {
-        this.wordService = wordService;
+    public DictionaryView(UserWordsService userWordsService) {
+        this.userWordsService = userWordsService;
+
 
         configGrid();
         configForm();
@@ -123,7 +123,7 @@ public class DictionaryView extends VerticalLayout {
                 Word learnedWord = event.getItem().get();
                 learnedWord.setTranslated(Languages.ALL, true);
                 learnedWord.setCompetently(true);
-                wordService.update(learnedWord);
+                userWordsService.update(learnedWord);
                 updateList();
             }
         });
@@ -139,11 +139,11 @@ public class DictionaryView extends VerticalLayout {
         form = new WordForm();
         form.setWidth("25em");
         form.addListener(WordForm.CloseEvent.class, closeEvent -> closeEditor());
-        form.addListener(WordForm.SaveEvent.class, this::saveContact);
+        form.addListener(WordForm.SaveEvent.class, this::saveWord);
     }
 
-    private void saveContact(WordForm.SaveEvent event) {
-        wordService.saveWord(event.getWord());
+    private void saveWord(WordForm.SaveEvent event) {
+        userWordsService.saveWord(event.getWord());
         updateList();
         closeEditor();
     }
@@ -153,7 +153,7 @@ public class DictionaryView extends VerticalLayout {
     }
 
     private void updateList() {
-        grid.setItems(wordService.getAll(filter.getValue(),status));
+        grid.setItems(userWordsService.getAll(filter.getValue(),status));
     }
 
     private void configuredFilter() {

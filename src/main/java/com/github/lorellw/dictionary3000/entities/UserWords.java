@@ -1,5 +1,6 @@
 package com.github.lorellw.dictionary3000.entities;
 
+
 import com.github.lorellw.dictionary3000.enums.Languages;
 import com.github.lorellw.dictionary3000.enums.Status;
 import lombok.Data;
@@ -7,31 +8,30 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
-@Setter
 @Getter
-@Table(name = "words")
-public class Word {
+@Setter
+@Table(name = "user_words")
+public class UserWords {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String wordRu;
-    private String wordEn;
 
-    @Transient
+    @ManyToOne()
+    @JoinColumn(name = "id_user")
+    private User user;
+    @ManyToOne()
+    @JoinColumn(name = "id_word")
+    private Word word;
+
+    @Column(name = "ru_translated")
     private boolean ruTranslated;
-    @Transient
+    @Column(name = "en_translated")
     private boolean enTranslated;
-    @Transient
+    @Column(name = "competently")
     private boolean competently;
-    @Transient
-    private boolean listened;
-
-    @OneToMany(mappedBy = "word")
-    private Set<UserWords> userWords;
-
 
     public void setTranslated(Languages lang, boolean translated){
         if (lang == Languages.enEN){

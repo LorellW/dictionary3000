@@ -25,20 +25,6 @@ public class WordService {
         repository.save(word);
     }
 
-    public List<Word> getAll(String filter, Status status) {
-        if ((filter == null || filter.isEmpty()) && status == null) {
-            return repository.findAll();
-        } else if (status != null) {
-            List<Word> temp = new ArrayList<>();
-            repository.search(filter).forEach(word -> {
-                if (word.getStatus() == status) temp.add(word);
-            });
-            return temp;
-        } else {
-            return repository.search(filter);
-        }
-    }
-
     public void update(Word newWord) {
         if (repository.findById(newWord.getId()).isPresent()) {
             repository.save(newWord);

@@ -15,19 +15,32 @@ public interface WordRepository extends JpaRepository<Word, Long> {
             "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
     List<Word> search(@Param("searchItem")String searchItem);
 
-    @Query("select w from Word w " +
-            "where w.enTranslated is FALSE or w.ruTranslated is FALSE")
+//    @Query("select w from Word w " +
+//            "where w.enTranslated is FALSE or w.ruTranslated is FALSE")
+@Query("select w from Word w " +
+        "where lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
+        "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
     List<Word> searchUnstudied();
 
-    @Query("select w from Word w " +
-            "where w.enTranslated is FALSE")
-    List<Word> searchEnUntranslated();
+//    @Query("select w from Word w " +
+//            "where w.enTranslated is FALSE")
+@Query("select w from Word w " +
+        "where lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
+        "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
+            List<Word> searchEnUntranslated();
 
-    @Query("select w from Word w " +
-            "where w.ruTranslated is FALSE")
+//    @Query("select w from Word w " +
+//            "where w.ruTranslated is FALSE")
+@Query("select w from Word w " +
+        "where lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
+        "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
     List<Word> searchRuUntranslated();
 
-    @Query("select w from Word w " +
-            "where w.competently is FALSE")
+//    @Query("select w from Word w " +
+//            "where w.competently is FALSE")
+@Query("select w from Word w " +
+        "where lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
+        "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
     List<Word> searchUnwritten();
+
 }
