@@ -1,6 +1,5 @@
 package com.github.lorellw.dictionary3000.entities;
 
-import com.github.lorellw.dictionary3000.enums.Role;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
