@@ -48,7 +48,7 @@ public class TTSView extends AbstractView {
     }
 
     private void configWordList() {
-        wordList = wordService.getUnwritten();
+        //wordList = wordService.getUnwritten();
         Collections.shuffle(wordList);
     }
 
