@@ -40,6 +40,12 @@ public class UserWordsService {
             System.err.println("Word is null");
             return;
         }
+        if (wordRepository.findByWordEn(word.getWordEn()).isEmpty()){
+            wordRepository.save(word);
+        }
+        if (userWordsRepository.findByWord(word).isEmpty()){
+            userWordsRepository.save(mapper.toUserWords(word, (User) securityService.getAuthenticatedUser()));
+        }
     }
 
     public List<Word> getUntranslated(Languages lang) {

@@ -31,16 +31,4 @@ public class WordService {
         }
     }
 
-    public List<Word> getUnwritten() {
-        return repository.searchUnwritten();
-    }
-
-    public List<Word> getUntranslated(Languages lang) {
-        if (lang == Languages.enEN) {
-            return repository.searchEnUntranslated();
-        } else if (lang == Languages.ruRU) {
-            return repository.searchRuUntranslated();
-        }
-        return repository.searchUnstudied();
-    }
 }
