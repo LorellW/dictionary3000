@@ -1,7 +1,9 @@
 package com.github.lorellw.dictionary3000.views;
 
+import com.github.lorellw.dictionary3000.services.SecurityService;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -11,7 +13,10 @@ import com.vaadin.flow.router.RouterLink;
 
 public class MainLayout extends AppLayout {
 
-    public MainLayout() {
+    private final SecurityService securityService;
+
+    public MainLayout(SecurityService securityService) {
+        this.securityService = securityService;
         createHeader();
         createDrawer();
     }
@@ -19,11 +24,21 @@ public class MainLayout extends AppLayout {
     private void createHeader() {
         H3 logo =new H3("Dictionary 3000");
         logo.addClassNames("text-l", "m-m");
+        //TODO do ... something
+        Button logout = new Button("Log out", buttonClickEvent -> {
+            try {
+                securityService.logout();
+            }catch (IllegalStateException ignored){
+
+            }
+        });
 
         HorizontalLayout header = new HorizontalLayout(
                 new DrawerToggle(),
-                logo
+                logo,
+                logout
         );
+
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.BASELINE);
         header.expand(logo);
         header.setWidth("99%");

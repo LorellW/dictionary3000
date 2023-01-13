@@ -1,4 +1,4 @@
-package com.github.lorellw.dictionary3000.enums;
+package com.github.lorellw.dictionary3000.entities;
 
 import org.springframework.security.core.GrantedAuthority;
 
