@@ -32,7 +32,15 @@ public class UserWordsService {
 
 
     public void update(Word learnedWord) {
-        userWordsRepository.save(mapper.toUserWords(learnedWord, (User) securityService.getAuthenticatedUser()));
+        userWordsRepository.findByWord(learnedWord).forEach(userWords -> {
+            if (userWords.getUser().getId().equals(((User) securityService.getAuthenticatedUser()).getId())){
+                userWords.setWord(learnedWord);
+                Long tempId = userWords.getId();
+                userWords = mapper.toUserWords(learnedWord, userWords.getUser());
+                userWords.setId(tempId);
+                userWordsRepository.save(userWords);
+            }
+        });
     }
 
     public void saveWord(Word word) {

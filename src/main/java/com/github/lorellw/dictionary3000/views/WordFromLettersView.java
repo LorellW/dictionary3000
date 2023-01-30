@@ -46,11 +46,13 @@ public class WordFromLettersView extends AbstractView {
         setAlignItems(Alignment.CENTER);
     }
 
+    //TODO reset button
     private void configResetButton() {
         resetButton.addClickShortcut(Key.BACKSPACE);
         resetButton.addClickListener(buttonClickEvent -> {
-            inputField.setValue(null);
-            //buttonField.getChildren().forEach();
+            inputField.setValue("");
+            buttonField.removeAll();
+            buttonField.add(configButtonField());
         });
     }
 
@@ -110,11 +112,12 @@ public class WordFromLettersView extends AbstractView {
         checkButton.addClickShortcut(Key.ENTER);
 
         checkButton.addClickListener(buttonClickEvent -> {
-            if (inputField.getValue().equals(currentString)) {
+            if (inputField.getValue().equals(getCurrentString())) {
                 inputField.setPrefixComponent(VaadinIcon.CHECK.create());
                 wordList.get(index - 1).setCompetently(true);
                 userWordsService.update(wordList.get(index-1));
             } else {
+                System.out.println(inputField.getValue() + " " + currentString);
                 inputField.setPrefixComponent(VaadinIcon.BAN.create());
                 inputField.setValue(inputField.getValue() + " (" + currentString + ")");
             }
