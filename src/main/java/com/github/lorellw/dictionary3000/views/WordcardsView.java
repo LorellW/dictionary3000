@@ -56,8 +56,8 @@ public class WordcardsView extends AbstractView {
         knowButton.addClickListener(buttonClickEvent -> {
             Word learnedWord = wordList.get(index-1);
             ruWord.setValue(learnedWord.getWordRu());
-            learnedWord.setTranslated(Languages.enEN,true);
-            learnedWord.setTranslated(Languages.ruRU,true);
+            learnedWord.setTranslated(Languages.ALL,true);
+            learnedWord.setCompetently(true);
             userWordsService.update(learnedWord);
         });
         dontKnowButton.addClickShortcut(Key.ARROW_RIGHT);
@@ -65,8 +65,7 @@ public class WordcardsView extends AbstractView {
             Word unlearnedWord = wordList.get(index-1);
             ruWord.setValue(unlearnedWord.getWordRu());
             if (unlearnedWord.isEnTranslated() || unlearnedWord.isRuTranslated() || unlearnedWord.isCompetently() ){
-                unlearnedWord.setTranslated(Languages.enEN,false);
-                unlearnedWord.setTranslated(Languages.ruRU,false);
+                unlearnedWord.setTranslated(Languages.ALL,false);
                 unlearnedWord.setCompetently(false);
                 userWordsService.update(unlearnedWord);
             }
