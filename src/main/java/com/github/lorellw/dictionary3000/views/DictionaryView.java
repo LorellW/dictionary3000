@@ -34,7 +34,6 @@ public class DictionaryView extends AbstractView {
     public DictionaryView(UserWordsService userWordsService) {
         this.userWordsService = userWordsService;
 
-
         configGrid();
         configForm();
         configuredFilter();
@@ -92,7 +91,6 @@ public class DictionaryView extends AbstractView {
         statusSelect.setItems(Status.NEW,Status.ONSTUDY,Status.STUDIED);
         statusSelect.addValueChangeListener(listener -> {
             status = listener.getValue();
-            System.out.println(status);
             updateList();
         });
     }
