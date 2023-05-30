@@ -27,27 +27,21 @@ public class GrammarService {
         return repository.findAll();
     }
 
-    public List<GrammaticalTask> getTasksByLesson(Integer value) {
-        return repository.findAllByLesson(value);
-    }
 
-    public List<String> getTasksTextByLesson(Integer value) {
+    public List<String> getTasksTextByLesson(Integer lesson, Integer exercise) {
         List<String> texts = new ArrayList<>();
-        repository.findAllByLesson(value).forEach(task -> {
+        repository.findAllByLesson(lesson,exercise).forEach(task -> {
             texts.add(task.getTask());
         });
         return texts;
     }
 
-    public Set<Integer> getLessonCount() {
-        return repository.getMaxLesson();
-    }
 
-    public Map<String,String> getWrongAnswers(List<String> answers, Integer value) {
+    public Map<String,String> getWrongAnswers(List<String> answers, Integer lesson, Integer exercise) {
 
         Map<String,String> wrongAnswers = new HashMap<>();
         int[] i = new int[]{0};
-        repository.findAllByLesson(value).forEach(task -> {
+        repository.findAllByLesson(lesson, exercise).forEach(task -> {
             if (!task.getSolution().equals(answers.get(i[0]))) {
                 wrongAnswers.put(task.getSolution(), answers.get(i[0]));
             }
@@ -55,4 +49,8 @@ public class GrammarService {
         });
         return wrongAnswers;
     }
+
+//    public Set<GrammaticalTask> testTasks(Long l, Long e){
+//        return repository.getTest(l,e);
+//    }
 }

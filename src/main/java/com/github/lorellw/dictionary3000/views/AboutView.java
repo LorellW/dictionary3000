@@ -18,6 +18,8 @@ public class AboutView extends AbstractView {
         this.userWordsService = userWordsService;
         this.grammarService = grammarService;
 
+
+        //TODO no comments
         Button addAllButton = new Button();
         addAllButton.addClickListener(buttonClickEvent -> {
             //userWordsService.addWords();

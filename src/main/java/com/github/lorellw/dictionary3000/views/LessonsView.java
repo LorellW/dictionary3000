@@ -1,6 +1,8 @@
 package com.github.lorellw.dictionary3000.views;
 
+import com.github.lorellw.dictionary3000.services.ExerciseService;
 import com.github.lorellw.dictionary3000.services.GrammarService;
+import com.github.lorellw.dictionary3000.services.LessonService;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
@@ -15,43 +17,56 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-
-@Route(value = "grammatical", layout = MainLayout.class)
-public class GrammaticalTasksView extends AbstractView {
-    private final ComboBox<Integer> lesson = new ComboBox<>();
+@Route(value = "lessons", layout = MainLayout.class)
+public class LessonsView extends AbstractView{
+    private ComboBox<Integer> lessonBox = new ComboBox<>();
+    private ComboBox<Integer> exerciseBox = new ComboBox<>();
     private VerticalLayout contentLayout = new VerticalLayout();
     private List<OneTaskDiv> oneTaskDivList = new ArrayList<>();
     private Button checkButton = new Button("Check");
 
     private final GrammarService grammarService;
+    private final ExerciseService exerciseService;
+    private final LessonService lessonService;
 
-    public GrammaticalTasksView(GrammarService grammarService) {
+
+    public LessonsView(GrammarService grammarService, ExerciseService exerciseService, LessonService lessonService) {
         this.grammarService = grammarService;
-        configComboBox();
+        this.exerciseService = exerciseService;
+        this.lessonService = lessonService;
+
+        configComboBoxes();
         configCheckButton();
-        add(lesson, contentLayout, checkButton);
+
+        add(lessonBox,exerciseBox,contentLayout,checkButton);
     }
 
-    private void configComboBox() {
-        lesson.setItems(grammarService.getLessonCount());
-        lesson.addValueChangeListener(event -> {
-            contentLayout.removeAll();
-            oneTaskDivList.clear();
-            grammarService.getTasksTextByLesson(event.getValue()).forEach(taskText -> {
-                OneTaskDiv div = new OneTaskDiv(taskText);
-                oneTaskDivList.add(div);
-            });
-            oneTaskDivList.forEach(oneTaskDiv -> contentLayout.add(oneTaskDiv));
+    private void configComboBoxes(){
+        lessonBox.setItems(lessonService.getAllLessons());
+
+        lessonBox.addValueChangeListener(event -> {
+            exerciseBox.setItems(exerciseService.getAllExercise(lessonBox.getValue()));
+        });
+        exerciseBox.addValueChangeListener(event -> updateContent());
+
+    }
+
+    private void updateContent() {
+        contentLayout.removeAll();
+        oneTaskDivList.clear();
+
+        grammarService.getTasksTextByLesson(lessonBox.getValue(), exerciseBox.getValue()).forEach(s -> {
+            OneTaskDiv div = new OneTaskDiv(s);
+            oneTaskDivList.add(div);
+            contentLayout.add(div);
         });
     }
 
-
-    private void configCheckButton( ) {
+    private void configCheckButton(){
         checkButton.addClickListener(event -> {
             List<String> answers = new ArrayList<>();
-
             oneTaskDivList.forEach(div -> answers.add(div.getAnswerValue()));
-            createResultDialog(grammarService.getWrongAnswers(answers, lesson.getValue())).open();
+            createResultDialog(grammarService.getWrongAnswers(answers,lessonBox.getValue(),exerciseBox.getValue())).open();
         });
     }
 
@@ -68,11 +83,11 @@ public class GrammaticalTasksView extends AbstractView {
         });
 
         resultDialog.add(closeButton);
+
         return resultDialog;
     }
 
-
-    private static class OneTaskDiv extends Div{
+    private static class OneTaskDiv extends Div {
         private final String taskText;
         private final TextField answer = new TextField();
 

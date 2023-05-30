@@ -14,9 +14,10 @@ public class GrammaticalTask {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Integer lesson;
-
     private String task;
     private String solution;
 
+    @ManyToOne
+    @JoinColumn(name = "id_exe")
+    private Exercise exercise;
 }
