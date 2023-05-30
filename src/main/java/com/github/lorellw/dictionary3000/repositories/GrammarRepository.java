@@ -11,9 +11,14 @@ import java.util.Set;
 
 @Repository
 public interface GrammarRepository extends JpaRepository<GrammaticalTask,Long> {
+
+    //TODO This is right method
     @Query("select g from GrammaticalTask g "+
-            "where g.lesson = :value ")
-    List<GrammaticalTask> findAllByLesson(@Param("value") Integer value);
-    @Query("select lesson from GrammaticalTask")
-    Set<Integer> getMaxLesson();
+            "join Exercise e on g.exercise=e.id "+
+            "join Lesson l on e.lesson=l.id "+
+            "where l.id = :lesson "+
+            "and "+
+            "e.seqNum = :exercise")
+    Set<GrammaticalTask> findAllByLesson(@Param("lesson") Integer lesson,
+                                 @Param("exercise") Integer exercise);
 }
