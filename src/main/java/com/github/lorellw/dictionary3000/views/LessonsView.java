@@ -1,5 +1,6 @@
 package com.github.lorellw.dictionary3000.views;
 
+import com.github.lorellw.dictionary3000.dto.ExerciseDto;
 import com.github.lorellw.dictionary3000.services.ExerciseService;
 import com.github.lorellw.dictionary3000.services.GrammarService;
 import com.github.lorellw.dictionary3000.services.LessonService;
@@ -16,18 +17,21 @@ import com.vaadin.flow.router.Route;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Route(value = "lessons", layout = MainLayout.class)
 public class LessonsView extends AbstractView{
-    private ComboBox<Integer> lessonBox = new ComboBox<>();
-    private ComboBox<Integer> exerciseBox = new ComboBox<>();
-    private VerticalLayout contentLayout = new VerticalLayout();
-    private List<OneTaskDiv> oneTaskDivList = new ArrayList<>();
-    private Button checkButton = new Button("Check");
+    private final ComboBox<Integer> lessonBox = new ComboBox<>();
+    private final ComboBox<Integer> exerciseBox = new ComboBox<>();
+    private final VerticalLayout contentLayout = new VerticalLayout();
+    private final List<OneTaskDiv> oneTaskDivList = new ArrayList<>();
+    private final Button checkButton = new Button("Check");
 
     private final GrammarService grammarService;
     private final ExerciseService exerciseService;
     private final LessonService lessonService;
+
+    private Set<ExerciseDto> actualExercises;
 
 
     public LessonsView(GrammarService grammarService, ExerciseService exerciseService, LessonService lessonService) {
@@ -44,10 +48,12 @@ public class LessonsView extends AbstractView{
     private void configComboBoxes(){
         lessonBox.setItems(lessonService.getAllLessons());
 
-        lessonBox.addValueChangeListener(event -> {
-            exerciseBox.setItems(exerciseService.getAllExercise(lessonBox.getValue()));
+        lessonBox.addValueChangeListener(event -> exerciseBox.setItems(exerciseService.getAllExerciseNumbers(lessonBox.getValue())));
+        exerciseBox.addValueChangeListener(event -> {
+            actualExercises = exerciseService.getAllExercise(lessonBox.getValue());
+            actualExercises.forEach(exerciseDto -> System.out.println(exerciseDto.getText()));
+            updateContent();
         });
-        exerciseBox.addValueChangeListener(event -> updateContent());
 
     }
 
@@ -56,6 +62,7 @@ public class LessonsView extends AbstractView{
         oneTaskDivList.clear();
 
         grammarService.getTasksTextByLesson(lessonBox.getValue(), exerciseBox.getValue()).forEach(s -> {
+
             OneTaskDiv div = new OneTaskDiv(s);
             oneTaskDivList.add(div);
             contentLayout.add(div);
@@ -71,16 +78,12 @@ public class LessonsView extends AbstractView{
     }
 
     private Dialog createResultDialog(Map<String,String> wrongAnswers) {
-        Dialog resultDialog = new Dialog();
+        var resultDialog = new Dialog();
         resultDialog.setHeaderTitle("Your Result");
-        wrongAnswers.forEach((s, s2) -> {
-            resultDialog.add(new HorizontalLayout(new Text(s + " : "), new Text(s2)));
-        });
+        wrongAnswers.forEach((s, s2) -> resultDialog.add(new HorizontalLayout(new Text(s + " : "), new Text(s2))));
 
         Button closeButton = new Button("Ok");
-        closeButton.addClickListener(event -> {
-            resultDialog.close();
-        });
+        closeButton.addClickListener(event -> resultDialog.close());
 
         resultDialog.add(closeButton);
 
