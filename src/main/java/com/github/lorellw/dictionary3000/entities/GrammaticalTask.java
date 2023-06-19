@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "gtasks")
 public class GrammaticalTask {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String task;

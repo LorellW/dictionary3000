@@ -22,7 +22,7 @@ public class AboutView extends AbstractView {
         //TODO no comments
         Button addAllButton = new Button();
         addAllButton.addClickListener(buttonClickEvent -> {
-            //userWordsService.addWords();
+
         });
         add(addAllButton);
     }

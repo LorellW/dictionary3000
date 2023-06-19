@@ -31,6 +31,7 @@ public class LessonsView extends AbstractView{
     private final ExerciseService exerciseService;
     private final LessonService lessonService;
 
+    // TODO may be Map<Integer, String>
     private Set<ExerciseDto> actualExercises;
 
 
@@ -51,7 +52,6 @@ public class LessonsView extends AbstractView{
         lessonBox.addValueChangeListener(event -> exerciseBox.setItems(exerciseService.getAllExerciseNumbers(lessonBox.getValue())));
         exerciseBox.addValueChangeListener(event -> {
             actualExercises = exerciseService.getAllExercise(lessonBox.getValue());
-            actualExercises.forEach(exerciseDto -> System.out.println(exerciseDto.getText()));
             updateContent();
         });
 
@@ -60,7 +60,11 @@ public class LessonsView extends AbstractView{
     private void updateContent() {
         contentLayout.removeAll();
         oneTaskDivList.clear();
-
+        actualExercises.forEach(exerciseDto -> {
+            if (exerciseDto.getSeqNumb() == exerciseBox.getValue()){
+                contentLayout.add(new Text(exerciseDto.getText()));
+            }
+        });
         grammarService.getTasksTextByLesson(lessonBox.getValue(), exerciseBox.getValue()).forEach(s -> {
 
             OneTaskDiv div = new OneTaskDiv(s);
