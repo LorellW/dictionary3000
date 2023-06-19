@@ -5,6 +5,8 @@ import com.github.lorellw.dictionary3000.entities.Lesson;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.ArrayList;
 import java.util.Set;
 
 @Getter
@@ -13,5 +15,6 @@ import java.util.Set;
 public class ExerciseDto {
     private int seqNumb;
     private String text;
+
 
 }

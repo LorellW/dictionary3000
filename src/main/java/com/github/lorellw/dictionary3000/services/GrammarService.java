@@ -42,15 +42,13 @@ public class GrammarService {
         Map<String,String> wrongAnswers = new HashMap<>();
         int[] i = new int[]{0};
         repository.findAllByLesson(lesson, exercise).forEach(task -> {
+            System.out.println(task.getId());
             if (!task.getSolution().equals(answers.get(i[0]))) {
-                wrongAnswers.put(task.getSolution(), answers.get(i[0]));
+                wrongAnswers.put(i[0] + ". " + task.getSolution(), answers.get(i[0]));
             }
             i[0]++;
         });
         return wrongAnswers;
     }
 
-//    public Set<GrammaticalTask> testTasks(Long l, Long e){
-//        return repository.getTest(l,e);
-//    }
 }

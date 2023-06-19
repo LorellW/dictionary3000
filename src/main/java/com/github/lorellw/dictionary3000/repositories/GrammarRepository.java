@@ -19,4 +19,5 @@ public interface GrammarRepository extends JpaRepository<GrammaticalTask,Long> {
             "e.seqNum = :exercise")
     Set<GrammaticalTask> findAllByLesson(@Param("lesson") Integer lesson,
                                  @Param("exercise") Integer exercise);
+
 }
