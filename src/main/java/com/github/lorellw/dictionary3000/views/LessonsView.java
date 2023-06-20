@@ -51,7 +51,6 @@ public class LessonsView extends AbstractView{
         lessonBox.addValueChangeListener(event -> exerciseBox.setItems(exerciseService.getAllExerciseNumbers(lessonBox.getValue())));
         exerciseBox.addValueChangeListener(event -> {
             actualExercises = exerciseService.getAllExercise(lessonBox.getValue());
-            actualExercises.forEach(exerciseDto -> System.out.println(exerciseDto.getText()));
             updateContent();
         });
 
@@ -77,10 +76,10 @@ public class LessonsView extends AbstractView{
         });
     }
 
-    private Dialog createResultDialog(Map<String,String> wrongAnswers) {
+    private Dialog createResultDialog(List<String> wrongAnswers) {
         var resultDialog = new Dialog();
         resultDialog.setHeaderTitle("Your Result");
-        wrongAnswers.forEach((s, s2) -> resultDialog.add(new HorizontalLayout(new Text(s + " : "), new Text(s2))));
+        wrongAnswers.forEach((s) -> resultDialog.add(new HorizontalLayout(new Text(s))));
 
         Button closeButton = new Button("Ok");
         closeButton.addClickListener(event -> resultDialog.close());
