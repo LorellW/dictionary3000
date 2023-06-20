@@ -13,7 +13,7 @@ import java.util.Set;
 @Table(name = "exercises")
 public class Exercise {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "text")
     private String text;

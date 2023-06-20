@@ -41,6 +41,7 @@ public class GrammarService {
         List<String> wrongAnswers = new ArrayList<>();
         int[] i = new int[]{0};
         repository.findAllByLesson(lesson, exercise).forEach(task -> {
+            System.out.println(task.getId());
             if (!task.getSolution().equals(answers.get(i[0]))) {
                 wrongAnswers.add(String.format("%d. %s | right answer: %s | your answer: %s", i[0] + 1, task.getTask(), task.getSolution(), answers.get(i[0])));
             }
@@ -49,7 +50,4 @@ public class GrammarService {
         return wrongAnswers;
     }
 
-//    public Set<GrammaticalTask> testTasks(Long l, Long e){
-//        return repository.getTest(l,e);
-//    }
 }
