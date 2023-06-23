@@ -1,10 +1,14 @@
 package com.github.lorellw.dictionary3000.views;
 
 import com.github.lorellw.dictionary3000.services.SecurityService;
+import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -25,6 +29,7 @@ public class MainLayout extends AppLayout {
         H3 logo =new H3("Dictionary 3000");
         logo.addClassNames("text-l", "m-m");
         //TODO do ... something
+        H5 username = new H5(securityService.getAuthenticatedUser().getUsername());
         Button logout = new Button("Log out", buttonClickEvent -> {
             try {
                 securityService.logout();
@@ -36,6 +41,7 @@ public class MainLayout extends AppLayout {
         HorizontalLayout header = new HorizontalLayout(
                 new DrawerToggle(),
                 logo,
+                username,
                 logout
         );
 

@@ -26,6 +26,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
     public LoginView(UserService userService) {
         this.userService = userService;
         addClassName("login-view");
+        setId("login-view-0");
         setSizeFull();
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
@@ -48,6 +49,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
     private Button createRegistrationButton() {
         Button registrationButton = new Button("Registration");
+        registrationButton.setId("registration-button-0");
         registrationButton.addClickListener(event -> new RegistrationDialog(userService).open());
         return registrationButton;
     }
