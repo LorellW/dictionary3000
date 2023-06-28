@@ -36,7 +36,7 @@ public class DictionaryView extends AbstractView {
 
         configGrid();
         configForm();
-        configuredFilter();
+        configFilter();
         configAddButton();
         configSelect();
 
@@ -80,6 +80,7 @@ public class DictionaryView extends AbstractView {
     }
 
     private void configSelect() {
+        statusSelect.setId("status-combo-box-0");
         statusSelect.setPlaceholder("Status");
         statusSelect.setEmptySelectionAllowed(true);
         statusSelect.setItemLabelGenerator(s -> {
@@ -155,7 +156,8 @@ public class DictionaryView extends AbstractView {
         grid.setItems(userWordsService.getAll(filter.getValue(),status));
     }
 
-    private void configuredFilter() {
+    private void configFilter() {
+        filter.setId("filter-text-field-0");
         filter.setPlaceholder("Search");
         filter.setPrefixComponent(VaadinIcon.SEARCH.create());
         filter.setClearButtonVisible(true);

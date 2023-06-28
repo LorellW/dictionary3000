@@ -26,10 +26,9 @@ import java.time.Duration;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
 @SpringBootTest
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
-class Dictionary3000ApplicationTests {
+class LoginTest {
 
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     @BeforeAll
     public static void setup() {
@@ -41,10 +40,7 @@ class Dictionary3000ApplicationTests {
         driver.manage().window().maximize();
     }
 
-    @AfterAll
-    public static void closeDriver(){
-        driver.close();
-    }
+
 
     @Test
     void loginViewTest() {

@@ -21,8 +21,8 @@ public class WordcardsView extends AbstractView {
     private final UserWordsService userWordsService;
     private List<Word> wordList;
 
-    private TextField enWord = new TextField();
-    private TextField ruWord = new TextField();
+    private final TextField enWord = new TextField();
+    private final TextField ruWord = new TextField();
     private int index = 0;
 
     public WordcardsView(UserWordsService userWordsService) {
@@ -46,10 +46,13 @@ public class WordcardsView extends AbstractView {
     private HorizontalLayout createButtonField(){
 
         Button knowButton = new Button("Know");
+        knowButton.setId("know-button-0");
         knowButton.setWidth("7em");
         Button dontKnowButton = new Button("Don't know");
+        dontKnowButton.setId("dont-know-button-0");
         dontKnowButton.setWidth("7em");
         Button nextButton = new Button("Start");
+        nextButton.setId("next-button-0");
         nextButton.setWidth("7em");
 
         knowButton.addClickShortcut(Key.ARROW_LEFT);
