@@ -22,8 +22,11 @@ public class WordCardsViewTest extends SetupViewTest{
         var ruTextField = driver.findElement(By.id("input-vaadin-text-field-7"));
         var knowButton = driver.findElement(By.id("know-button-0"));
         var dontKnowButton = driver.findElement(By.id("dont-know-button-0"));
-        var nextButton = driver.findElement(By.id("next-button-0"));
-
+        var startNextButton = driver.findElement(By.id("next-button-0"));
+        startNextButton.click();
+        knowButton.click();
+        dontKnowButton.click();
+        startNextButton.click();
 
     }
 }
