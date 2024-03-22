@@ -1,10 +1,14 @@
-package com.github.lorellw.dictionary3000.pageTests;
+package com.github.lorellw.dictionary3000.pageTests.loginViewTest;
 
+import com.github.lorellw.dictionary3000.pageTests.AbstractTest;
+import com.github.lorellw.dictionary3000.services.UserService;
 import com.github.lorellw.dictionary3000.util.Util;
 import lombok.SneakyThrows;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,9 +16,8 @@ import java.time.Duration;
 import static org.testng.Assert.*;
 
 @Test
-public class LoginViewTest extends AbstractTest{
+public class LoginViewPositiveTest extends AbstractTest {
 
-    @SneakyThrows
     public void loginPositiveTest(){
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.titleIs("Login"));
@@ -30,11 +33,8 @@ public class LoginViewTest extends AbstractTest{
                 .until(ExpectedConditions
                         .not(ExpectedConditions.titleIs(currentTitle)));
         assertEquals(driver.getTitle(),"About");
+
     }
 
-    private void sendInput(By locator, String text){
-        driver.findElement(locator)
-                .findElement(By.tagName("input"))
-                .sendKeys(text);
-    }
+
 }

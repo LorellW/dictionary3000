@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All">
+    <test name="qwerty">
+        <classes>
+<!--            <class name="com.github.lorellw.dictionary3000.TestTest"></class>-->
+<!--            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginViewPositiveTest"/>-->
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginViewNegativeTest"/>
+        </classes>
+    </test>
+</suite>

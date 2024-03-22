@@ -51,6 +51,7 @@ public class TranslateView extends AbstractView {
     }
 
     private void configTextField() {
+        wordToTranslate.setId("word-to-translate-text-field-0");
         wordToTranslate.setReadOnly(true);
         wordToTranslate.addThemeVariants(TextFieldVariant.LUMO_ALIGN_CENTER);
         wordToTranslate.getStyle().set("width", "21em");
@@ -80,6 +81,7 @@ public class TranslateView extends AbstractView {
 
     private Button createNextButton() {
         Button nextButton = new Button("Start");
+        nextButton.setId("next-button-0");
         nextButton.addClickShortcut(Key.SPACE);
         nextButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         nextButton.addClickListener(buttonClickEvent -> {
@@ -126,6 +128,7 @@ public class TranslateView extends AbstractView {
             button.setIcon(new Icon(VaadinIcon.CHECK));
             wordList.get(index - 1).setTranslated(langMode, true);
             userWordsService.update(wordList.get(index - 1));
+            Arrays.stream(buttons).forEach(b -> b.setEnabled(false)); // temporary fix
         } else {
             button.setIcon(new Icon(VaadinIcon.BAN));
             Arrays.stream(buttons).forEach(b -> {
@@ -142,7 +145,9 @@ public class TranslateView extends AbstractView {
         Tabs languagesTabs = new Tabs();
 
         Tab enTab = new Tab("English to Russian");
+        enTab.setId("en-tab-0");
         Tab ruTab = new Tab("Russian to English");
+        ruTab.setId("ru-tab-0");
 
 
         languagesTabs.addSelectedChangeListener(selectedChangeEvent -> {
