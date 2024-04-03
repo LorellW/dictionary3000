@@ -16,7 +16,7 @@ import java.time.Duration;
 import static org.testng.Assert.*;
 
 @Test
-public class LoginViewPositiveTest extends AbstractTest {
+public class LoginPositiveTest extends AbstractTest {
 
     public void loginPositiveTest(){
         new WebDriverWait(driver, Duration.ofSeconds(3))

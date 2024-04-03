@@ -13,7 +13,7 @@ import java.time.Duration;
 import static org.testng.Assert.assertEquals;
 
 @Test
-public class LoginViewNegativeTest extends AbstractTest {
+public class LoginNegativeTest extends AbstractTest {
 
     public void incorrectUserName() {
         driver.get("http://localhost:8080/login");

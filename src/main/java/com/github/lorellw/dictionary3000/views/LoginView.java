@@ -49,6 +49,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
     private Button createRegistrationButton() {
         Button registrationButton = new Button("Registration");
+        registrationButton.setId("registration-button");
         registrationButton.addClickListener(event -> new RegistrationDialog(userService).open());
         return registrationButton;
     }
@@ -73,12 +74,18 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
             configSingUpButton();
 
             Button closeButton = new Button("Close", e -> this.close());
+            closeButton.setId("close-button");
             HorizontalLayout buttonLayout = new HorizontalLayout(closeButton, singUpButton);
+
+            usernameTextField.setId("login-input");
+            passwordField.setId("pass-input");
+            confirmPasswordField.setId("confirm-pass-input");
 
             return new VerticalLayout(usernameTextField,passwordField,confirmPasswordField,buttonLayout);
         }
 
         private void configSingUpButton() {
+            singUpButton.setId("sign-up-button");
             singUpButton.addClickShortcut(Key.ENTER);
             singUpButton.addClickListener(buttonClickEvent -> {
                 if (passwordField.getValue().equals(confirmPasswordField.getValue())) {
@@ -109,7 +116,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
         private Dialog createInfoDialog(String info){
             Dialog infoDialog = new Dialog();
-
+            infoDialog.setId("info-dialog");
             infoDialog.setHeaderTitle("Message");
             Button cancelButton = new Button("Cancel", e-> infoDialog.close());
 
