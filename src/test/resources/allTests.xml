@@ -6,10 +6,15 @@
         <parameter name="newPassword" value="TestPassword"/>
         <parameter name="existingUsername" value="User"/>
         <classes>
-<!--            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginPositiveTest"/>-->
-<!--            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginNegativeTest"/>-->
-<!--            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.PositiveRegistrationTest"/>-->
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.PositiveRegistrationTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginPositiveTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginNegativeTest"/>
             <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.NegativeRegistrationTest"/>
+        </classes>
+    </test>
+    <test name="mainLayoutTest">
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.LogoutTest"/>
         </classes>
     </test>
 </suite>

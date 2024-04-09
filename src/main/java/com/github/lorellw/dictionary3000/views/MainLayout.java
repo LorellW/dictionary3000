@@ -32,7 +32,7 @@ public class MainLayout extends AppLayout {
 
             }
         });
-
+        logout.setId("logout-button");
         HorizontalLayout header = new HorizontalLayout(
                 new DrawerToggle(),
                 logo,

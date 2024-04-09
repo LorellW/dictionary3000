@@ -2,16 +2,19 @@ package com.github.lorellw.dictionary3000.pageTests;
 
 import com.github.lorellw.dictionary3000.config.ConnectConfig;
 import com.github.lorellw.dictionary3000.config.WebDriverConfig;
+import com.github.lorellw.dictionary3000.util.Util;
 import lombok.SneakyThrows;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.time.Duration;
 
 public abstract class AbstractTest {
     protected WebDriver driver;
@@ -32,6 +35,20 @@ public abstract class AbstractTest {
         element.findElement(locator)
                 .findElement(By.tagName("input"))
                 .sendKeys(text);
+    }
+
+    protected void successfulLogin(){
+        new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(ExpectedConditions.titleIs("Login"));
+
+        sendInput(By.id("vaadinLoginUsername"), Util.getPropertyByKey("login"));
+        sendInput(By.id("vaadinLoginPassword"),Util.getPropertyByKey("pass"));
+
+        driver.findElement(By.tagName("vaadin-login-form-wrapper"))
+                .findElement(By.tagName("vaadin-button")).click();
+
+        new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(ExpectedConditions.titleIs("About"));
     }
 
     @SneakyThrows
