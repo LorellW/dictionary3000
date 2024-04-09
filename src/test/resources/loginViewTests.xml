@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="LoginViewTests">
-    <test name="loginTest">
-        <classes>
-            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginPositiveTest"/>
-            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginNegativeTest"/>
-        </classes>
-    </test>
-    <test name="registrationTests">
+<suite name="loginViewTests">
+    <test name="loginViewTest">
+        <parameter name="newLogin" value="TestUsername"/>
+        <parameter name="newPassword" value="TestPassword"/>
+        <parameter name="existingUsername" value="User"/>
         <classes>
             <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.PositiveRegistrationTest"/>
-
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginPositiveTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.LoginNegativeTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.loginViewTest.NegativeRegistrationTest"/>
         </classes>
     </test>
 </suite>

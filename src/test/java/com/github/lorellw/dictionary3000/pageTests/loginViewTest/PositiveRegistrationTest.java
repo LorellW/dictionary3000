@@ -14,7 +14,7 @@ public class PositiveRegistrationTest extends RegistrationTest {
             "newLogin", "newPassword"
     })
     public void positiveRegistrationTest(String newLogin, String newPassword) throws SQLException, InterruptedException {
-
+        openRegistrationDialog();
         dataInput(newLogin,newPassword, newPassword);
 
         Thread.sleep(1000);//todo try some WDW
