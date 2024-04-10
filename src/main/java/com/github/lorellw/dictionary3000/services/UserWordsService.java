@@ -57,6 +57,7 @@ public class UserWordsService {
     }
 
     public List<Word> getUntranslated(Languages lang) {
+
         List<Word> temp = new ArrayList<>();
         if (lang == Languages.enEN) {
             userWordsRepository.searchEnUntranslated((User) securityService.getAuthenticatedUser()).forEach(userWord -> {
@@ -82,14 +83,14 @@ public class UserWordsService {
                 words.add(mapper.toWord(userWord));
             });
         } else if (status != null) {
-            userWordsRepository.search(filter, (User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+            userWordsRepository.search(/*filter,*/ (User) securityService.getAuthenticatedUser()).forEach(userWord -> {
                 Word temp = mapper.toWord(userWord);
                 if (temp.getStatus() == status) {
                     words.add(temp);
                 }
             });
         } else {
-            userWordsRepository.search(filter, (User) securityService.getAuthenticatedUser()).forEach(userWord -> {
+            userWordsRepository.search(/*filter,*/ (User) securityService.getAuthenticatedUser()).forEach(userWord -> {
                 words.add(mapper.toWord(userWord));
             });
         }
