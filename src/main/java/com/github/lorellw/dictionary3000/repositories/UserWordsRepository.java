@@ -15,11 +15,12 @@ public interface UserWordsRepository extends JpaRepository<UserWords, Long> {
 
     @Query("select uw from UserWords uw " +
             "join Word w on uw.word=w.id " +
-            "where uw.user = :currentUser " +
-            "and " +
-            "lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
-            "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
-    List<UserWords> search(@Param("searchItem") String searchItem, @Param("currentUser") User user);
+            "where uw.user = :currentUser " )
+//            "and " +
+//            "lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
+//            "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
+    List<UserWords> search(/*@Param("searchItem") String searchItem,*/
+                           @Param("currentUser") User user);
 
     @Query("select uw from UserWords uw " +
             "where uw.user = :currentUser " +
