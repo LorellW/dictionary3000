@@ -3,7 +3,8 @@
 <suite name="dictionaryViewTests">
     <test name="dictionaryViewTest">
         <classes>
-            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PersonalDictionaryTest"/>
+<!--            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PersonalDictionaryTest"/>-->
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.StatusTest"/>
         </classes>
     </test>
 </suite>
