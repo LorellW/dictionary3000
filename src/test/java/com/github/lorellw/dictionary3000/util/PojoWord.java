@@ -10,12 +10,17 @@ import java.util.Objects;
 @Getter
 @AllArgsConstructor
 public class PojoWord {
-    private String ru;
-    private String en;
-    private String status;
+    private final String en;
+    private final String ru;
+    private final Status status;
 
-    public Status stringToStatus(){
-        return null;
+    public static Status stringToStatus(String status) {
+        return switch (status) {
+            case "vaadin:check" -> Status.STUDIED;
+            case "vaadin:clock" -> Status.ONSTUDY;
+            case "vaadin:book" -> Status.NEW;
+            default -> Status.BROKEN;
+        };
     }
 
     @Override
