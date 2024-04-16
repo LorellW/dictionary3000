@@ -96,6 +96,7 @@ public class DictionaryView extends AbstractView {
     }
 
     private void configAddButton() {
+        addButton.setId("add-button");
         addButton.addClickListener(buttonClickEvent -> {
             if (form.isVisible()) {
                 form.setVisible(false);

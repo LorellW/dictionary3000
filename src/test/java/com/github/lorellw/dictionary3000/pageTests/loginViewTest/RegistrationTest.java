@@ -29,12 +29,15 @@ public class RegistrationTest extends AbstractTest {
     }
 
     protected void clear(String temp){
-        sendUpdateQuery(String.format("delete from user_role ur\n" +
-                "where ur.id_user = (\n" +
-                "select id from users u \n" +
-                "where u.username = '%s'\n" +
-                ")",temp));
-        sendUpdateQuery(String.format("delete from users u\n" +
-                "where u.username = '%s'",temp));
+        sendUpdateQuery(String.format("""
+                delete from user_role ur \s
+                where ur.id_user = (\s
+                select id from users u \s
+                where u.username = '%s'\s
+                )""",temp));
+        sendUpdateQuery(String.format("""
+                delete from users u \s
+                where u.username = '%s'
+                """,temp));
     }
 }

@@ -13,12 +13,11 @@ import org.testng.annotations.AfterClass;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.Duration;
 
 public abstract class AbstractTest {
     protected WebDriver driver;
-    private Connection connection;
+    private final Connection connection;
 
     public AbstractTest() {
         this.driver = WebDriverConfig.getConfiguredDriver();
@@ -61,10 +60,8 @@ public abstract class AbstractTest {
         var statement = connection.createStatement();
         statement.executeUpdate(query);
     }
-
     @AfterClass
-    public void quit() throws SQLException {
-        connection.close();
+    public void quit() {
         driver.quit();
     }
 }

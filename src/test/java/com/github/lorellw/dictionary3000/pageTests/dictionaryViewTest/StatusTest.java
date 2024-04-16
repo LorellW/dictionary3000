@@ -1,15 +1,9 @@
 package com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest;
 
 import com.github.lorellw.dictionary3000.enums.Status;
-import com.github.lorellw.dictionary3000.pageTests.AbstractTest;
 import com.github.lorellw.dictionary3000.util.PojoWord;
-import com.vaadin.flow.component.combobox.ComboBox;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
