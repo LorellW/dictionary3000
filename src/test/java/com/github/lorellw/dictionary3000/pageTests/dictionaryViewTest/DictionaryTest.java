@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class DictionaryTest extends AbstractTest {
     }
 
     protected List<PojoWord> getContentFromDB() {
-        var words = new ArrayList<PojoWord>();
+        List<PojoWord> words = new ArrayList<>();
         var resultSet = sendSelectQuery(String.format("""
                 SELECT id FROM users u \s
                 WHERE u.username = '%s'""",
@@ -49,30 +50,47 @@ public class DictionaryTest extends AbstractTest {
         try {
             resultSet.next();
             idUser = resultSet.getInt(1);
-
             resultSet = sendSelectQuery(String.format("""
                     SELECT * FROM user_words uw \s
                     JOIN words w ON uw.id_word = w.id \s
                     WHERE uw.id_user = %d
-                    """,
-                    idUser));
-            while (resultSet.next()) {
-                String en = resultSet.getString("word_en");
-                String ru = resultSet.getString("word_ru");
-                String status;
-                var competently = resultSet.getBoolean("competently");
-                var enTranslated = resultSet.getBoolean("en_translated");
-                var ruTranslated = resultSet.getBoolean("ru_translated");
-                if (competently && enTranslated && ruTranslated) {
-                    status = "vaadin:check";
-                } else if (competently || enTranslated || ruTranslated) {
-                    status = "vaadin:clock";
-                } else {
-                    status = "vaadin:book";
-                }
-                words.add(new PojoWord(en, ru, PojoWord.stringToStatus(status)));
-            }
+                    """, idUser));
+            words = resultSetToList(resultSet);
         } catch (SQLException ignored) { }
         return words;
+    }
+
+    protected List<PojoWord> resultSetToList(ResultSet set) throws SQLException {
+        var list = new ArrayList<PojoWord>();
+        while (set.next()) {
+            String en = set.getString("word_en");
+            String ru = set.getString("word_ru");
+            String status;
+            var competently = set.getBoolean("competently");
+            var enTranslated = set.getBoolean("en_translated");
+            var ruTranslated = set.getBoolean("ru_translated");
+            if (competently && enTranslated && ruTranslated) {
+                status = "vaadin:check";
+            } else if (competently || enTranslated || ruTranslated) {
+                status = "vaadin:clock";
+            } else {
+                status = "vaadin:book";
+            }
+            list.add(new PojoWord(en, ru, PojoWord.stringToStatus(status)));
+        }
+        return list;
+    }
+
+    protected void clear(String notRealWordEn){
+        sendUpdateQuery(String.format("""
+                delete from user_words uw\s
+                where uw.id_word = (\s
+                select id from words w\s
+                where w.word_en = '%s')
+                """,notRealWordEn));
+        sendUpdateQuery(String.format("""
+                delete from words w \s
+                where w.word_en = '%s'
+                """,notRealWordEn));
     }
 }

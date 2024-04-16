@@ -2,7 +2,6 @@ package com.github.lorellw.dictionary3000.util;
 
 import com.github.lorellw.dictionary3000.enums.Status;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.Objects;

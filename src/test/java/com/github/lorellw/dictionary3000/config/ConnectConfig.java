@@ -4,7 +4,6 @@ import com.github.lorellw.dictionary3000.util.Util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class ConnectConfig {
     private static Connection connection;
