@@ -15,6 +15,18 @@
     <test name="mainLayoutTest">
         <classes>
             <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.LogoutTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.DrawerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.NavigationTest"/>
+        </classes>
+    </test>
+    <test name="dictionaryViewTest">
+        <parameter name="newWordEn" value="NotRealWord"/>
+        <parameter name="newWordRu" value="НенастоящееСлово"/>
+        <parameter name="username" value="User"/>
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PersonalDictionaryTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PositiveAddingNewWordTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.StatusTest"/>
         </classes>
     </test>
 </suite>

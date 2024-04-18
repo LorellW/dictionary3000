@@ -35,8 +35,10 @@ public class WordcardsView extends AbstractView {
 
     private HorizontalLayout createTextFields(){
         enWord.setLabel("EN");
+        enWord.setId("en-word-field");
         enWord.setReadOnly(true);
         ruWord.setLabel("RU");
+        ruWord.setId("ru-word-field");
         ruWord.setReadOnly(true);
         HorizontalLayout textFields = new HorizontalLayout();
         textFields.add(enWord,ruWord);
@@ -46,10 +48,13 @@ public class WordcardsView extends AbstractView {
     private HorizontalLayout createButtonField(){
 
         Button knowButton = new Button("Know");
+        knowButton.setId("know-button");
         knowButton.setWidth("7em");
         Button dontKnowButton = new Button("Don't know");
+        dontKnowButton.setId("dont-know-button");
         dontKnowButton.setWidth("7em");
         Button nextButton = new Button("Start");
+        nextButton.setId("start-next-button");
         nextButton.setWidth("7em");
 
         knowButton.addClickShortcut(Key.ARROW_LEFT);
