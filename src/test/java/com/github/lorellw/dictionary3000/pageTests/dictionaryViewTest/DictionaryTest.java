@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DictionaryTest extends AbstractTest {
+abstract class DictionaryTest extends AbstractTest {
 
     protected DictionaryTest(){
         successfulLogin();
@@ -43,7 +43,7 @@ public class DictionaryTest extends AbstractTest {
     protected List<PojoWord> getContentFromDB() {
         List<PojoWord> words = new ArrayList<>();
         var resultSet = sendSelectQuery(String.format("""
-                SELECT id FROM users u \s
+                SELECT id FROM users u\s
                 WHERE u.username = '%s'""",
                 Util.getPropertyByKey("login")));
         int idUser;
@@ -51,34 +51,13 @@ public class DictionaryTest extends AbstractTest {
             resultSet.next();
             idUser = resultSet.getInt(1);
             resultSet = sendSelectQuery(String.format("""
-                    SELECT * FROM user_words uw \s
-                    JOIN words w ON uw.id_word = w.id \s
+                    SELECT * FROM user_words uw\s
+                    JOIN words w ON uw.id_word = w.id\s
                     WHERE uw.id_user = %d
                     """, idUser));
             words = resultSetToList(resultSet);
         } catch (SQLException ignored) { }
         return words;
-    }
-
-    protected List<PojoWord> resultSetToList(ResultSet set) throws SQLException {
-        var list = new ArrayList<PojoWord>();
-        while (set.next()) {
-            String en = set.getString("word_en");
-            String ru = set.getString("word_ru");
-            String status;
-            var competently = set.getBoolean("competently");
-            var enTranslated = set.getBoolean("en_translated");
-            var ruTranslated = set.getBoolean("ru_translated");
-            if (competently && enTranslated && ruTranslated) {
-                status = "vaadin:check";
-            } else if (competently || enTranslated || ruTranslated) {
-                status = "vaadin:clock";
-            } else {
-                status = "vaadin:book";
-            }
-            list.add(new PojoWord(en, ru, PojoWord.stringToStatus(status)));
-        }
-        return list;
     }
 
     protected void clear(String notRealWordEn){

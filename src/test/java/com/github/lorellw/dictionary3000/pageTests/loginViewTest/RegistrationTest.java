@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class RegistrationTest extends AbstractTest {
+abstract class RegistrationTest extends AbstractTest {
 
     protected void openRegistrationDialog(){
         driver.get("http://localhost:8080/login");
