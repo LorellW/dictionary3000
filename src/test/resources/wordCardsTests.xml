@@ -2,8 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="wordCardsTests">
     <test name="wordCardsTest">
+        <parameter name="username" value="User"/>
         <classes>
-            <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.StartAndNextText"/>
+<!--            <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.StartAndNextText"/>-->
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.KnowButtonTest"/>
         </classes>
     </test>
 </suite>
