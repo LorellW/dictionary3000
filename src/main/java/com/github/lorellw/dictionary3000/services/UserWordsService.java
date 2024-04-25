@@ -91,7 +91,6 @@ public class UserWordsService {
         User user = (User) securityService.getAuthenticatedUser();
         List<Word> words = wordRepository.findAll();
 
-
         words.forEach(word -> {
             UserWords temp = new UserWords();
             temp.setUser(user);
