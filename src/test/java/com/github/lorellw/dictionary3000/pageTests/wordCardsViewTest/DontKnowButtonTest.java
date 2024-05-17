@@ -24,6 +24,6 @@ public class DontKnowButtonTest extends WordCardsTest{
         var word = findWord(username, enField.getAttribute("value"));
         assertEquals(word.getStatus(), Status.NEW);
 
-        clear(username, word.getEn());
+        clear();
     }
 }

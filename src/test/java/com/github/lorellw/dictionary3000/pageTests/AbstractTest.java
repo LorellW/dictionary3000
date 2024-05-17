@@ -29,7 +29,8 @@ public abstract class AbstractTest {
     }
 
     protected void sendInput(By locator, String text) {
-        driver.findElement(locator)
+        new WebDriverWait(driver, Duration.ofSeconds(100))
+                .until(ExpectedConditions.presenceOfElementLocated(locator))
                 .findElement(By.tagName("input"))
                 .sendKeys(text);
     }
@@ -85,6 +86,36 @@ public abstract class AbstractTest {
         var statement = connection.createStatement();
         statement.executeUpdate(query);
     }
+
+    @SneakyThrows
+    protected long getCurrentUserId(){
+        var resultSet = sendSelectQuery(String.format("""
+                SELECT id FROM users u\s
+                WHERE u.username = '%s'""",
+                Util.getPropertyByKey("login")));
+        if (resultSet.next()){
+            return resultSet.getLong(1);
+        }
+        return -1;
+    }
+
+    protected void clear(){
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.complete.id")));
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.translatedEu.id")));
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.translatedRu.id")));
+    }
+
+    private void updateWord(long id){
+        sendUpdateQuery(String.format("""
+                UPDATE user_words\s
+                  SET en_translated = true,\s
+                   	  competently = true,\s
+                   	  ru_translated = true\s
+                  WHERE id_user = %d\s
+                  AND id_word = %d
+                """,getCurrentUserId(), id));
+    }
+
     @AfterClass
     public void quit() {
         driver.quit();

@@ -42,19 +42,12 @@ abstract class DictionaryTest extends AbstractTest {
 
     protected List<PojoWord> getContentFromDB() {
         List<PojoWord> words = new ArrayList<>();
-        var resultSet = sendSelectQuery(String.format("""
-                SELECT id FROM users u\s
-                WHERE u.username = '%s'""",
-                Util.getPropertyByKey("login")));
-        int idUser;
         try {
-            resultSet.next();
-            idUser = resultSet.getInt(1);
-            resultSet = sendSelectQuery(String.format("""
+            var resultSet = sendSelectQuery(String.format("""
                     SELECT * FROM user_words uw\s
                     JOIN words w ON uw.id_word = w.id\s
                     WHERE uw.id_user = %d
-                    """, idUser));
+                    """, getCurrentUserId()));
             words = resultSetToList(resultSet);
         } catch (SQLException ignored) { }
         return words;
