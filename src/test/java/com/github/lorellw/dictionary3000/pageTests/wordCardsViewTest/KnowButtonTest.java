@@ -32,7 +32,7 @@ public class KnowButtonTest extends WordCardsTest {
         assertEquals(ruWord,word.getRu());
         assertEquals(word.getStatus(), Status.STUDIED);
 
-        clear(username,enWord);
+        clear();
     }
 
 

@@ -37,4 +37,10 @@
             <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.DontKnowButtonTest"/>
         </classes>
     </test>
+    <test name="translateTests">
+    <classes>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.StartNextButtonTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.TranslateAnswersTest"/>
+    </classes>
+    </test>
 </suite>

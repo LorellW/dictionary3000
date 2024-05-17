@@ -41,17 +41,4 @@ abstract class WordCardsTest extends AbstractTest {
                 """, enWord, username))).get(0);
     }
 
-    protected void clear(String username, String enWord){
-        sendUpdateQuery(String.format("""
-                update user_words uw\s
-                set en_translated = false,
-                ru_translated = false\s
-                where uw.id_user = (
-                select id from users u\s
-                where u.username = '%s')
-                and uw.id_word = (
-                select id from words w\s
-                where w.word_en = '%s');
-                """,username,enWord));
-    }
 }
