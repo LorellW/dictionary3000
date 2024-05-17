@@ -58,6 +58,7 @@ public abstract class AbstractTest {
     protected List<PojoWord> resultSetToList(ResultSet set) throws SQLException {
         var list = new ArrayList<PojoWord>();
         while (set.next()) {
+            long id = set.getLong("id_word");
             String en = set.getString("word_en");
             String ru = set.getString("word_ru");
             String status;
@@ -71,7 +72,7 @@ public abstract class AbstractTest {
             } else {
                 status = "vaadin:book";
             }
-            list.add(new PojoWord(en, ru, PojoWord.stringToStatus(status)));
+            list.add(new PojoWord(id, en, ru, PojoWord.stringToStatus(status)));
         }
         return list;
     }
@@ -100,20 +101,31 @@ public abstract class AbstractTest {
     }
 
     protected void clear(){
-        updateWord(Long.parseLong(Util.getPropertyByKey("word.complete.id")));
-        updateWord(Long.parseLong(Util.getPropertyByKey("word.translatedEu.id")));
-        updateWord(Long.parseLong(Util.getPropertyByKey("word.translatedRu.id")));
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.complete.id")),true,true,true);
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.translatedEu.id")),false,true,false);
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.translatedRu.id")),false,false,true);
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.new.id")),false,false,false);
+        updateWord(Long.parseLong(Util.getPropertyByKey("word.another.id")),false,false,false);
     }
 
-    private void updateWord(long id){
+    private void updateWord(long id,boolean competently, boolean euTransl,boolean ruTransl){
         sendUpdateQuery(String.format("""
                 UPDATE user_words\s
-                  SET en_translated = true,\s
-                   	  competently = true,\s
-                   	  ru_translated = true\s
+                  SET competently = %b,\s 
+                      en_translated = %b,\s
+                   	  ru_translated = %b\s
                   WHERE id_user = %d\s
                   AND id_word = %d
-                """,getCurrentUserId(), id));
+                """,competently,euTransl,ruTransl,getCurrentUserId(),id));
+    }
+
+    protected PojoWord findWord( String word) throws SQLException {
+        return resultSetToList(sendSelectQuery(String.format("""
+                SELECT * FROM user_words uw
+                JOIN words w ON uw.id_word = w.id
+                WHERE (w.word_en = '%s' OR w.word_ru = '%s')
+                AND uw.id_user = '%d'
+                """, word, word, getCurrentUserId()))).get(0);
     }
 
     @AfterClass

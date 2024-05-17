@@ -12,15 +12,15 @@ import java.sql.SQLException;
 import static org.testng.Assert.assertEquals;
 
 @Test
-public class PositiveAddingNewWordTest extends DictionaryTest{
+public class PositiveAddingNewWordTest extends DictionaryTest {
     @Parameters({
             "newWordEn",
             "newWordRu"
     })
     public void addingTest(String newWordEn, String newWordRu) throws SQLException, InterruptedException {
         driver.findElement(By.id("add-button")).click();
-        sendInput(By.id("input-word-en"),newWordEn);
-        sendInput(By.id("input-word-ru"),newWordRu);
+        sendInput(By.id("input-word-en"), newWordEn);
+        sendInput(By.id("input-word-ru"), newWordRu);
         driver.findElement(By.id("save-button")).click();
 
         Thread.sleep(10);
@@ -35,7 +35,7 @@ public class PositiveAddingNewWordTest extends DictionaryTest{
         var list = resultSetToList(resultSet);
 
         assertEquals(list.size(), 1);
-        assertEquals(new PojoWord(newWordEn,newWordRu, Status.NEW),list.get(0));
+        assertEquals(new PojoWord(0L, newWordEn, newWordRu, Status.NEW), list.get(0));
 
         clear(newWordEn);
     }

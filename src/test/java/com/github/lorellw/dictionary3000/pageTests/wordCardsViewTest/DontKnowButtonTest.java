@@ -13,15 +13,14 @@ import static org.testng.Assert.assertEquals;
 
 @Test
 public class DontKnowButtonTest extends WordCardsTest{
-    @Parameters("username")
-    public void dontKnowButtonTest(String username) throws SQLException, InterruptedException {
+    public void dontKnowButtonTest() throws SQLException, InterruptedException {
         nextButton.click();
         driver.findElement(By.id("know-button")).click();
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(drvr -> !ruField.getAttribute("value").equals(""));
         driver.findElement(By.id("dont-know-button")).click();
         Thread.sleep(500);
-        var word = findWord(username, enField.getAttribute("value"));
+        var word = findWord( enField.getAttribute("value"));
         assertEquals(word.getStatus(), Status.NEW);
 
         clear();

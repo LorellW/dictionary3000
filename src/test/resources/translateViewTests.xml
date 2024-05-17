@@ -4,7 +4,9 @@
     <test name="translateTests">
         <classes>
             <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.StartNextButtonTest"/>
-            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.TranslateAnswersTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.WrongAnswerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.RightAnswerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.DifferentVariantsTest"/>
         </classes>
     </test>
 </suite>

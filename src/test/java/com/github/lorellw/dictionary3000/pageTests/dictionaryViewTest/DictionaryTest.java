@@ -15,7 +15,7 @@ import java.util.List;
 
 abstract class DictionaryTest extends AbstractTest {
 
-    protected DictionaryTest(){
+    protected DictionaryTest() {
         successfulLogin();
         driver.get("http://localhost:8080/3000");
         new WebDriverWait(driver, Duration.ofSeconds(3))
@@ -35,7 +35,7 @@ abstract class DictionaryTest extends AbstractTest {
             String en = elements.get(i).getAttribute("innerText");
             String ru = elements.get(i + 1).getAttribute("innerText");
             String status = elements.get(i + 2).findElement(By.tagName("vaadin-icon")).getAttribute("icon");
-            words.add(new PojoWord(en, ru, PojoWord.stringToStatus(status)));
+            words.add(new PojoWord(0L, en, ru, PojoWord.stringToStatus(status)));
         }
         return words;
     }
@@ -49,20 +49,21 @@ abstract class DictionaryTest extends AbstractTest {
                     WHERE uw.id_user = %d
                     """, getCurrentUserId()));
             words = resultSetToList(resultSet);
-        } catch (SQLException ignored) { }
+        } catch (SQLException ignored) {
+        }
         return words;
     }
 
-    protected void clear(String notRealWordEn){
+    protected void clear(String notRealWordEn) {
         sendUpdateQuery(String.format("""
                 delete from user_words uw\s
                 where uw.id_word = (\s
                 select id from words w\s
                 where w.word_en = '%s')
-                """,notRealWordEn));
+                """, notRealWordEn));
         sendUpdateQuery(String.format("""
                 delete from words w \s
                 where w.word_en = '%s'
-                """,notRealWordEn));
+                """, notRealWordEn));
     }
 }

@@ -15,11 +15,10 @@ import static org.testng.Assert.assertNotEquals;
 
 @Test
 public class KnowButtonTest extends WordCardsTest {
-    @Parameters("username")
-    public void knowButtonTest(String username) throws SQLException {
+    public void knowButtonTest() throws SQLException {
         nextButton.click();
         var enWord = enField.getAttribute("value");
-        var word = findWord(username,enWord);
+        var word = findWord(enWord);
 
         assertNotEquals(word.getStatus(), Status.STUDIED);
 
@@ -28,7 +27,7 @@ public class KnowButtonTest extends WordCardsTest {
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(drvr -> !ruField.getAttribute("value").equals(""));
         var ruWord = ruField.getAttribute("value");
-        word = findWord(username,enWord);
+        word = findWord(enWord);
         assertEquals(ruWord,word.getRu());
         assertEquals(word.getStatus(), Status.STUDIED);
 

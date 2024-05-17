@@ -16,7 +16,7 @@ abstract class WordCardsTest extends AbstractTest {
     protected WebElement enField;
     protected WebElement ruField;
 
-    protected WordCardsTest(){
+    protected WordCardsTest() {
         successfulLogin();
         driver.get("http://localhost:8080/wordcards");
         new WebDriverWait(driver, Duration.ofSeconds(3))
@@ -25,20 +25,10 @@ abstract class WordCardsTest extends AbstractTest {
         initialiseElements();
     }
 
-    private void initialiseElements(){
+    private void initialiseElements() {
         this.nextButton = driver.findElement(By.id("start-next-button"));
         this.enField = driver.findElement(By.id("en-word-field"));
         this.ruField = driver.findElement(By.id("ru-word-field"));
-    }
-
-    protected PojoWord findWord(String username, String enWord) throws SQLException {
-        return resultSetToList(sendSelectQuery(String.format("""
-                SELECT * FROM user_words uw\s
-                JOIN users u ON uw.id_user = u.id\s
-                JOIN words w ON uw.id_word = w.id\s
-                WHERE w.word_en = '%s'
-                AND u.username = '%s'
-                """, enWord, username))).get(0);
     }
 
 }
