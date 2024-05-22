@@ -7,6 +7,7 @@
             <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.WrongAnswerTest"/>
             <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.RightAnswerTest"/>
             <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.DifferentVariantsTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.LanguageSwapTest"/>
         </classes>
     </test>
 </suite>

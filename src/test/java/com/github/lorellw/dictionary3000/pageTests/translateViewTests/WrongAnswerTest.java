@@ -1,17 +1,8 @@
 package com.github.lorellw.dictionary3000.pageTests.translateViewTests;
 
-import com.github.lorellw.dictionary3000.util.PojoWord;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.Duration;
-import java.util.HashSet;
-import java.util.Optional;
 
 import static org.testng.Assert.*;
 
@@ -33,6 +24,5 @@ public class WrongAnswerTest extends TranslateViewTest {
             System.err.println(webElement.getText());
             assertEquals(webElement.getAttribute("aria-disabled"), "true");
         });
-
     }
 }
