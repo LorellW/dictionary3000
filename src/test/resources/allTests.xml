@@ -40,7 +40,7 @@
     <test name="translateTests">
     <classes>
         <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.StartNextButtonTest"/>
-        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.TranslateAnswersTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.WrongAnswerTest"/>
     </classes>
     </test>
 </suite>

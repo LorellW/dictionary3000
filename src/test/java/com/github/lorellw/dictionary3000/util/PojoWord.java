@@ -9,6 +9,7 @@ import java.util.Objects;
 @Getter
 @AllArgsConstructor
 public class PojoWord {
+    private final long id;
     private final String en;
     private final String ru;
     private final Status status;
