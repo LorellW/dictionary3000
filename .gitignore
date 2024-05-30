@@ -36,3 +36,4 @@ build/
 ### Prorerties ###
 src/test/resources/app.properties
 src/main/resources/application.properties
+

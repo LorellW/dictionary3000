@@ -1,4 +1,4 @@
-package com.github.lorellw.dictionary3000.pageTests.translateViewTests;
+package com.github.lorellw.dictionary3000.pageTests.translateViewTest;
 
 import com.github.lorellw.dictionary3000.pageTests.AbstractTest;
 import org.openqa.selenium.By;
@@ -6,13 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 
 import java.sql.ResultSet;
 import java.time.Duration;
 import java.util.List;
 
-public class TranslateViewTest extends AbstractTest {
+abstract class TranslateViewTest extends AbstractTest {
 
     protected WebElement nextButton;
     protected List<WebElement> answerButtons;

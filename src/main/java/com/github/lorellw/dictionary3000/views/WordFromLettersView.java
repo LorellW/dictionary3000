@@ -2,7 +2,6 @@ package com.github.lorellw.dictionary3000.views;
 
 import com.github.lorellw.dictionary3000.entities.Word;
 import com.github.lorellw.dictionary3000.services.UserWordsService;
-import com.github.lorellw.dictionary3000.services.WordService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -19,14 +18,14 @@ import java.util.*;
 public class WordFromLettersView extends AbstractView {
     private final UserWordsService userWordsService;
 
-    private TextField wordRu = new TextField("RuWord");
-    private TextField inputField = new TextField("Input");
+    private final TextField task = new TextField("RuWord");
+    private final TextField answer = new TextField("Input");
 
-    private Button nextButton = new Button("Start");
-    private Button checkButton = new Button("Check");
-    private Button resetButton = new Button("Reset");
+    private final Button nextButton = new Button("Start");
+    private final Button checkButton = new Button("Check");
+    private final Button resetButton = new Button("Reset");
 
-    private HorizontalLayout buttonField = new HorizontalLayout();
+    private final HorizontalLayout buttonField = new HorizontalLayout();
 
     private List<Word> wordList;
     private String currentString; //current word.wordEN
@@ -41,22 +40,26 @@ public class WordFromLettersView extends AbstractView {
         configCheckButton();
         configResetButton();
 
-        add(wordRu, inputField, buttonField, new HorizontalLayout(nextButton, checkButton, resetButton));
+        add(task, answer, buttonField, new HorizontalLayout(nextButton, checkButton, resetButton));
 
         setAlignItems(Alignment.CENTER);
     }
 
     //TODO reset button
     private void configResetButton() {
+        resetButton.setId("reset-button");
+        resetButton.setEnabled(false);
         resetButton.addClickShortcut(Key.BACKSPACE);
         resetButton.addClickListener(buttonClickEvent -> {
-            inputField.setValue("");
+            answer.setValue("");
+            answer.setPrefixComponent(null);
             buttonField.removeAll();
             buttonField.add(configButtonField());
         });
     }
 
     private Collection<Component> configButtonField() {
+        buttonField.setId("letters");
         List<String> characters = Arrays.asList(getCurrentString().split(""));
         Collections.shuffle(characters);
         List<Component> buttons = new ArrayList<>();
@@ -79,16 +82,20 @@ public class WordFromLettersView extends AbstractView {
     }
 
     private void configNextButton() {
+        nextButton.setId("next-button");
         nextButton.addClickShortcut(Key.SPACE);
         nextButton.addClickListener(buttonClickEvent -> {
             nextButton.setText("Next");
             nextButton.setEnabled(false);
 
-            currentString = wordList.get(index).getWordEn();
-            wordRu.setValue(wordList.get(index).getWordRu());
+            checkButton.setEnabled(true);
+            resetButton.setEnabled(true);
 
-            inputField.setValue("");
-            inputField.setPrefixComponent(null);
+            currentString = wordList.get(index).getWordEn();
+            task.setValue(wordList.get(index).getWordRu());
+
+            answer.setValue("");
+            answer.setPrefixComponent(null);
 
             buttonField.removeAll();
             buttonField.add(configButtonField());
@@ -102,24 +109,25 @@ public class WordFromLettersView extends AbstractView {
         button.setMinWidth("3em");
         button.setText(letter);
         button.addClickListener(buttonClickEvent -> {
-            inputField.setValue(inputField.getValue() + button.getText());
+            answer.setValue(answer.getValue() + button.getText());
             buttonClickEvent.getSource().setEnabled(false);
         });
         return button;
     }
 
     private void configCheckButton() {
+        checkButton.setId("check-button");
         checkButton.addClickShortcut(Key.ENTER);
+        checkButton.setEnabled(false);
 
         checkButton.addClickListener(buttonClickEvent -> {
-            if (inputField.getValue().equals(getCurrentString())) {
-                inputField.setPrefixComponent(VaadinIcon.CHECK.create());
+            if (answer.getValue().equals(getCurrentString())) {
+                answer.setPrefixComponent(VaadinIcon.CHECK.create());
                 wordList.get(index - 1).setCompetently(true);
                 userWordsService.update(wordList.get(index-1));
             } else {
-                System.out.println(inputField.getValue() + " " + currentString);
-                inputField.setPrefixComponent(VaadinIcon.BAN.create());
-                inputField.setValue(inputField.getValue() + " (" + currentString + ")");
+                answer.setPrefixComponent(VaadinIcon.BAN.create());
+                answer.setValue(answer.getValue() + "(" + currentString + ")");
             }
             buttonField.getChildren().forEach(component -> ((Button)component).setEnabled(false));
             nextButton.setEnabled(true);
@@ -127,10 +135,12 @@ public class WordFromLettersView extends AbstractView {
     }
 
     private void configTextFields() {
-        wordRu.setReadOnly(true);
-        wordRu.getStyle().set("width", "21em");
-        inputField.setReadOnly(true);
-        inputField.getStyle().set("width", "21em");
+        task.setId("task-output");
+        task.setReadOnly(true);
+        task.getStyle().set("width", "21em");
+        answer.setId("answer-input");
+        answer.setReadOnly(true);
+        answer.getStyle().set("width", "21em");
     }
 
 
