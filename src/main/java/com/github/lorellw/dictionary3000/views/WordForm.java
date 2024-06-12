@@ -27,10 +27,11 @@ public class WordForm extends FormLayout {
     private Binder<Word> binder = new BeanValidationBinder<>(Word.class);
 
     public WordForm() {
+        wordEn.setId("input-word-en");
+        wordRu.setId("input-word-ru");
+        saveButton.setId("save-button");
         binder.bindInstanceFields(this);
-        add(wordEn,
-                wordRu,
-                createButtonField());
+        add(wordEn, wordRu, createButtonField());
 
     }
 

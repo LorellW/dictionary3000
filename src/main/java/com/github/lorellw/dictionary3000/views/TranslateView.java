@@ -64,7 +64,7 @@ public class TranslateView extends AbstractView {
 
     private VerticalLayout createButtonField() {
         VerticalLayout buttonField = new VerticalLayout();
-
+        buttonField.setId("button-layout");
         answer1.addClickShortcut(Key.DIGIT_1);
         answer2.addClickShortcut(Key.DIGIT_2);
         answer3.addClickShortcut(Key.DIGIT_3);

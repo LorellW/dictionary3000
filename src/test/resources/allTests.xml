@@ -15,6 +15,43 @@
     <test name="mainLayoutTest">
         <classes>
             <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.LogoutTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.DrawerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.mainLayoutTest.NavigationTest"/>
+        </classes>
+    </test>
+    <test name="dictionaryViewTest">
+        <parameter name="newWordEn" value="NotRealWord"/>
+        <parameter name="newWordRu" value="НенастоящееСлово"/>
+        <parameter name="username" value="User"/>
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PersonalDictionaryTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PositiveAddingNewWordTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.StatusTest"/>
+        </classes>
+    </test>
+    <test name="wordCardsTest">
+        <parameter name="username" value="User"/>
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.StartAndNextText"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.KnowButtonTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordCardsViewTest.DontKnowButtonTest"/>
+        </classes>
+    </test>
+    <test name="translateTests">
+    <classes>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.StartNextButtonTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.WrongAnswerTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.RightAnswerTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.DifferentVariantsTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.LanguageSwapTest"/>
+    </classes>
+    </test>
+    <test name="wordFromLettersTest">
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.ControlButtonsTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.LettersTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.WrongAnswerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.RightAnswerTest"/>
         </classes>
     </test>
 </suite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="dictionaryViewTests">
+    <test name="dictionaryViewTest">
+        <parameter name="newWordEn" value="NotRealWord"/>
+        <parameter name="newWordRu" value="НенастоящееСлово"/>
+        <parameter name="username" value="User"/>
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PersonalDictionaryTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.PositiveAddingNewWordTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.dictionaryViewTest.StatusTest"/>
+        </classes>
+    </test>
+</suite>

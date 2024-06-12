@@ -13,37 +13,50 @@ import java.util.List;
 @Repository
 public interface UserWordsRepository extends JpaRepository<UserWords, Long> {
 
-    @Query("select uw from UserWords uw " +
-            "join Word w on uw.word=w.id " +
-            "where uw.user = :currentUser " +
-            "and " +
-            "lower(w.wordRu) like lower(concat('%', :searchItem, '%')) " +
-            "or lower(w.wordEn) like lower(concat('%', :searchItem, '%'))")
-    List<UserWords> search(@Param("searchItem") String searchItem, @Param("currentUser") User user);
+    @Query("""
+            SELECT uw FROM UserWords uw\s
+            JOIN Word w ON uw.word = w.id\s
+            WHERE uw.user = :currentUser\s
+            AND(\s
+            LOWER(w.wordRu) LIKE LOWER(CONCAT('%', :searchItem, '%'))\s
+            OR\s
+            LOWER(w.wordRu) LIKE LOWER(CONCAT('%', :searchItem, '%')))
+            """)
+    List<UserWords> search(@Param("searchItem") String searchItem,
+                           @Param("currentUser") User user);
 
-    @Query("select uw from UserWords uw " +
-            "where uw.user = :currentUser " +
-            "and " +
-            "uw.enTranslated is FALSE")
+    @Query("""
+            SELECT uw FROM UserWords uw\s
+            WHERE uw.user = :currentUser\s
+            AND\s
+            uw.enTranslated is FALSE
+            """)
     List<UserWords> searchEnUntranslated(@Param("currentUser") User user);
 
-    @Query("select uw from UserWords uw " +
-            "where uw.user = :currentUser " +
-            "and " +
-            "uw.ruTranslated is FALSE")
+    @Query("""
+            SELECT uw FROM UserWords uw\s
+            WHERE uw.user = :currentUser\s
+            AND\s
+            uw.ruTranslated is FALSE
+            """)
     List<UserWords> searchRuUntranslated(@Param("currentUser") User user);
 
-    @Query("select uw from UserWords uw " +
-            "where uw.user = :currentUser " +
-            "and " +
-            "uw.enTranslated is FALSE " +
-            "or uw.ruTranslated is FALSE")
+    @Query("""
+            SELECT uw FROM UserWords uw\s
+            WHERE uw.user = :currentUser\s
+            AND(\s
+            uw.enTranslated is FALSE\s
+            OR\s
+            uw.ruTranslated is FALSE)
+            """)
     List<UserWords> searchUntranslated(@Param("currentUser") User user);
 
-    @Query("select uw from UserWords uw " +
-            "where uw.user = :currentUser " +
-            "and " +
-            "uw.competently is FALSE")
+    @Query("""
+            SELECT uw FROM UserWords uw\s
+            WHERE uw.user = :currentUser\s
+            AND\s
+            uw.competently is FALSE
+            """)
     List<UserWords> searchUnwritten(@Param("currentUser") User user);
 
     List<UserWords> findByUser(User user);
