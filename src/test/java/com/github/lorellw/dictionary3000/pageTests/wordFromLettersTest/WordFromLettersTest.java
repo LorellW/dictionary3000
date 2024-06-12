@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 
 import java.time.Duration;
 
@@ -31,4 +32,6 @@ public class WordFromLettersTest extends AbstractTest {
         taskOutput = driver.findElement(By.id("task-output"));
         answerInput = driver.findElement(By.id("answer-input"));
     }
+
+
 }

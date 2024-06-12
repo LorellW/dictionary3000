@@ -17,12 +17,11 @@ public class DontKnowButtonTest extends WordCardsTest{
         nextButton.click();
         driver.findElement(By.id("know-button")).click();
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(drvr -> !ruField.getAttribute("value").equals(""));
+                .until(drvr -> !ruField.getAttribute("value").isEmpty());
         driver.findElement(By.id("dont-know-button")).click();
         Thread.sleep(500);
         var word = findWord( enField.getAttribute("value"));
         assertEquals(word.getStatus(), Status.NEW);
 
-        clear();
     }
 }
