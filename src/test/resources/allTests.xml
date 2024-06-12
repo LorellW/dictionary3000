@@ -39,8 +39,19 @@
     </test>
     <test name="translateTests">
     <classes>
-        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.StartNextButtonTest"/>
-        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.WrongAnswerTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.StartNextButtonTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.WrongAnswerTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.RightAnswerTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.DifferentVariantsTest"/>
+        <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.LanguageSwapTest"/>
     </classes>
+    </test>
+    <test name="wordFromLettersTest">
+        <classes>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.ControlButtonsTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.LettersTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.WrongAnswerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.wordFromLettersTest.RightAnswerTest"/>
+        </classes>
     </test>
 </suite>

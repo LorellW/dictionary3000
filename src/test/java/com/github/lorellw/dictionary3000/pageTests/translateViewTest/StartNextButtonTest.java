@@ -1,4 +1,4 @@
-package com.github.lorellw.dictionary3000.pageTests.translateViewTests;
+package com.github.lorellw.dictionary3000.pageTests.translateViewTest;
 
 import org.testng.annotations.Test;
 

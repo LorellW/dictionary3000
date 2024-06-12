@@ -3,11 +3,11 @@
 <suite name="translateTests">
     <test name="translateTests">
         <classes>
-            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.StartNextButtonTest"/>
-            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.WrongAnswerTest"/>
-            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.RightAnswerTest"/>
-            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.DifferentVariantsTest"/>
-            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTests.LanguageSwapTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.StartNextButtonTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.WrongAnswerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.RightAnswerTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.DifferentVariantsTest"/>
+            <class name="com.github.lorellw.dictionary3000.pageTests.translateViewTest.LanguageSwapTest"/>
         </classes>
     </test>
 </suite>

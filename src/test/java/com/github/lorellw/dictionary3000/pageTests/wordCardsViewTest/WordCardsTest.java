@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 
 import java.sql.SQLException;
 import java.time.Duration;
@@ -29,6 +30,11 @@ abstract class WordCardsTest extends AbstractTest {
         this.nextButton = driver.findElement(By.id("start-next-button"));
         this.enField = driver.findElement(By.id("en-word-field"));
         this.ruField = driver.findElement(By.id("ru-word-field"));
+    }
+
+    @AfterClass
+    protected void clearDb(){
+        clear();
     }
 
 }

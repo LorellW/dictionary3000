@@ -4,15 +4,16 @@ import com.github.lorellw.dictionary3000.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+
 import java.util.Objects;
 
 @Getter
 @AllArgsConstructor
 public class PojoWord {
-    private final long id;
-    private final String en;
-    private final String ru;
-    private final Status status;
+    private long id;
+    private String en;
+    private String ru;
+    private Status status;
 
     public static Status stringToStatus(String status) {
         return switch (status) {
