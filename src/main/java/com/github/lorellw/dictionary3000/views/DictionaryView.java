@@ -63,17 +63,11 @@ public class DictionaryView extends AbstractView {
         grid.setSizeFull();
         grid.addColumn(Word::getWordEn).setHeader("Eng");
         grid.addColumn(Word::getWordRu).setHeader("Rus");
-        grid.addComponentColumn(word -> {
-            if (word.getStatus() == Status.NEW) {
-                return new Icon(VaadinIcon.BOOK);
-            }
-            if (word.getStatus() == Status.ONSTUDY) {
-                return new Icon(VaadinIcon.CLOCK);
-            }
-            if (word.getStatus() == Status.STUDIED) {
-                return new Icon(VaadinIcon.CHECK);
-            }
-            return new Icon(VaadinIcon.TOOLS);
+        grid.addComponentColumn(word -> switch (word.getStatus()){
+            case NEW -> new Icon(VaadinIcon.BOOK);
+            case ONSTUDY -> new Icon(VaadinIcon.CLOCK);
+            case STUDIED -> new Icon(VaadinIcon.CHECK);
+            default -> new Icon(VaadinIcon.TOOLS);
         }).setHeader("Status");
         grid.getColumns().forEach(col -> col.setAutoWidth(true));
         add(grid);
@@ -84,7 +78,7 @@ public class DictionaryView extends AbstractView {
         statusSelect.setEmptySelectionAllowed(true);
         statusSelect.setItemLabelGenerator(s -> {
             if (s == null){
-                return "";
+                return "All";
             }
             return s.getName();
         });
