@@ -1,11 +1,13 @@
 package com.github.lorellw.dictionary3000.config;
 
 import com.github.lorellw.dictionary3000.util.Util;
+import lombok.Getter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectConfig {
+    @Getter
     private static Connection connection;
     static {
         try {
@@ -20,7 +22,4 @@ public class ConnectConfig {
         }
     }
 
-    public static Connection getConnection(){
-        return connection;
-    }
 }
